@@ -1,0 +1,241 @@
+#welcomeTextbox {
+    position: absolute;
+    left: 100px;
+    top: 500px;
+    width: 80%;
+    height: 4em;
+}
+
+#subtext {
+    position: absolute;
+}
+
+#cursor {
+    display: none;
+    position: absolute;
+    width: 12px;
+    height: 27px;
+    background-color: #a6e22e;
+}
+
+#linkbox {
+    z-index: 100;
+    width: 30px;
+    bottom: 80px;
+    left: 40px;
+    position: fixed;
+    padding: 0px;
+    text-align:center;
+}
+
+#navbar, #navbarDetector {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    top: 0px;
+}
+
+#navbar {
+    position: absolute;
+    z-index: 100;
+    justify-content: flex-end;
+    background-color: #232323;
+    display: flex;
+}
+
+#navbarDetector {
+    position: fixed;
+    z-index: 99;
+}
+
+#navResume {
+    color: #f92672;
+    padding-right: 30px;
+}
+
+.navbarLink {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 1.5em;
+}
+
+a {
+    color: #fdf9ff;
+    text-decoration: none;
+}
+
+a:hover, #navResume:hover {
+    cursor: pointer;
+    color: #a6e22e;
+    text-decoration: none;
+}
+
+#resumeIcon:hover {
+    cursor: pointer;
+    color: #f92672;
+    text-decoration: none;
+}
+
+#inspired {
+    position: absolute;
+    width: 100%;
+    top: 80%;
+    color: #575757;
+    text-align: center;
+}
+
+#learnMore {
+    width: 100%;
+    text-align: center;
+    top: 80%;
+    color: white;
+    position: absolute;
+}
+
+#learnMore p:hover {
+    color: #a6e22e;
+    cursor: pointer;
+}
+
+#inspired a {
+    color: #575757;
+}
+
+.container {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    height: 100%;
+}
+
+.content {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
+}
+
+#screenshot {
+    height: 80%;
+    position: absolute;
+    top:7.8%;
+    right: -30%;
+}
+
+#portrait {
+    width: 25%;
+    position: absolute;
+    right: 15%;
+    top: 25%;
+}
+
+.projectTitle, .subtitle {
+    color: #a6e22e;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.subtitle {
+    font-size: 1.75em;
+}
+
+.projectTitle, #experienceContent h2 {
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+.projectTitle:hover {
+    color: #918199
+}
+
+.projectDescription, #experienceContent li {
+    line-height: 1.25em;
+    margin-top: 0px;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.schoolContent {
+    border-left: 2px solid #575757;
+}
+
+.schoolContent, .experienceFrame {
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+h1 {
+    font-size: 2em;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1em;
+    color: #f92672;
+}
+
+#educationContainer {
+    height: fit-content;
+}
+
+#educationContent {
+    padding-top: 10%
+}
+
+.experienceFrame {
+    float: left;
+    width: auto;
+    position: absolute;
+}
+
+#experienceButtons{
+    float: right;
+    width: fit-content;
+}
+
+.experienceButton {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    font-size: 1.25em;
+    color: #575757;
+    border-left: 2px solid #575757;
+}
+
+#technicalFrame, #courseworkFrame {
+    visibility: hidden;
+}
+
+h2 {
+    color: #fdf9ff;
+    font-size: 1.75em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+p, li {
+    color: #fdf9ff;
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+body {
+    font-family: 'Peddana', serif;
+    margin: 0px;
+    background-color: #232323;
+    overflow-x: hidden;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}

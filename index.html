@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Devan Kavalchek</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Peddana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="linkbox">
+        <a class="fa fa-github" title="Github" style="font-size:25px; padding-bottom: 20px"
+            href="https://github.com/DevanTurtle7"></a>
+        <a class="fa fa-envelope" title="Email" style="font-size:20px" href="mailto:devan.kavalchek@gmail.com"></a>
+        <a class="fa fa-file" id="resumeIcon" title="Resume" style="font-size:20px; padding-top: 20px" href="assets/media/resume.pdf"></a>
+    </div>
+
+    <div id="navbar">
+        <a class="navbarLink" id="navAboutMe">About Me</a>
+        <a class="navbarLink" id="navEducation">Education</a>
+        <a class="navbarLink" id="navExperience">Experience</a>
+        <a class="navbarLink" id="navProjects">Projects</a>
+        <a class="navbarLink" id="navResume" href="assets/media/resume.pdf">Resume</a>
+    </div>
+
+    <div id="navbarDetector"></div>
+
+    <div id="welcomeTextbox">
+        <h1 style="margin:0px;">Devan Kavalchek</h1>
+        <h1 id="subtext" style="color:#fdf9ff; margin-bottom: 5px;">A detail oriented software engineer</h1>
+        <div id="cursor"></div>
+    </div>
+    <div id="learnMore">
+        <p>Learn More About Me<br><i class="fa fa-angle-down"></i></p>
+    </div>
+
+    <div class="container" id="aboutMeContainer">
+        <img id="portrait" src="assets/media/portrait.png" alt="Portrait"/>
+        <div class='content'>
+            <h1 id="aboutMeTitle">About Me</h1>
+            <p id="aboutMePar" style="width: 50%">Hi! I’m Devan!
+                <br>I’m extremely passionate about programming and currently searching for an internship. I am
+                well-versed in python, flutter, html, javascript, and more. I’m a fast learner and always looking to
+                learn new languages and frameworks. I am currently a student at the Rochester Institute of Technology
+                in the computer exploration
+                program and looking to pursue a B.S. in Software Engineering. In my program I am doing a lot of hands-on
+                learning in several different fields of computing and gaining a lot more experience than your average
+                computer science student.
+                <br>In my free time I love programming, skiing and mountain biking. I grew up in a national park 3
+                minutes from a ski resort so skiing and the outdoors has always been a big part of my life!
+            </p>
+        </div>
+    </div>
+
+    <div class="container" id="educationContainer">
+        <div class="content" id="educationContent">
+            <h1>Education</h1>
+            <h1 class="subtitle">High School</h1>
+            <div class="schoolContent">
+                <div style="margin-left: 25px; line-height: 24px; margin-bottom: 10px">
+                    <p style="color: #a6e22e;">2016-2018</p>
+                    <h2>Montessori High School at University Circle</h2>
+                    <p>University Circle, OH</p>
+                    <p>Taught 2 two week technology based courses</p>
+                </div>
+
+                <div style="margin-left: 25px; line-height: 24px;">
+                    <p style="color: #a6e22e;">2018-2020</p>
+                    <h2>Andrews Osborne Academy</h2>
+                    <p>Willoughby, OH</p>
+                    <p>Participated in eSports and Mock Trial</p>
+                </div>
+            </div>
+            <h1 class="subtitle">College</h1>
+            <div class="schoolContent">
+                <div style="margin-left: 25px; line-height: 24px; margin-bottom: 10px">
+                    <p style="color: #a6e22e;">2020-2025</p>
+                    <h2>Rochester Institute of Technology</h2>
+                    <p>Rochester, NY</p>
+                    <p>Computer Exploration Program, Pursuing a B.S. in Software Engineering</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="experienceContainer">
+        <div class="content" id="experienceContent">
+            <h1>Experience</h1>
+            <div class="experienceFrame" id="volunteerFrame">
+                <p style="color: #a6e22e;">2020</p>
+                <h2>ClayHack</h2>
+                <p style="line-height: 1.2em;">Rochester, NY</p>
+                <p style="line-height: 1em;">Participated in ClayHack, an 8 hour hackathon, and won Best Project
+                    Design.</p>
+
+                <p style="color: #a6e22e;">2017</p>
+                <h2>Ludum Dare 39</h2>
+                <p style="line-height: 1em;">Participated in Ludum Dare 39, at 72 hour game jam.</p>
+
+                <p style="color: #a6e22e;">2016</p>
+                <h2>World Maker Faire Volunteer</h2>
+                <p style="line-height: 1.2em;">New York City, NY</p>
+                <p style="line-height: 1em;">Helped set up World Maker Faire</p>
+            </div>
+            <div class="experienceFrame" id="technicalFrame">
+                <p>- Experienced with test driven development and writing self-documenting code.</p>
+                <p>- Proficient in git version control.</p>
+                <p>- Detail oriented.</p>
+                <p>- Dedicated and passionate about writing code.</p>
+                <p>- Great at working with teams and collaboration.</p>
+            </div>
+            <div class="experienceFrame" id="courseworkFrame">
+                <p>- Software Development & Problem Solving I</p>
+                <p>- Project-Based Calculus I</p>
+                <p>- Web & Mobile I</p>
+                <p>- Computing Exploration Seminar</p>
+                <p>- Introduction to Cybersecurity</p>
+            </div>
+            <div id="experienceButtons">
+                <h2 class="experienceButton" style="font-size:1.25em" id="volunteerButton">Volunteer</h2>
+                <h2 class="experienceButton" style="font-size:1.25em" id="technicalButton">Technical Skills</h2>
+                <h2 class="experienceButton" style="font-size:1.25em" id="courseworkButton">Relevant Coursework</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="projectsContainer">
+        <img id="screenshot" src="assets/media/screenshot.png" alt="Code"/>
+        <div class='content'>
+            <h1 id="projectsTitle" style="margin-bottom: 10px">Featured Projects</h1>
+            <a class="projectTitle" href="https://github.com/DevanTurtle7/geneticAlgorithm">Genetic Algorithm</a>
+            <p class="projectDescription">A machine learning algorithm inspired by nature, evolution and survival of the
+                fittest.</p>
+            <a class="projectTitle" href="https://github.com/DevanTurtle7/clayHack2020">Corner Clerk</a>
+            <p class="projectDescription" style="color: #f92672; margin-bottom: 0px;">ClayHack 2020 Winner: Best Project
+                Design</p>
+            <p class="projectDescription">An iOS and Android app designed to make grocery shopping easier to make
+                grocery shopping easier for college students.</p>
+            <a class="projectTitle" href="https://github.com/DevanTurtle7/flutter_hue">Firefly</a>
+            <p class="projectDescription">An iOS and Android app that uses the Philips Hue API to control smart lights.
+            </p>
+            <a href="https://github.com/DevanTurtle7"
+                style="color: #f92672; font-size: 1.25em; font-weight: 600; margin-top: 0px; margin-bottom: 0px;">View
+                More</a>
+            <form method="get" action="assets/media/resume.pdf">
+            </form>
+           
+        </div>
+    </div>
+
+    <p id="inspired" style="line-height: 1em;">Devan Kavalchek 2020 <br /> Website inspired by <a
+            href="https://brittanychiang.com">Brittany Chiang</a></p>
+</body>
+
+</html>
