@@ -1,39 +1,42 @@
-var hidden = false;
-var animationSpeed = 300;
-
 function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    /*
+    Pauses the program for a given amount of time
+
+    Parameters:
+        ms: The amount of time to pause for (in milliseconds)
+    */
+    return new Promise(resolve => setTimeout(resolve, ms))
 }
 
 async function introAnimation() {
-    var text = "Page Not Found"
-    document.getElementById("cursor").style.display = "inline";
-    document.getElementById("subtext").innerHTML = "";
+    var text = 'Page Not Found'
+    $('#cursor').css('display', 'inline')
+    $('#subtext').text('')
 
-    await sleep(250);
+    await sleep(250); // Don't play the animation immediately
 
+    // "Type" out the text
     for (var i = 0; i < text.length + 1; i++) {
         await sleep(80);
-        document.getElementById("subtext").innerHTML = text.substring(0, i);
-        var right = document.getElementById("subtext").getBoundingClientRect().right;
-        var left = document.getElementById("subtext").getBoundingClientRect().left;
-        document.getElementById("cursor").style.left = (right - left) + "px";
+        $('#subtext').text(text.substring(0, i))
+        $('#cursor').css('left', $('#subtext').width() - $('#subtext').position().left)
     }
 
-    cursor();
+    cursor(); // Start the cursor animation
 }
 
 function cursor() {
-    cursorOn = true;
+    /*
+    Animates the cursor on the landing page
+    */
+    var cursorOn = true
 
-    var right = document.getElementById("subtext").getBoundingClientRect().right;
-    var left = document.getElementById("subtext").getBoundingClientRect().left;
-    document.getElementById("cursor").style.left = (right - left) + 5 + "px";
-
+    // Infinitely toggle the cursor on and off
     window.setInterval(function () {
-        cursorOn = !cursorOn;
-        document.getElementById("cursor").style.display = cursorOn ? "inline" : "none";
-    }, 800);
+        cursorOn = !cursorOn
+        $('#cursor').css('display', cursorOn ? 'inline' : 'none')
+    }, 800)
+
 }
 
-window.addEventListener("load", introAnimation);
+$(document).ready(introAnimation)
