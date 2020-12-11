@@ -1,12 +1,95 @@
-#welcomeTextbox {
+/* Linkbox Styles */
+
+#linkbox {
+    display: flex;
+    flex-flow: column;
+    position: fixed;
+    bottom: 80px;
+    left: 42px;
+    z-index: 99;
+}
+
+#githubIcon {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#resumeIcon {
+    margin-top: 27px;
+}
+
+#linkbox a {
+    transition: color .2s;
+}
+
+#linkbox a:not(#resumeIcon):hover {
+    color: #a6e22e;
+}
+
+#resumeIcon:hover {
+    color: #f92672;
+}
+
+/*Navbar Styles */
+
+#navbar {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
     position: absolute;
-    left: 100px;
-    top: 500px;
-    width: 80%;
-    height: 4em;
+    width: 100%;
+    height: 60px;
+    background-color: #232323;
+}
+
+.navbarLink {
+    font-size: 1.5em;
+    transition: color .2s;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#navResume {
+    color: #f92672;
+    margin-right: 20px;
+}
+
+.navbarLink:hover, #navResume:hover {
+    color: #a6e22e;
+}
+
+#navbarDetector {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    padding: 0px;
+    margin: 0px;
+    height: 60px;
+    background-color: rgba(0,0,0,0);
+    z-index: 99;
+}
+
+/* Landing Page Styles */
+
+#landingPage {
+    width: 100%;
 }
 
 #subtext {
+    color: #fdf9ff;
+    display: inline-block;
+}
+
+#textbox h1 {
+    height: 40px;
+}
+
+#textbox {
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
     position: absolute;
 }
 
@@ -15,81 +98,16 @@
     position: absolute;
     width: 12px;
     height: 27px;
+    top: 47px;
     background-color: #a6e22e;
 }
 
-#linkbox {
-    z-index: 100;
-    width: 30px;
-    bottom: 80px;
-    left: 40px;
-    position: fixed;
-    padding: 0px;
-    text-align:center;
-}
-
-#navbar, #navbarDetector {
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    top: 0px;
-}
-
-#navbar {
-    position: absolute;
-    z-index: 100;
-    justify-content: flex-end;
-    background-color: #232323;
-    display: flex;
-}
-
-#navbarDetector {
-    position: fixed;
-    z-index: 99;
-}
-
-#navResume {
-    color: #f92672;
-    padding-right: 30px;
-}
-
-.navbarLink {
-    padding-right: 10px;
-    padding-left: 10px;
-    font-size: 1.5em;
-}
-
-a {
-    color: #fdf9ff;
-    text-decoration: none;
-}
-
-a:hover, #navResume:hover {
-    cursor: pointer;
-    color: #a6e22e;
-    text-decoration: none;
-}
-
-#resumeIcon:hover {
-    cursor: pointer;
-    color: #f92672;
-    text-decoration: none;
-}
-
-#inspired {
-    position: absolute;
-    width: 100%;
-    top: 80%;
-    color: #575757;
-    text-align: center;
-}
-
 #learnMore {
-    width: 100%;
-    text-align: center;
-    top: 80%;
-    color: white;
     position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    transition: color .2s;
 }
 
 #learnMore p:hover {
@@ -97,114 +115,230 @@ a:hover, #navResume:hover {
     cursor: pointer;
 }
 
-#inspired a {
-    color: #575757;
+/* About Me Styles */
+
+#aboutMe {
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: flex-start;
+    padding-left: 100px;
+    padding-right: 50px;
+    padding-bottom: 75px;
+    margin-top: 50px;
 }
 
-.container {
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    height: 100%;
+#aboutMe h1 {
+    height: 40px;
 }
 
-.content {
-    position: relative;
-    width: 70%;
-    height: 70%;
-    top: 15%;
-    left: 15%;
-}
-
-#screenshot {
-    height: 80%;
-    position: absolute;
-    top:7.8%;
-    right: -30%;
-}
-
-#portrait {
-    width: 25%;
-    position: absolute;
-    right: 15%;
-    top: 25%;
-}
-
-.projectTitle, .subtitle {
-    color: #a6e22e;
+#aboutMe p {
+    padding-top: 0px;
     margin-top: 0px;
-    margin-bottom: 0px;
 }
 
-.subtitle {
-    font-size: 1.75em;
+#aboutMe img {
+    width: 300px;
+    padding-left: 20px;
+    padding-right: 0px;
+    padding-bottom: 0px;
 }
 
-.projectTitle, #experienceContent h2 {
-    font-size: 1.5em;
-    line-height: 1em;
+@media only screen and (max-width: 700px) {
+    #aboutMe {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding-right: 50px;
+    }
+    #aboutMe img {
+        padding-left: 0px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+    }
 }
 
-.projectTitle:hover {
-    color: #918199
+@media only screen and (min-width: 1150px) {
+    #aboutMe img {
+        width: 400px;
+    }
+    #aboutMe {
+        padding-right: 200px;
+        padding-left: 200px;
+    }
 }
 
-.projectDescription, #experienceContent li {
-    line-height: 1.25em;
-    margin-top: 0px;
-    width: 60%;
-    margin-bottom: 20px;
+/* Education Styles */
+
+#education {
+    padding-left: 100px;
+    padding-right: 50px;
+    margin-top: 75px;
+    padding-bottom: 75px;
 }
 
-.schoolContent {
-    border-left: 2px solid #575757;
-}
-
-.schoolContent, .experienceFrame {
-    margin-left: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px
-}
-
-h1 {
-    font-size: 2em;
+#education h2, #education p {
     padding: 0px;
     margin: 0px;
+}
+
+#education h1 {
+    height: 35px;
+}
+
+#education p {
+    height: 25px;
     line-height: 1em;
-    color: #f92672;
 }
 
-#educationContainer {
-    height: fit-content;
+.educationContent h2 {
+    line-height: 1em
 }
 
-#educationContent {
-    padding-top: 10%
+.yearLabel {
+    color: #a6e22e;
 }
 
-.experienceFrame {
-    float: left;
-    width: auto;
-    position: absolute;
+.sectionTitle {
+    color: #a6e22e;
 }
 
-#experienceButtons{
-    float: right;
-    width: fit-content;
+.educationContent {
+    padding-left: 25px;
+    margin-left: 25px;
+    border-left: 2px solid #575757;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-.experienceButton {
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 15px;
+@media only screen and (min-width: 1150px) {
+    #education {
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+}
+
+/* Experience Styles */
+
+
+
+#experience {
+    margin-top: 75px;
+    padding-left: 100px;
+    padding-right: 20px;
+    padding-bottom: 75px
+}
+
+#experienceContainer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    max-width: 750px;
+}
+
+#containers {
+    padding-right: 10px;
+}
+
+#buttons p {
     font-size: 1.25em;
     color: #575757;
     border-left: 2px solid #575757;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 140px;
+    transition: border .2s, color .2s;
 }
 
-#technicalFrame, #courseworkFrame {
-    visibility: hidden;
+#buttons p:hover {
+    cursor: pointer;
+}
+
+#volunteerContainer h2, #volunteerContainer p, #skillsContainer p, #courseworkContainer p {
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.2em
+}
+
+@media only screen and (min-width: 1150px) {
+    #experience {
+        padding-left: 200px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #experience {
+        padding-right: 0px;
+    }
+}
+
+/* Project Styles */
+
+#projects {
+    margin-top: 75px;
+    margin-bottom: 200px;
+    padding-left: 100px;
+    padding-right: 50px;
+    width: 50%
+}
+
+#projects img {
+    position: absolute;
+    margin-top: -50px;
+}
+
+@media only screen and (min-width: 1150px) {
+    #projects {
+        padding-left: 200px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #projects {
+        width: auto;
+    }
+}
+
+#projects a {
+    font-size: 1.75em;
+    color: #a6e22e;
+    transition: color .2s;
+    line-height: 1em;
+}
+
+#projects a:hover {
+    color: #fdf9ff;
+}
+
+#projects p {
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 20px;
+}
+
+#projects i {
+    color: #f92672
+}
+
+/* Footer Styles */
+#footer {
+    line-height: 1em;
+    text-align: center;
+    color: #575757;
+}
+
+#footer a {
+    color: #575757;
+}
+
+/* HTML Styles */
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    color: #f92672;
 }
 
 h2 {
@@ -214,12 +348,25 @@ h2 {
     margin-bottom: 0px;
 }
 
-p, li {
-    color: #fdf9ff;
+p {
     font-size: 1.25em;
-    font-weight: 600;
-    margin-top: 0px;
-    margin-bottom: 0px;
+}
+
+p, a {
+    color: #fdf9ff;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    object-fit: contain;
+}
+
+.fa {
+    font-size: 20px;
 }
 
 body {
@@ -227,7 +374,6 @@ body {
     margin: 0px;
     background-color: #232323;
     overflow-x: hidden;
-    
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;

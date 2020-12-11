@@ -1,192 +1,177 @@
-var pageLength = 0;
-var activeExperienceButton = "volunteer";
-var count = 0;
-var hidden = false;
-var animationSpeed = 300;
+function pixelfy(number) {
+    return number.toString() + 'px'
+}
 
 function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-async function introAnimation() {
-    var text = "A detail oriented software engineer."
-    document.getElementById("cursor").style.display = "inline";
-    document.getElementById("subtext").innerHTML = "";
+function center(tag) {
+    var width = $(window).width()
 
-    await sleep(250);
+    $(tag).css('left', pixelfy((width / 2) - ($(tag).width() / 2)))
+}
 
-    for (var i = 0; i < text.length + 1; i++) {
-        await sleep(80);
-        document.getElementById("subtext").innerHTML = text.substring(0, i);
-        var right = document.getElementById("subtext").getBoundingClientRect().right;
-        var left = document.getElementById("subtext").getBoundingClientRect().left;
-        document.getElementById("cursor").style.left = (right - left) + "px";
+function resize() {
+    var height = $(window).height()
+    var width = $(window).width()
+
+    // Landing Page Resizing
+    $('#landingPage').css('height', pixelfy(height))
+    center('#textbox')
+    $('#textbox').css('top', pixelfy((height / 2) - ($('#textbox').height())))
+    $('#learnMore').css('top', pixelfy(height - 150))
+    center('#learnMore')
+
+    //Projects Resizing
+    $('#screenshot').css('left', pixelfy($('#projects').outerWidth()));
+    $('#screenshot').css('display', width < 600 ? 'none' : 'inline')
+
+    if (width < 1250 && width > 900) {
+        $('#screenshot').css('display', 'inline')
+        $('#screenshot').css('width', pixelfy(2 * (width - $('#projects').outerWidth())));
+
+    } else if (width < 900) {
+        $('#screenshot').css('width', pixelfy(600));
     }
-
-    cursor();
-}
-
-function experienceHandler(button) {
-    var clicked = ""
-    var otherName1 = "";
-    var otherName2 = "";
-
-    if (button == 0) {
-        clicked = "volunteer";
-        otherName1 = "technical";
-        otherName2 = "coursework";
-    } else if (button == 1) {
-        clicked = "technical";
-        otherName1 = "volunteer";
-        otherName2 = "coursework";
-    } else if (button == 2) {
-        clicked = "coursework";
-        otherName1 = "volunteer";
-        otherName2 = "technical";
-    }
-
-    document.getElementById(clicked + "Button").style.color = "#a6e22e";
-    document.getElementById(clicked + "Button").style.borderLeft = "2px solid #a6e22e";
-    document.getElementById(clicked + "Frame").style.visibility = "visible";
-
-    document.getElementById(otherName1 + "Button").style.color = "#575757";
-    document.getElementById(otherName1 + "Button").style.borderLeft = "2px solid #575757";
-    document.getElementById(otherName1 + "Frame").style.visibility = "hidden";
-
-    document.getElementById(otherName2 + "Button").style.color = "#575757";
-    document.getElementById(otherName2 + "Button").style.borderLeft = "2px solid #575757";
-    document.getElementById(otherName2 + "Frame").style.visibility = "hidden";
-
-    activeExperienceButton = clicked
-}
-
-function hoverHandler(hover, name) {
-    if (name != activeExperienceButton) {
-        if (hover) {
-            document.getElementById(name + "Button").style.color = "#a6e22e";
-            document.getElementById(name + "Button").style.borderLeft = "2px solid #a6e22e";
-        } else {
-            document.getElementById(name + "Button").style.color = "#575757";
-            document.getElementById(name + "Button").style.borderLeft = "2px solid #575757";
-        }
-    }
-}
-
-function resizeElements() {
-    var height = window.innerHeight;
-    var width = window.innerWidth;
-    var right = document.getElementById("subtext").getBoundingClientRect().right;
-    var left = document.getElementById("subtext").getBoundingClientRect().left;
-    var body = document.body,
-        html = document.documentElement;
-    var educationHeight = document.getElementById("educationContainer").getBoundingClientRect().height;
-    var experienceWidth = document.getElementById("experienceContent").getBoundingClientRect().width;
-    var buttonWidth = document.getElementById("experienceButtons").getBoundingClientRect().width;
-
-    pageLength = height;
-
-    document.getElementById("welcomeTextbox").style.top = (.4 * height) + "px";
-    document.getElementById("welcomeTextbox").style.left = (.2 * width) + "px";
-
-    document.getElementById("aboutMeContainer").style.top = height + "px";
-    document.getElementById("educationContainer").style.top = (2 * height) + "px";
-    document.getElementById("experienceContainer").style.top = (2 * height) + educationHeight + "px";
-    document.getElementById("projectsContainer").style.top = (3 * height) + educationHeight + "px";
-
-    document.getElementById("inspired").style.top = html.scrollHeight + "px";
-
-    document.getElementById("navbarDetector").style.height = document.getElementById("navbar").getBoundingClientRect().height + "px";
-
-    document.getElementById("volunteerButton").style.color = "#a6e22e";
-    document.getElementById("volunteerButton").style.borderLeft = "2px solid #a6e22e";
-    document.getElementById("volunteerFrame").style.width = (experienceWidth - buttonWidth) - 20 + "px"
-    document.getElementById("volunteerButton").addEventListener("click", function () { experienceHandler(0) });
-    document.getElementById("technicalButton").addEventListener("click", function () { experienceHandler(1) });
-    document.getElementById("courseworkButton").addEventListener("click", function () { experienceHandler(2) });
-    document.getElementById("volunteerButton").addEventListener("mouseenter", function () { hoverHandler(true, "volunteer") });
-    document.getElementById("technicalButton").addEventListener("mouseenter", function () { hoverHandler(true, "technical") });
-    document.getElementById("courseworkButton").addEventListener("mouseenter", function () { hoverHandler(true, "coursework") });
-    document.getElementById("volunteerButton").addEventListener("mouseleave", function () { hoverHandler(false, "volunteer") });
-    document.getElementById("technicalButton").addEventListener("mouseleave", function () { hoverHandler(false, "technical") });
-    document.getElementById("courseworkButton").addEventListener("mouseleave", function () { hoverHandler(false, "coursework") });
-
-    document.getElementById("learnMore").addEventListener("click", scrollButtonClick);
-    document.getElementById("navAboutMe").addEventListener("click", function () { navButtonClick(height) });
-    document.getElementById("navEducation").addEventListener("click", function () { navButtonClick(height * 2) });
-    document.getElementById("navExperience").addEventListener("click", function () { navButtonClick((height * 2) + educationHeight) });
-    document.getElementById("navProjects").addEventListener("click", function () { navButtonClick((height * 3) + educationHeight) });
-    document.getElementById("navbarDetector").addEventListener("mouseenter", function() {
-        count = 0
-        hidden = false;
-        document.getElementById("navbar").animate({ "top": "0px" }, animationSpeed);
-        setTimeout(function () {
-            document.getElementById("navbar").style.top = "0px";
-        }, animationSpeed);
-    });
 }
 
 function cursor() {
-    cursorOn = true;
-
-    var right = document.getElementById("subtext").getBoundingClientRect().right;
-    var left = document.getElementById("subtext").getBoundingClientRect().left;
-    document.getElementById("cursor").style.left = (right - left) + 5 + "px";
+    var cursorOn = true
 
     window.setInterval(function () {
-        cursorOn = !cursorOn;
-        document.getElementById("cursor").style.display = cursorOn ? "inline" : "none";
-    }, 800);
+        cursorOn = !cursorOn
+        $('#cursor').css('display', cursorOn ? 'inline' : 'none')
+    }, 800)
+
 }
 
-function scrollButtonClick() {
-    var height = window.innerHeight;
-    document.body.scrollTop = height;
-    document.documentElement.scrollTop = height;
+async function introAnimation() {
+    var text = 'A detail oriented software engineer.'
+
+    $('#cursor').css('display', 'inline')
+    $('#subtext').text('')
+    $('#cursor').css('left', pixelfy($('#subtext').width()))
+
+    await sleep(250)
+
+    for (var i = 0; i < text.length + 1; i++) {
+        await sleep(80)
+        $('#subtext').text(text.substring(0, i))
+        $('#cursor').css('left', pixelfy($('#subtext').width()))
+    }
+
+    cursor()
+    resize()
 }
 
-function navButtonClick(scrollTo) {
-    document.body.scrollTop = scrollTo;
-    document.documentElement.scrollTop = scrollTo;
+function navSetup() {
+    $('#learnMore').on('click', function () { navHandler('aboutMe') })
+    $('#navAboutMe').on('click', function () { navHandler('aboutMe') })
+    $('#navEducation').on('click', function () { navHandler('education') })
+    $('#navExperience').on('click', function () { navHandler('experience') })
+    $('#navProjects').on('click', function () { navHandler('projects') })
+    $('#navbarDetector').mouseover(peekNav)
 }
 
-window.addEventListener("resize", resizeElements);
-window.addEventListener("load", resizeElements);
-//window.addEventListener("load", cursor);
-window.addEventListener("load", introAnimation);
+function navHandler(tag) {
+    var section = ['landingPage', 'aboutMe', 'education', 'experience', 'projects']
+    var index = section.indexOf(tag) - 1
+    var element = $('#' + section[index])
 
-var lastScroll = 0;
+    window.scrollTo(0, element.offset().top + element.height())
+}
 
-window.addEventListener("scroll", (event) => {
-    let scroll = this.scrollY;
-    //console.log(scroll)
+function peekNav() {
+    hidden = false;
+    count = 0;
+    document.getElementById('navbar').animate({ 'top': '0px' }, animationSpeed)
+    setTimeout(function () {
+        $('#navbar').css('top', '0px')
+    }, animationSpeed)
+}
 
-    if (scroll > 30) {
-        document.getElementById("navbar").style.position = "fixed"
-        document.getElementById("navbar").style.boxShadow = "0px 0px 10px black";
+var lastScroll = 0
+var hidden = false
+var count = 0
+var animationSpeed = 300
+
+function navbarHandler() {
+    let scroll = this.scrollY
+
+    if (scroll > 70) {
+        $('#navbar').css('position', 'fixed')
+        $('#navbar').css('boxShadow', '0px 0px 10px black')
     } else {
-        count = 0;
-        document.getElementById("navbar").style.position = "absolute"
-        document.getElementById("navbar").style.boxShadow = "";
+        count = 0
+        $('#navbar').css('position', 'absolute')
+        $('#navbar').css('boxShadow', '')
     }
 
     if (lastScroll - scroll < 0 && !hidden) {
         if (count > 5) {
-            hidden = true;
-            document.getElementById("navbar").animate({ "top": "-60px" }, animationSpeed);
+            hidden = true
+            document.getElementById('navbar').animate({ 'top': '-70px' }, animationSpeed)
             setTimeout(function () {
-                document.getElementById("navbar").style.top = "-60px";
+                $('#navbar').css('top', '-70px')
             }, animationSpeed)
         } else {
-            count += 1;
+            count += 1
         }
     } else if (lastScroll - scroll > 0) {
         count = 0
-        hidden = false;
-        document.getElementById("navbar").animate({ "top": "0px" }, animationSpeed);
+        hidden = false
+        document.getElementById('navbar').animate({ 'top': '0px' }, animationSpeed)
         setTimeout(function () {
-            document.getElementById("navbar").style.top = "0px";
+            $('#navbar').css('top', '0px')
         }, animationSpeed)
     }
 
     lastScroll = scroll
-});
+}
+
+var activeButton = 'volunteer'
+
+function experienceSetup() {
+    $('#volunteerButton').on('click', function() {experienceHandler('volunteer')})
+    $('#volunteerButton').mouseover(function() {experienceHover('volunteer', true)})
+    $('#volunteerButton').mouseleave(function() {experienceHover('volunteer', false)})
+
+    $('#skillsButton').on('click', function() {experienceHandler('skills')})
+    $('#skillsButton').mouseover(function() {experienceHover('skills', true)})
+    $('#skillsButton').mouseleave(function() {experienceHover('skills', false)})
+
+    $('#courseworkButton').on('click', function() {experienceHandler('coursework')})
+    $('#courseworkButton').mouseover(function() {experienceHover('coursework', true)})
+    $('#courseworkButton').mouseleave(function() {experienceHover('coursework', false)})
+}
+
+function experienceHandler(tag) {
+    var tabs = ['volunteer', 'skills', 'coursework']
+    activeButton = tag
+
+    for (var i = 0; i < tabs.length; i++) {
+        var currentTab = tabs[i]
+        var activeTab = currentTab == tag
+
+        $('#' + currentTab + 'Button').css('color', activeTab ? '#a6e22e' : '#575757')
+        $('#' + currentTab + 'Button').css('border-left', '2px solid ' + (activeTab ? '#a6e22e' : '#575757').toString())
+        $('#' + currentTab + 'Container').css('display', activeTab ? 'inline' : 'none')
+    }
+}
+
+function experienceHover(tag, over) {
+    $('#' + tag + 'Button').css('color', over || tag == activeButton ? '#a6e22e' : '#575757')
+    $('#' + tag + 'Button').css('border-left', '2px solid ' + (over || tag == activeButton ? '#a6e22e' : '#575757').toString())
+}
+
+$(document).ready(function() {
+    resize()
+    introAnimation()
+    navSetup()
+    experienceSetup()
+    experienceHandler('volunteer')
+})
+
+$(window).resize(resize)
+$(window).scroll(navbarHandler)
