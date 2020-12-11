@@ -93,6 +93,7 @@ function peekNav() {
 
 var lastScroll = 0
 var hidden = false
+var onTop = true;
 var count = 0
 var animationSpeed = 300
 
@@ -102,8 +103,15 @@ function navbarHandler() {
     if (scroll > 70) {
         $('#navbar').css('position', 'fixed')
         $('#navbar').css('boxShadow', '0px 0px 10px black')
+
+        if (onTop) {
+            onTop = false;
+            count = 6
+            $('#navbar').css('top', '-70px')
+        }
     } else {
         count = 0
+        onTop = true;
         $('#navbar').css('position', 'absolute')
         $('#navbar').css('boxShadow', '')
     }
