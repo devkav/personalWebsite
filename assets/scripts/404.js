@@ -32,9 +32,11 @@ function center(tag) {
 }
 
 function resize() {
-    console.log(1)
-    $('#homeButton').css('top', pixelfy(($(window).height() / 2) + $('#textbox404').height()))
-    center('#homeButton')
+    /*
+    Moves the "Go Home" button to the correct position
+    */
+    $('#homeButton').css('top', pixelfy(($(window).height() / 2) + $('#textbox404').height())) // Move the button below the textbox
+    center('#homeButton') // Center the button
 }
 
 async function introAnimation() {
