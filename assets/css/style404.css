@@ -24,6 +24,18 @@ h1 {
     display: inline-block;
 }
 
+a {
+    color: #fdf9ff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.75em;
+    position: absolute;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 
 body {
     font-family: 'Peddana', serif;
