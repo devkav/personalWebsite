@@ -382,6 +382,7 @@ body {
     margin: 0px;
     background-color: #232323;
     overflow-x: hidden;
+
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -393,3 +394,8 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+html, body {
+    position:relative;
+    overflow-x:hidden;
+  }
