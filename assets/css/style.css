@@ -370,6 +370,17 @@ img {
     font-size: 20px;
 }
 
+.inlineLink {
+    color: #a6e22e;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all .2s;
+}
+
+.inlineLink:hover {
+    text-decoration-color: #a6e22e;
+}
+
 .notransition {
     -webkit-transition: none !important;
     -moz-transition: none !important;
