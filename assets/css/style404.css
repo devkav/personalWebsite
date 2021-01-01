@@ -30,10 +30,11 @@ a {
     cursor: pointer;
     font-size: 1.75em;
     position: absolute;
+    transition: color .2s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #a6e22e
 }
 
 
