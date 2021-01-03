@@ -64,6 +64,8 @@ function resize() {
         })
     } else if (width < 900) {
         $('#screenshot').css('width', pixelfy(600));
+    } else {
+        $('#screenshot').css('width', pixelfy(750));
     }
 }
 
