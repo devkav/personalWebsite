@@ -202,10 +202,12 @@ function experienceHandler(tag) {
         var currentTab = tabs[i]
         var activeTab = currentTab == tag
         var color = activeTab ? '#a6e22e' : '#575757' // The color is green if the ith tab is the active tab. Grey otherwise
+        var backgroundColor = activeTab ? 'rgba(166, 226, 46, .1)' : 'rgba(0,0,0,0)'
 
         $('#' + currentTab + 'Button').css({
             'color': color,
-            'border-left': '2px solid ' + color.toString()
+            'border-left': '2px solid ' + color.toString(),
+            'background-color': backgroundColor,
         })
 
         $('#' + currentTab + 'Container').css('display', activeTab ? 'inline' : 'none') // Shows the active container and hides the others.
@@ -222,11 +224,13 @@ function experienceHover(tag, over) {
         over: Boolean. True if the mouse is currently hovering. False otherwise.
     */
     var color = over || tag == activeButton ? '#a6e22e' : '#575757' // Color is green if the mouse is hovered or if this tab is the active tab. Grey otherwise.
+    var backgroundColor = over || tag == activeButton ? 'rgba(166, 226, 46, .1)' : 'rgba(0,0,0,0)'
 
     // Set the text and line to color
     $('#' + tag + 'Button').css({
         'color': color,
-        'border-left': '2px solid ' + color.toString()
+        'border-left': '2px solid ' + color.toString(),
+        'background-color': backgroundColor,
     })
 }
 

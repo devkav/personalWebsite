@@ -241,6 +241,7 @@
 #buttons p {
     font-size: 1.25em;
     color: #575757;
+    background-color: rgba(0,0,0,0);
     border-left: 2px solid #575757;
     padding-left: 10px;
     padding-top: 5px;
@@ -248,7 +249,7 @@
     margin-top: 0px;
     margin-bottom: 0px;
     width: 140px;
-    transition: border .2s, color .2s;
+    transition: border .2s, color .2s, background-color .2s;
 }
 
 #buttons {
@@ -257,6 +258,7 @@
 
 #buttons p:hover {
     cursor: pointer;
+    background-color: rgba(166, 226, 46, .1);
 }
 
 #volunteerContainer h2, #volunteerContainer p, #skillsContainer p, #courseworkContainer p {
