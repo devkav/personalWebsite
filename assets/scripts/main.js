@@ -67,6 +67,11 @@ function resize() {
     } else {
         $('#screenshot').css('width', pixelfy(750));
     }
+
+    //Experience Resizing
+    if (width > 900) {
+        center('#experience')
+    }
 }
 
 function cursor() {

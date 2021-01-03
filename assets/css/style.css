@@ -30,7 +30,7 @@
     color: #f92672;
 }
 
-/*Navbar Styles */
+/* Navbar Styles */
 
 #navbar {
     display: flex;
@@ -220,8 +220,6 @@
 
 /* Experience Styles */
 
-
-
 #experience {
     margin-top: 75px;
     padding-left: 100px;
@@ -253,6 +251,10 @@
     transition: border .2s, color .2s;
 }
 
+#buttons {
+    margin-top: 52px;
+}
+
 #buttons p:hover {
     cursor: pointer;
 }
@@ -272,6 +274,20 @@
 @media only screen and (max-width: 600px) {
     #experience {
         padding-right: 0px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #experience {
+        padding-left: 0px;
+        padding-right: 0px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    #experienceContainer {
+        width: 750px
     }
 }
 
@@ -324,6 +340,7 @@
 }
 
 /* Footer Styles */
+
 #footer {
     line-height: 1em;
     text-align: center;
