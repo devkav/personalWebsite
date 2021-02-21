@@ -18,6 +18,17 @@
     margin-top: 27px;
 }
 
+#devpostSVG {
+    fill: white;
+    width:24px;
+    margin-bottom: 12px;
+    transition: fill .2s;
+}
+
+#devpostIcon:hover > #devpostSVG {
+    fill: #a6e22e;
+}
+
 #linkbox a {
     transition: color .2s;
 }
