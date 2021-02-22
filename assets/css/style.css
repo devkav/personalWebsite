@@ -4,25 +4,45 @@
     display: flex;
     flex-flow: column;
     position: fixed;
-    bottom: 80px;
+    bottom: 42px;
     left: 42px;
+    width: 23px;
+    height: 150px;
     z-index: 99;
+    justify-content: space-between;
 }
 
 #githubIcon {
     font-size: 25px;
-    margin-bottom: 20px;
+    height: 23px;
+    /*margin-bottom: 20px;*/
+}
+
+#emailIcon, #resumeIcon {
+    vertical-align: center;
+    text-align: center;
+}
+
+#emailIcon {
+    font-size: 21px;
+    padding-bottom: 2px;
 }
 
 #resumeIcon {
-    margin-top: 27px;
+    font-size: 22px;
+    /*margin-top: 27px;*/
 }
 
 #devpostSVG {
     fill: white;
-    width:24px;
-    margin-bottom: 12px;
+    width:23px;
+    /*margin-bottom: 12px;*/
     transition: fill .2s;
+    padding: none;
+}
+
+#devpostIcon {
+    height: 23px;
 }
 
 #devpostIcon:hover > #devpostSVG {
@@ -397,7 +417,7 @@ img {
 }
 
 .fa {
-    font-size: 20px;
+    /*font-size: 20px;*/
 }
 
 .inlineLink {
