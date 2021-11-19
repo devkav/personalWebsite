@@ -10,6 +10,7 @@
     height: 150px;
     z-index: 99;
     justify-content: space-between;
+    text-align: center;
 }
 
 #githubIcon {
@@ -31,6 +32,11 @@
 #resumeIcon {
     font-size: 22px;
     /*margin-top: 27px;*/
+}
+
+#linkedinIcon {
+    font-size: 22px;
+    padding-bottom: 2px;
 }
 
 #devpostSVG {
