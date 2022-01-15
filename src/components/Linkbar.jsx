@@ -12,15 +12,16 @@ class Linkbar extends Component {
     openGithub = () => {this.openLink("https://github.com/DevanTurtle7")}
     openLinkedIn = () => {this.openLink("https://www.linkedin.com/in/devan-kavalchek")}
     openDevpost = () => {this.openLink("https://devpost.com/djk6908")}
+    openResume = () => {this.openLink("./resume.pdf")}
 
     render() {
         return (
             <div className="linkbar">
-                <AiOutlineGithub className="linkbar-icon" onClick={this.openGithub}/>
-                <FaLinkedinIn className="linkbar-icon" onClick={this.openLinkedIn}/>
-                <SiDevpost className="linkbar-icon" onClick={this.openDevpost}/>
-                <MdEmail className="linkbar-icon" />
-                <AiFillFile className="linkbar-icon" />
+                <AiOutlineGithub className="linkbar-icon color-0" onClick={this.openGithub}/>
+                <FaLinkedinIn className="linkbar-icon color-25" onClick={this.openLinkedIn}/>
+                <SiDevpost className="linkbar-icon color-50" onClick={this.openDevpost}/>
+                <MdEmail className="linkbar-icon color-75" />
+                <AiFillFile className="linkbar-icon color-100" onClick={this.openResume}/>
             </div>
         );
     }

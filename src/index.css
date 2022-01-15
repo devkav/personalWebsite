@@ -56,8 +56,31 @@ h1.welcome-text {
 .linkbar-icon {
   font-size: 26px;
   margin: 2px;
+  color: #212529;
+  background-color: rgba(0, 0, 0, 0);
+  transition: color .3s;
 }
 
 .linkbar-icon:hover {
   cursor: pointer;
+}
+
+.color-0:hover {
+  color: #7E3FF2;
+}
+
+.color-25:hover {
+  color: #9B3FE2;
+}
+
+.color-50:hover {
+  color: #B83FD3;
+}
+
+.color-75:hover {
+  color: #D53FC3;
+}
+
+.color-100:hover {
+  color: #f23fb3;
 }
