@@ -100,10 +100,12 @@ p {
 
 .nav-header {
   height: 80px;
+  padding-right: 40px;
   width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: end;
+  align-items: center;
 }
 
 .header-col {
@@ -144,25 +146,28 @@ p {
   }
 }
 
-.learn-more-text {
-  width: fit-content;
-  height: fit-content;
-  margin: 0;
-  padding: 0;
+.gradient-hover {
   color: #212529;
-  transition: color .2s;
-  animation: gradient-color-fade-out .4s;
+  transition: color .3s;
+  animation: gradient-color-fade-out .6s;
 
   background: -webkit-linear-gradient(330deg, var(--start), var(--end));
   background-clip: text;
   -webkit-background-clip: text;
 }
 
-.learn-more-text:hover {
+.gradient-hover:hover {
   color: rgba(0, 0, 0, 0);
   cursor: pointer;
   animation: gradient-color-fade-in;
   animation-fill-mode: forwards;
+}
+
+.learn-more-text {
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
 }
 
 .down-icon {
@@ -174,4 +179,13 @@ p {
 
 .learn-more-text:hover .down-icon {
   color: #7E3FF2;
+}
+
+.nav-item {
+  height: fit-content;
+  width: fit-content;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 0px;
+  margin-top: 0px
 }

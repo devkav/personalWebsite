@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 class WelcomePage extends Component {
   constructor(props) {
     super(props)
-    
+
     this.state = {
       degrees: 0
     }
@@ -28,13 +28,13 @@ class WelcomePage extends Component {
         degrees += 360
       }
     } else {
-        degrees += 180
+      degrees += 180
     }
 
     degrees = Math.round(degrees)
 
     if (this.state.degrees !== degrees) {
-      this.setState({degrees: degrees})
+      this.setState({ degrees: degrees })
     }
   }
 
