@@ -18,6 +18,11 @@ class WelcomePage extends Component {
     this.setState({mouseX: e.clientX, mouseY: e.clientY})
   }
 
+  onClick = () => {
+    const aboutMe = document.getElementById("aboutMe")
+    aboutMe.scrollIntoView({behavior: 'smooth'})
+  }
+
   render() {
     return (
       <div className="welcome-page" onMouseMove={this.onMouseMove}>
@@ -31,7 +36,7 @@ class WelcomePage extends Component {
           </Container>
         </div>
 
-        <LearnMore />
+        <LearnMore onClick={this.onClick}/>
       </div>
     );
   }

@@ -5,7 +5,7 @@ class LearnMore extends Component {
     render() {
         return (
             <div className="learn-more">
-                <p className="learn-more-text gradient-hover">Learn More <br />
+                <p className="learn-more-text gradient-hover" onClick={this.props.onClick}>Learn More <br />
                     <MdKeyboardArrowDown className="down-icon" />
                 </p>
             </div>

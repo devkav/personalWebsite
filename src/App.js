@@ -1,8 +1,11 @@
 import './App.css';
 import { Component } from 'react';
 import { Col } from 'reactstrap';
-import WelcomePage from './pages/WelcomePage';
 import Linkbar from './components/Linkbar';
+import WelcomePage from './pages/WelcomePage';
+import AboutMe from './pages/AboutMe';
+import Experience from './pages/Experience';
+import Projects from './pages/Projects';
 
 class App extends Component {
   render() {
@@ -10,6 +13,9 @@ class App extends Component {
       <Col>
         <Linkbar />
         <WelcomePage />
+        <AboutMe />
+        <Experience />
+        <Projects />
       </Col>
     );
   }
