@@ -67,8 +67,7 @@ p {
 }
 
 .linkbar-icon {
-  font-size: clamp(26px, 2vw, 40px);
-  margin: 2px;
+  font-size: clamp(26px, 2vw, 32px);
   color: #212529;
   background-color: rgba(0, 0, 0, 0);
   transition: color .3s;
