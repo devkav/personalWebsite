@@ -20,6 +20,13 @@ body {
 
 h1.welcome-text {
   font-size: 72px;
+  font-weight: 900;
+  color: #7E3FF2;
+
+  background: -webkit-linear-gradient(330deg, #7E3FF2, #f23fb3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .welcome-page {
@@ -36,4 +43,21 @@ h1.welcome-text {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.linkbar {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  bottom: 50px;
+  left: 35px;
+}
+
+.linkbar-icon {
+  font-size: 26px;
+  margin: 2px;
+}
+
+.linkbar-icon:hover {
+  cursor: pointer;
 }
