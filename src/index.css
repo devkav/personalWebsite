@@ -33,7 +33,7 @@ h1.welcome-text {
   -webkit-text-fill-color: transparent;
 }
 
-h3.welcome-text {
+h3, p {
   font-size: clamp(14px, 1.5vw, 20px) !important;
 }
 
@@ -71,6 +71,7 @@ p {
   color: #212529;
   background-color: rgba(0, 0, 0, 0);
   transition: color .3s;
+  margin-bottom: clamp(4px, 1vh, 16px);
 }
 
 .linkbar-icon:hover {
@@ -119,9 +120,58 @@ p {
   text-align: center;
 }
 
-.learn-more p {
+@keyframes gradient-color-fade-in {
+  from {
+    --start: rgba(0, 0, 0, 0);
+    --end: rgba(0, 0, 0, 0);
+  }
+
+  to {
+    --start: #7E3FF2;
+    --end: #f23fb3;
+  }
+}
+
+@keyframes gradient-color-fade-out {
+  from {
+    --start: #7E3FF2;
+    --end: #f23fb3;
+  }
+
+  to {
+    --start: rgba(0, 0, 0, 0);
+    --end: rgba(0, 0, 0, 0);
+  }
+}
+
+.learn-more-text {
   width: fit-content;
   height: fit-content;
   margin: 0;
   padding: 0;
+  color: #212529;
+  transition: color .2s;
+  animation: gradient-color-fade-out .4s;
+
+  background: -webkit-linear-gradient(330deg, var(--start), var(--end));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.learn-more-text:hover {
+  color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  animation: gradient-color-fade-in;
+  animation-fill-mode: forwards;
+}
+
+.down-icon {
+  font-size: clamp(20px, 2vw, 30px);
+  margin: 0;
+  padding: 0;
+  color: #212529;
+}
+
+.learn-more-text:hover .down-icon {
+  color: #7E3FF2;
 }

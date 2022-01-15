@@ -1,10 +1,13 @@
 import { Component } from 'react';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
 class LearnMore extends Component {
     render() {
         return (
             <div className="learn-more">
-                <p>Learn More</p>
+                <p className="learn-more-text">Learn More <br />
+                    <MdKeyboardArrowDown className="down-icon" />
+                </p>
             </div>
         );
     }
