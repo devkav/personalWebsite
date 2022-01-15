@@ -15,9 +15,9 @@ class WelcomePage extends Component {
   onMouseMove = (e) => {
     let centerX = window.innerWidth / 2
     let centerY = window.innerHeight / 2
-    let currentX = e.screenX
-    let currentY = e.screenY
-    let rise = centerY + (centerY - currentY)
+    let currentX = e.clientX
+    let currentY = e.clientY
+    let rise = centerY - currentY
     let run = currentX - centerX
 
     let radians = Math.atan(rise / run)
@@ -37,6 +37,7 @@ class WelcomePage extends Component {
       this.setState({degrees: degrees})
     }
   }
+
   render() {
     return (
       <div className="welcome-page" onMouseMove={this.onMouseMove}>
