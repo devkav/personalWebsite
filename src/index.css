@@ -11,6 +11,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+p {
+  font-weight: 500;
+}
+
 .welcome-text {
   width: fit-content;
   height: fit-content;
@@ -19,7 +23,7 @@ body {
 }
 
 h1.welcome-text {
-  font-size: 72px;
+  font-size: clamp(48px, 8vw, 96px);
   font-weight: 900;
   color: #7E3FF2;
 
@@ -28,6 +32,11 @@ h1.welcome-text {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+h3.welcome-text {
+  font-size: clamp(14px, 1.5vw, 20px);
+}
+
 
 .welcome-page {
   width: 100vw;
@@ -54,7 +63,7 @@ h1.welcome-text {
 }
 
 .linkbar-icon {
-  font-size: 26px;
+  font-size: clamp(26px, 2vw, 40px);
   margin: 2px;
   color: #212529;
   background-color: rgba(0, 0, 0, 0);
@@ -83,4 +92,32 @@ h1.welcome-text {
 
 .color-100:hover {
   color: #f23fb3;
+}
+
+.nav-header {
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.header-col {
+  width: 100vw;
+  height: calc(100vh - (80px + 160px));
+}
+
+.learn-more {
+  width: 100vw;
+  height: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.learn-more p {
+  width: fit-content;
+  margin: 0;
+  padding: 0;
 }
