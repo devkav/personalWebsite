@@ -33,9 +33,9 @@ class LearnMore extends Component {
         
         return (
             <div className={"learn-more " + className}>
-                <p className="learn-more-text gradient-hover" onClick={this.props.onClick}>Learn More <br />
+                <h3 className="learn-more-text gradient-hover" onClick={this.props.onClick}>Learn More <br />
                     <MdKeyboardArrowDown className="down-icon" />
-                </p>
+                </h3>
             </div>
         );
     }

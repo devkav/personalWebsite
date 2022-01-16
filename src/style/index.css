@@ -11,16 +11,24 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-p {
-  font-weight: 500;
+h1 {
+  font-size: clamp(54px, 15vw, 96px) !important;
+  font-weight: 900 !important;
 }
 
-h3, p {
+h2 {
+  font-size: clamp(40px, 5vw, 64px) !important;
+  font-weight: 700 !important;
+}
+
+h3 {
   font-size: clamp(16px, 1.5vw, 20px) !important;
+  font-weight: 500 !important;
 }
 
 p {
-  font-weight: 500;
+  font-size: clamp(18px, 1.5vw, 20px) !important;
+  font-weight: 400 !important;
 }
 
 .centered-col {
@@ -37,6 +45,11 @@ p {
 .fade-in-end {
   opacity: 1;
   transition: opacity 1s;
+}
+
+.fit-content {
+  height: fit-content;
+  width: fit-content;
 }
 
 @keyframes gradient-color-fade-in {

@@ -1,0 +1,13 @@
+#aboutMe {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#about-me-par {
+    max-width: 1000px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
