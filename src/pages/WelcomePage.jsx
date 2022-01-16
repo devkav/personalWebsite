@@ -18,6 +18,8 @@ class WelcomePage extends Component {
 
   componentDidMount() {
     this.load()
+    const welcome = document.getElementById("welcome")
+    welcome.scrollIntoView()
   }
 
   load = async () => {
@@ -42,7 +44,7 @@ class WelcomePage extends Component {
     let className = this.state.loaded ? "fade-in-end" : "fade-in-start"
 
     return (
-      <div className={"welcome-page " + className} onMouseMove={this.onMouseMove}>
+      <div className={"welcome-page " + className} onMouseMove={this.onMouseMove} id="welcome">
         <Navbar />
 
         <div className="header-col centered-col">
