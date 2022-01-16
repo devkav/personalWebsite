@@ -181,10 +181,12 @@ p {
   margin: 0;
   padding: 0;
   color: #212529;
+  transition: margin .5s, color .3s;
 }
 
 .learn-more-text:hover .down-icon {
   color: #7E3FF2;
+  margin-top: 7px;
 }
 
 .nav-item {
@@ -193,5 +195,16 @@ p {
   margin-left: 12px;
   margin-right: 12px;
   margin-bottom: 0px;
-  margin-top: 0px
+  margin-top: 0px;
+  transition: margin 1s, opacity 1s, color .3s;
+}
+
+.nav-item-unloaded {
+  margin-bottom: 100px;
+  opacity: 0;
+}
+
+.nav-item-loaded {
+  margin-bottom: 0px;
+  opacity: 1;
 }
