@@ -217,3 +217,14 @@ p {
   opacity: 1;
   transition: opacity 1s;
 }
+
+.linkbar-unloaded {
+  left: -35px;
+  opacity: 0;
+}
+
+.linkbar-loaded {
+  left: 35px;
+  opacity: 1;
+  transition: left 1s, opacity 1s;
+}

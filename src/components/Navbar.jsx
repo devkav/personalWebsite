@@ -13,6 +13,7 @@ class Navbar extends Component {
             text: "Projects",
             section: "projects"
         }]
+
         let navItems = []
 
         for (let i = 0; i < items.length; i++) {
@@ -20,14 +21,12 @@ class Navbar extends Component {
             let text = current.text
             let section = current.section
             let order = (items.length - 1) - i
-            
-            navItems.push(<NavItem text={text} section={section} order={order} key={i}/>)
+
+            navItems.push(<NavItem text={text} section={section} order={order} key={i} />)
         }
 
         return (
-            <div className="nav-header">
-            {navItems}
-            </div>
+            <div className="nav-header">{navItems}</div>
         );
     }
 }
