@@ -23,7 +23,7 @@ p {
 }
 
 h1.welcome-text {
-  font-size: clamp(48px, 8vw, 96px);
+  font-size: clamp(58px, 8vw, 96px);
   font-weight: 900;
   color: #7E3FF2;
 
@@ -181,7 +181,7 @@ p {
   margin: 0;
   padding: 0;
   color: #212529;
-  transition: margin .5s, color .3s;
+  transition: margin .4s, color .3s;
 }
 
 .learn-more-text:hover .down-icon {
@@ -207,4 +207,13 @@ p {
 .nav-item-loaded {
   margin-bottom: 0px;
   opacity: 1;
+}
+
+.fade-in-start {
+  opacity: 0;
+}
+
+.fade-in-end {
+  opacity: 1;
+  transition: opacity 1s;
 }
