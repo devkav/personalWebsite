@@ -41,7 +41,6 @@ p {
   font-weight: 500;
 }
 
-
 .welcome-page {
   width: 100vw;
   height: 100vh;
@@ -67,35 +66,11 @@ p {
 }
 
 .linkbar-icon {
-  font-size: clamp(20px, 2.5vw, 32px);
+  font-size: clamp(28px, 2.5vw, 36px);
   color: #212529;
   background-color: rgba(0, 0, 0, 0);
   transition: color .3s;
   margin-bottom: clamp(4px, 1vh, 16px);
-}
-
-.linkbar-icon:hover {
-  cursor: pointer;
-}
-
-.color-0:hover {
-  color: #7E3FF2;
-}
-
-.color-25:hover {
-  color: #9B3FE2;
-}
-
-.color-50:hover {
-  color: #B83FD3;
-}
-
-.color-75:hover {
-  color: #D53FC3;
-}
-
-.color-100:hover {
-  color: #f23fb3;
 }
 
 .nav-header {
@@ -122,53 +97,6 @@ p {
   text-align: center;
 }
 
-@keyframes gradient-color-fade-in {
-  from {
-    background: -webkit-linear-gradient(330deg,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
-
-  to {
-    background: -webkit-linear-gradient(330deg, #7E3FF2, #f23fb3);
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
-}
-
-@keyframes gradient-color-fade-out {
-  from {
-    background: -webkit-linear-gradient(330deg, #7E3FF2, #f23fb3);
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
-
-  to {
-    background: -webkit-linear-gradient(330deg,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
-}
-
-.gradient-hover {
-  color: #212529;
-  transition: color .3s;
-  animation-name: gradient-color-fade-out;
-  animation-duration: .3s;
-  animation-timing-function: step-end;
-  animation-fill-mode: forwards;
-}
-
-.gradient-hover:hover {
-  color: rgba(0, 0, 0, 0);
-  cursor: pointer;
-  animation-name: gradient-color-fade-in;
-  animation-delay: 0ms;
-  animation-duration: 0ms;
-  animation-timing-function: step-start;
-  animation-fill-mode: forwards;
-}
-
 .learn-more-text {
   width: fit-content;
   height: fit-content;
@@ -182,11 +110,6 @@ p {
   padding: 0;
   color: #212529;
   transition: margin .4s, color .3s;
-}
-
-.learn-more-text:hover .down-icon {
-  color: #7E3FF2;
-  margin-top: 7px;
 }
 
 .nav-item {
@@ -227,4 +150,82 @@ p {
   left: 35px;
   opacity: 1;
   transition: left 1s, opacity 1s;
+}
+
+@keyframes gradient-color-fade-in {
+  from {
+    background: -webkit-linear-gradient(330deg,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  to {
+    background: -webkit-linear-gradient(330deg, #7E3FF2, #f23fb3);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
+
+@keyframes gradient-color-fade-out {
+  from {
+    background: -webkit-linear-gradient(330deg, #7E3FF2, #f23fb3);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  to {
+    background: -webkit-linear-gradient(330deg,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
+
+@media (hover: hover) {
+  .learn-more-text:hover .down-icon {
+    color: #7E3FF2;
+    margin-top: 7px;
+  }
+
+  .gradient-hover:hover {
+    color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    animation-name: gradient-color-fade-in;
+    animation-delay: 0ms;
+    animation-duration: 0ms;
+    animation-timing-function: step-start;
+    animation-fill-mode: forwards;
+  }
+
+  .linkbar-icon:hover {
+    cursor: pointer;
+  }
+  
+  .color-0:hover {
+    color: #7E3FF2;
+  }
+  
+  .color-25:hover {
+    color: #9B3FE2;
+  }
+  
+  .color-50:hover {
+    color: #B83FD3;
+  }
+  
+  .color-75:hover {
+    color: #D53FC3;
+  }
+  
+  .color-100:hover {
+    color: #f23fb3;
+  }
+
+  .gradient-hover {
+    color: #212529;
+    transition: color .3s;
+    animation-name: gradient-color-fade-out;
+    animation-duration: .3s;
+    animation-timing-function: step-end;
+    animation-fill-mode: forwards;
+  }
 }

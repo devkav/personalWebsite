@@ -1,4 +1,4 @@
-import './App.css';
+import './style/App.css';
 import { Component } from 'react';
 import { Col } from 'reactstrap';
 import Linkbar from './components/Linkbar';
