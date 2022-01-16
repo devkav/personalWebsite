@@ -16,7 +16,7 @@ p {
 }
 
 h3, p {
-  font-size: clamp(14px, 1.5vw, 20px) !important;
+  font-size: clamp(16px, 1.5vw, 20px) !important;
 }
 
 p {
