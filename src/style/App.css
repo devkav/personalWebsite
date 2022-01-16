@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+.linkbar {
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    bottom: 50px;
+    left: 35px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.linkbar-icon {
+    font-size: clamp(28px, 2.5vw, 36px);
+    color: #212529;
+    background-color: rgba(0, 0, 0, 0);
+    transition: color .3s;
+    margin-bottom: clamp(4px, 1vh, 16px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.linkbar-unloaded {
+    left: -35px;
+    opacity: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.linkbar-loaded {
+    left: 35px;
+    opacity: 1;
+    transition: left 1s, opacity 1s;
 }
 
-.App-link {
-  color: #61dafb;
-}
+@media (hover: hover) {
+    .color-0:hover {
+        color: #7E3FF2;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    .color-25:hover {
+        color: #9B3FE2;
+    }
+
+    .color-50:hover {
+        color: #B83FD3;
+    }
+
+    .color-75:hover {
+        color: #D53FC3;
+    }
+
+    .color-100:hover {
+        color: #f23fb3;
+    }
+
+    .linkbar-icon:hover {
+        cursor: pointer;
+    }
 }

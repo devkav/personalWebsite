@@ -1,3 +1,4 @@
+import '../style/WelcomePage.css';
 import { Component } from 'react';
 import { Container } from 'reactstrap';
 import LearnMore from '../components/LearnMore';
