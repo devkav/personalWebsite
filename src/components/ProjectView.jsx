@@ -4,10 +4,6 @@ import Chip from './Chip';
 import IconButton from './IconButton';
 
 class ProjectView extends Component {
-    openGithub = () => {
-        window.open(this.props.githubLink, "_blank")
-    }
-
     render() {
         let chips = []
         let tags = this.props.tags
