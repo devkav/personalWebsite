@@ -49,9 +49,9 @@ class WelcomePage extends Component {
 
         <div className="header-col centered-col">
           <Container className="welcome-text-container">
-            <h3 className="welcome-text">Hi, my name is</h3>
+            <h4 className="welcome-text">Hi, my name is</h4>
             <TitleText mouseX={this.state.mouseX} mouseY={this.state.mouseY} />
-            <h3 className="welcome-text">A detail oriented software engineer.</h3>
+            <h4 className="welcome-text">A detail oriented software engineer.</h4>
           </Container>
         </div>
 

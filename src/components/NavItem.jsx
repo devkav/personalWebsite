@@ -31,7 +31,7 @@ class NavItem extends Component {
         let className = this.state.loaded ? "nav-item-loaded" : "nav-item-unloaded"
 
         return (
-            <h3 className={"gradient-hover nav-item " + className} onClick={this.onClick}>{this.props.text}</h3>
+            <h4 className={"gradient-hover nav-item " + className} onClick={this.onClick}>{this.props.text}</h4>
         );
     }
 }
