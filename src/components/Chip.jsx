@@ -23,7 +23,6 @@ class Chip extends Component {
             let startPercent = this.props.order / this.props.numItems
             let endPercent = (this.props.order + 1) / this.props.numItems
 
-
             startColor = this.rgbToString(
                 this.between(rStart, rEnd, startPercent),
                 g,
@@ -32,7 +31,6 @@ class Chip extends Component {
                 this.between(rStart, rEnd, endPercent),
                 g,
                 this.between(bStart, bEnd, endPercent))
-            console.log(endColor)
         }
 
         return (
