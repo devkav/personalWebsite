@@ -18,9 +18,20 @@
 .chips-row {
     display: flex;
     flex-flow: row;
-    margin-top: 16px;
     flex-wrap: wrap;
 }
+
+.project-card-footer {
+    display: flex;
+    flex-flow: row;
+    margin-top: 16px;
+    justify-content: space-between;
+}
+
+.project-github-icon {
+    color: #212529;
+    font-size: 31px;
+  }
 
 @media screen and (min-width: 800px) {
     .project-card {

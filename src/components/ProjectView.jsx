@@ -1,7 +1,12 @@
 import { Component } from 'react';
+import { AiOutlineGithub } from 'react-icons/ai';
 import Chip from './Chip';
 
 class ProjectView extends Component {
+    openGithub = () => {
+        window.open(this.props.githubLink, "_blank")
+    }
+
     render() {
         let chips = []
         let tags = this.props.tags
@@ -22,8 +27,13 @@ class ProjectView extends Component {
                     in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                     occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
                     id est laborum.</p>
-                <div className="chips-row">
-                    {chips}
+
+                <div className="project-card-footer">
+                    <div className="chips-row">
+                        {chips}
+                    </div>
+                    <AiOutlineGithub className="project-github-icon color-100 clickable"
+                    onClick={this.openGithub} />
                 </div>
             </div>
         );
