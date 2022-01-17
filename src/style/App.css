@@ -29,7 +29,28 @@
     margin-top: 100px;
 }
 
+.chip {
+    background-color: rgb(126, 63, 242, .4);
+    color: rgb(126, 63, 242);
+    border-radius: 100px;
+    width: fit-content;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: 8px;
+}
+
+.chip-text {
+    margin: 0;
+    font-size: clamp(16px, 1vw, 18px) !important;
+}
+
 @media (hover: hover) {
+    .linkbar-icon:hover {
+        color: #7E3FF2;
+    }
+
     .color-0:hover {
         color: #7E3FF2;
     }

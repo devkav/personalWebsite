@@ -41,11 +41,11 @@ class Linkbar extends Component {
 
         return (
             <div className={"linkbar " + className}>
-                <AiOutlineGithub className="linkbar-icon color-0" onClick={this.openGithub} />
-                <FaLinkedinIn className="linkbar-icon color-25" onClick={this.openLinkedIn} />
-                <SiDevpost className="linkbar-icon color-50" onClick={this.openDevpost} />
-                <MdEmail className="linkbar-icon color-75" onClick={this.openEmail} />
-                <AiFillFile className="linkbar-icon color-100" onClick={this.openResume} />
+                <AiOutlineGithub className="linkbar-icon" onClick={this.openGithub} />
+                <FaLinkedinIn className="linkbar-icon" onClick={this.openLinkedIn} />
+                <SiDevpost className="linkbar-icon" onClick={this.openDevpost} />
+                <MdEmail className="linkbar-icon" onClick={this.openEmail} />
+                <AiFillFile className="linkbar-icon" onClick={this.openResume} />
             </div>
         );
     }
