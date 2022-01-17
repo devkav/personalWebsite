@@ -32,6 +32,7 @@
 .project-github-icon {
     color: #212529;
     font-size: 31px;
+    transition: color .3s;
 }
 
 @media screen and (min-width: 800px) {

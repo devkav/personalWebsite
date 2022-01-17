@@ -8,7 +8,7 @@ class Projects extends Component {
             <div className="centered-col">
             <div id="projects">
                 <h2 id="projects-label">Projects</h2>
-                <ProjectView title="myProject" tags={["JavaScript", "Kotlin", "Dart", "Test of This"]}/>
+                <ProjectView title="myProject" tags={["JavaScript", "Kotlin", "Dart", "Test of This"]} githubLink="https://google.com"/>
             </div>
             </div>
         );

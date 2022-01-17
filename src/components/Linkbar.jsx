@@ -3,6 +3,7 @@ import { AiOutlineGithub, AiFillFile } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { SiDevpost } from 'react-icons/si';
 import { MdEmail } from 'react-icons/md';
+import IconButton from './IconButton';
 
 class Linkbar extends Component {
     constructor(props) {
@@ -11,10 +12,6 @@ class Linkbar extends Component {
         this.state = {
             loaded: false
         }
-    }
-
-    openLink = (link) => {
-        window.open(link, "_blank")
     }
 
     componentDidMount() {
@@ -30,22 +27,26 @@ class Linkbar extends Component {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    openGithub = () => { this.openLink("https://github.com/DevanTurtle7") }
-    openLinkedIn = () => { this.openLink("https://www.linkedin.com/in/devan-kavalchek") }
-    openDevpost = () => { this.openLink("https://devpost.com/djk6908") }
-    openEmail = () => { this.openLink("mailto:devan.kavalchek@gmail.com") }
-    openResume = () => { this.openLink("./resume.pdf") }
-
     render() {
         let className = this.state.loaded ? "linkbar-loaded" : "linkbar-unloaded"
 
         return (
             <div className={"linkbar " + className}>
-                <AiOutlineGithub className="linkbar-icon color-0" onClick={this.openGithub} />
-                <FaLinkedinIn className="linkbar-icon color-25" onClick={this.openLinkedIn} />
-                <SiDevpost className="linkbar-icon color-50" onClick={this.openDevpost} />
-                <MdEmail className="linkbar-icon color-75" onClick={this.openEmail} />
-                <AiFillFile className="linkbar-icon color-100" onClick={this.openResume} />
+                <IconButton href="https://github.com/DevanTurtle7">
+                    <AiOutlineGithub className="linkbar-icon color-0" />
+                </IconButton>
+                <IconButton href="https://www.linkedin.com/in/devan-kavalchek">
+                    <FaLinkedinIn className="linkbar-icon color-25" />
+                </IconButton>
+                <IconButton href="https://devpost.com/djk6908">
+                    <SiDevpost className="linkbar-icon color-50" />
+                </IconButton>
+                <IconButton href="mailto:devan.kavalchek@gmail.com">
+                    <MdEmail className="linkbar-icon color-75" />
+                </IconButton>
+                <IconButton href="./resume.pdf">
+                    <AiFillFile className="linkbar-icon color-100" />
+                </IconButton>
             </div>
         );
     }
