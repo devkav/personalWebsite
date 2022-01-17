@@ -4,6 +4,7 @@ import { Container } from 'reactstrap';
 import LearnMore from '../components/LearnMore';
 import Navbar from '../components/Navbar';
 import TitleText from '../components/TitleText';
+import { isMobile } from 'react-device-detect';
 
 class WelcomePage extends Component {
   constructor(props) {
@@ -32,7 +33,9 @@ class WelcomePage extends Component {
   }
 
   onMouseMove = (e) => {
-    this.setState({ mouseX: e.clientX, mouseY: e.clientY })
+    if (!isMobile) {
+      this.setState({ mouseX: e.clientX, mouseY: e.clientY })
+    }
   }
 
   onClick = () => {
