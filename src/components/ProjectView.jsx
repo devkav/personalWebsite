@@ -32,8 +32,10 @@ class ProjectView extends Component {
                     <div className="chips-row">
                         {chips}
                     </div>
-                    <AiOutlineGithub className="project-github-icon color-100 clickable"
-                    onClick={this.openGithub} />
+                    <div>
+                        <AiOutlineGithub className="project-github-icon color-100 clickable"
+                            onClick={this.openGithub} />
+                    </div>
                 </div>
             </div>
         );
