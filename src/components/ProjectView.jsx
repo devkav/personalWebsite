@@ -4,10 +4,12 @@ import Chip from './Chip';
 class ProjectView extends Component {
     render() {
         let chips = []
+        let tags = this.props.tags
+        let numTags = tags.length
 
-        for (let i = 0; i < this.props.tags.length; i++) {
-            let current = this.props.tags[i]
-            chips.push(<Chip text={current}/>)
+        for (let i = 0; i < numTags; i++) {
+            let current = tags[i]
+            chips.push(<Chip text={current} gradient={true} order={i} numItems={numTags} key={i} />)
         }
 
         return (
