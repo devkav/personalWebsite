@@ -1,28 +1,43 @@
 import { Component } from 'react';
 
 class Chip extends Component {
-    //rgb(126, 63, 242, .7), rgb(242, 63, 179, .7)
+    between = (a, b, percent) => {
+        let difference = b - a
+
+        return a + (percent * difference)
+    }
+
+    rgbToString = (r, g, b) => "rgb(" + r + "," + g + "," + b + ")"
+
     render() {
         let gradient = this.props.gradient === true;
 
-        let r,g,b,a;
+        let startColor, endColor
 
         if (gradient) {
             let rStart = 126
+            let rEnd = 242
             let bStart = 242
-            let rDif = 116
-            let bDif = -63
-            let percent = this.props.order / this.props.numItems
-            r = rStart + (percent * rDif)
-            g = 63
-            b = bStart + (percent * bDif)
-            a = 0.4
+            let bEnd = 179
+            let g = 63
+            let startPercent = this.props.order / this.props.numItems
+            let endPercent = (this.props.order + 1) / this.props.numItems
+
+
+            startColor = this.rgbToString(
+                this.between(rStart, rEnd, startPercent),
+                g,
+                this.between(bStart, bEnd, startPercent))
+            endColor = this.rgbToString(
+                this.between(rStart, rEnd, endPercent),
+                g,
+                this.between(bStart, bEnd, endPercent))
+            console.log(endColor)
         }
 
         return (
             <div className="chip" style={!gradient ? {} : {
-                backgroundColor: "rgba(" + r + "," + g + "," + b + "," + a + ")",
-                color: "rgb(" + r + "," + g + "," + b + ")"
+                background: "-webkit-linear-gradient(0deg, " + startColor + "," + endColor + ")"
             }}>
                 <p className="chip-text">{this.props.text}</p>
             </div>
