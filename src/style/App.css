@@ -25,6 +25,10 @@
     transition: left 1s, opacity 1s;
 }
 
+.footer {
+    margin-top: 100px;
+}
+
 @media (hover: hover) {
     .color-0:hover {
         color: #7E3FF2;

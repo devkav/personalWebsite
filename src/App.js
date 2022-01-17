@@ -6,6 +6,7 @@ import WelcomePage from './pages/WelcomePage';
 import AboutMe from './pages/AboutMe';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <AboutMe />
         <Experience />
         <Projects />
+        <Footer/>
       </Col>
     );
   }
