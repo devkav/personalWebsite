@@ -8,6 +8,21 @@
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 20px;
+    position: absolute;
+    width: 60vw;
+    transition: left 1s;
+}
+
+.project-card-next {
+    left: 100vw;
+}
+
+.project-card-prev {
+    left: -60vw;
+}
+
+.project-card-current {
+    left: 20vw;
 }
 
 #projects-label {
@@ -37,7 +52,9 @@
 
 @media screen and (min-width: 800px) {
     .project-card {
+        /*
         margin-left: clamp(0px, calc(100vw - 800px), 100px);
         margin-right: clamp(0px, calc(100vw - 800px), 100px);
+        */
     }
 }
