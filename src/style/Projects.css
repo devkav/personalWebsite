@@ -10,19 +10,22 @@
     padding: 20px;
     position: absolute;
     width: 60vw;
-    transition: left 1s;
+    transition: left 1s, opacity .5s;
 }
 
 .project-card-next {
     left: 100vw;
+    opacity: 0;
 }
 
 .project-card-prev {
     left: -60vw;
+    opacity: 0;
 }
 
 .project-card-current {
     left: 20vw;
+    opacity: 1;
 }
 
 #projects-label {

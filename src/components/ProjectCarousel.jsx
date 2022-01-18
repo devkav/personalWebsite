@@ -11,13 +11,17 @@ class ProjectCarousel extends Component {
         }
     }
 
-    onClick = () => {
+    next = () => {
         let numProjects = this.props.projects.length
 
-        if (this.state.current >= (numProjects - 1)) {
-            this.setState({current: 0})
-        } else {
+        if (this.state.current < (numProjects - 1)) {
             this.setState({current: this.state.current + 1})
+        }
+    }
+
+    previous = () => {
+        if (this.state.current > 0) {
+            this.setState({current: this.state.current - 1})
         }
     }
 
@@ -51,8 +55,9 @@ class ProjectCarousel extends Component {
         }
 
         return (
-            <div>
-                <Button onClick={this.onClick}>Next</Button>
+            <div className="project-carousel">
+                <Button onClick={this.previous}>Previous</Button>
+                <Button onClick={this.next}>Next</Button>
                 {projectViews}
             </div>
         );
