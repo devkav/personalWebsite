@@ -53,11 +53,11 @@
     transition: color .3s;
 }
 
+/*
 @media screen and (min-width: 800px) {
     .project-card {
-        /*
         margin-left: clamp(0px, calc(100vw - 800px), 100px);
         margin-right: clamp(0px, calc(100vw - 800px), 100px);
-        */
     }
 }
+*/
