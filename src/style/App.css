@@ -4,6 +4,7 @@
     flex-flow: column;
     bottom: 50px;
     left: 35px;
+    z-index: 100;
 }
 
 .linkbar-icon {
