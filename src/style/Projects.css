@@ -11,6 +11,9 @@
     position: relative;
     width: 60vw;
     transition: left 1s, opacity .5s;
+    height: fit-content;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .project-card-next {
@@ -51,6 +54,11 @@
     color: #212529;
     font-size: 31px;
     transition: color .3s;
+}
+
+.project-carousel {
+    display: grid;
+    align-items: center;
 }
 
 /*
