@@ -56,9 +56,9 @@ class ProjectCarousel extends Component {
 
         return (
             <div className="project-carousel">
+                {projectViews}
                 <Button onClick={this.previous}>Previous</Button>
                 <Button onClick={this.next}>Next</Button>
-                {projectViews}
             </div>
         );
     }

@@ -8,23 +8,23 @@
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 20px;
-    position: absolute;
+    position: relative;
     width: 60vw;
     transition: left 1s, opacity .5s;
 }
 
 .project-card-next {
-    left: 100vw;
+    left: 80vw;
     opacity: 0;
 }
 
 .project-card-prev {
-    left: -60vw;
+    left: -80vw;
     opacity: 0;
 }
 
 .project-card-current {
-    left: 20vw;
+    left: 0vw;
     opacity: 1;
 }
 
