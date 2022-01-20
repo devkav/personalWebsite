@@ -17,6 +17,7 @@ class ProjectView extends Component {
         return (
             <div className={"project-card " + this.props.classNames}>
                 <h3>{this.props.title}</h3>
+                <h3>Web application</h3>
                 <p>{this.props.description}</p>
 
                 <div className="project-card-footer">

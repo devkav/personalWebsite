@@ -9,7 +9,7 @@ class ProjectCarousel extends Component {
         super(props)
 
         this.state = {
-            current: 1
+            current: 0
         }
     }
 
