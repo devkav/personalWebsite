@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Button } from 'reactstrap';
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md"
 import CarouselIndicator from './CarouselIndicator';
 
 class CarouselControls extends Component {
@@ -9,9 +10,9 @@ class CarouselControls extends Component {
 
         return (
             <div className="carousel-controls">
-                <Button onClick={this.props.previousCallback}>Previous</Button>
+                <MdNavigateBefore onClick={this.props.previousCallback} className="carousel-btn clickable" />
                 <CarouselIndicator numBubbles={numBubbles} active={active} />
-                <Button onClick={this.props.nextCallback}>Next</Button>
+                <MdNavigateNext onClick={this.props.nextCallback} className="carousel-btn clickable" />
             </div>
         );
     }

@@ -60,33 +60,38 @@
     display: grid;
     align-items: center;
     margin-top: 20px;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
 }
 
 .bubble {
     height: 12px;
     width: 11px;
     border-radius: 12px;
-    outline: 2px solid black;
+    outline: 2px solid #212529;
     margin: 4px;
     transition: background-color .4s;
-  }
-  
-  .bubble-active {
-    background-color: black;
-  }
+}
+
+.bubble-active {
+    background-color: #212529;
+}
 
 .carousel-indicator {
     width: fit-content;
     display: flex;
     flex-flow: row;
-  }
+}
 
 .carousel-controls {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: center;
+}
+
+.carousel-btn {
+    font-size: 24px;
+    color: #212529;
 }
 
 /*
