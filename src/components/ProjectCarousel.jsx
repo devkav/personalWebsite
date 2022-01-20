@@ -60,7 +60,12 @@ class ProjectCarousel extends Component {
             <div className="project-carousel">
                 {projectViews}
 
-                <CarouselControls numBubbles={numProjects} active={this.state.current} />
+                <CarouselControls
+                    numBubbles={numProjects}
+                    active={this.state.current}
+                    previousCallback={this.previous}
+                    nextCallback={this.next}
+                />
             </div>
         );
     }

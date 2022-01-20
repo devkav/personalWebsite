@@ -9,9 +9,9 @@ class CarouselControls extends Component {
 
         return (
             <div className="carousel-controls">
-                <Button>Previous</Button>
+                <Button onClick={this.props.previousCallback}>Previous</Button>
                 <CarouselIndicator numBubbles={numBubbles} active={active} />
-                <Button>Next</Button>
+                <Button onClick={this.props.nextCallback}>Next</Button>
             </div>
         );
     }
