@@ -56,10 +56,25 @@
     transition: color .3s;
 }
 
-.project-carousel {
+.project-display {
     display: grid;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;;
 }
+
+.bubble {
+    height: 12px;
+    width: 11px;
+    border-radius: 12px;
+    outline: 2px solid black;
+    margin: 4px;
+    transition: background-color .4s;
+  }
+  
+  .bubble-active {
+    background-color: black;
+  }
 
 .carousel-indicator {
     width: fit-content;

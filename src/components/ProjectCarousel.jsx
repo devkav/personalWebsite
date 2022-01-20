@@ -58,7 +58,9 @@ class ProjectCarousel extends Component {
 
         return (
             <div className="project-carousel">
-                {projectViews}
+                <div className="project-display">
+                    {projectViews}
+                </div>
 
                 <CarouselControls
                     numBubbles={numProjects}
