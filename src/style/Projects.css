@@ -10,7 +10,7 @@
     padding: 20px;
     position: relative;
     width: 60vw;
-    transition: left 1s, opacity .5s;
+    transition: left .7s, opacity .3s;
     height: fit-content;
     grid-column: 1;
     grid-row: 1;
