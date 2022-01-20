@@ -61,6 +61,19 @@
     align-items: center;
 }
 
+.carousel-indicator {
+    width: fit-content;
+    display: flex;
+    flex-flow: row;
+  }
+
+.carousel-controls {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
 /*
 @media screen and (min-width: 800px) {
     .project-card {

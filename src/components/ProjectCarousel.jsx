@@ -2,6 +2,7 @@ import { Button, CarouselIndicators } from 'reactstrap';
 import { Component } from 'react';
 import ProjectView from './ProjectView';
 import CarouselIndicator from './CarouselIndicator';
+import CarouselControls from './CarouselControls';
 
 class ProjectCarousel extends Component {
     constructor(props) {
@@ -56,15 +57,10 @@ class ProjectCarousel extends Component {
         }
 
         return (
-            <div>
-                <Button onClick={this.previous}>Previous</Button>
-                <Button onClick={this.next}>Next</Button>
+            <div className="project-carousel">
+                {projectViews}
 
-                <CarouselIndicator numBubbles={3} active={this.state.current}/>
-
-                <div className="project-carousel">
-                    {projectViews}
-                </div>
+                <CarouselControls numBubbles={numProjects} active={this.state.current} />
             </div>
         );
     }

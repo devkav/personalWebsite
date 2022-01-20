@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Bubble from './Bubble';
 
-class CarouselIndicator  extends Component {
+class CarouselIndicator extends Component {
     render() {
         let active = this.props.active
         let numBubbles = this.props.numBubbles
