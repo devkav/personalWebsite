@@ -27,6 +27,10 @@ class ProjectCarousel extends Component {
         }
     }
 
+    setActive = (i) => {
+        this.setState({ current: i })
+    }
+
     render() {
         let projects = this.props.projects
         let projectViews = []
@@ -67,6 +71,7 @@ class ProjectCarousel extends Component {
                     active={this.state.current}
                     previousCallback={this.previous}
                     nextCallback={this.next}
+                    setActive={this.setActive}
                 />
             </div>
         );
