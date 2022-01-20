@@ -25,11 +25,11 @@ class Projects extends Component {
         ]
 
         return (
-            <div className="centered-col">
-            <div id="projects">
-                <h2 id="projects-label">Projects</h2>
-                <ProjectCarousel projects={projects}/>
-            </div>
+            <div id="projects" className="centered-col">
+                <div className="projects-container">
+                    <h2 id="projects-label">Projects</h2>
+                    <ProjectCarousel projects={projects} />
+                </div>
             </div>
         );
     }

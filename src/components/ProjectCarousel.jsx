@@ -1,6 +1,7 @@
-import { Button } from 'reactstrap';
+import { Button, CarouselIndicators } from 'reactstrap';
 import { Component } from 'react';
 import ProjectView from './ProjectView';
+import CarouselIndicator from './CarouselIndicator';
 
 class ProjectCarousel extends Component {
     constructor(props) {
@@ -58,6 +59,8 @@ class ProjectCarousel extends Component {
             <div>
                 <Button onClick={this.previous}>Previous</Button>
                 <Button onClick={this.next}>Next</Button>
+
+                <CarouselIndicator numBubbles={3} active={this.state.current}/>
 
                 <div className="project-carousel">
                     {projectViews}
