@@ -94,6 +94,15 @@
     color: #212529;
     margin-right: 6px;
     margin-left: 6px;
+    transition: opacity .3s;
+}
+
+.carousel-btn-inactive {
+    opacity: 0;
+}
+
+.carousel-btn-inactive:hover {
+    cursor: default !important;
 }
 
 /*
