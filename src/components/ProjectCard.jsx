@@ -3,7 +3,7 @@ import { AiOutlineGithub } from 'react-icons/ai';
 import Chip from './Chip';
 import IconButton from './IconButton';
 
-class ProjectView extends Component {
+class ProjectCard extends Component {
     render() {
         let chips = []
         let tags = this.props.tags
@@ -17,7 +17,6 @@ class ProjectView extends Component {
         return (
             <div className={"project-card " + this.props.classNames}>
                 <h3>{this.props.title}</h3>
-                <h3>Web application</h3>
                 <p>{this.props.description}</p>
 
                 <div className="project-card-footer">
@@ -35,4 +34,4 @@ class ProjectView extends Component {
     }
 }
 
-export default ProjectView;
+export default ProjectCard;

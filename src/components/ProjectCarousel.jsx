@@ -1,7 +1,5 @@
-import { Button, CarouselIndicators } from 'reactstrap';
 import { Component } from 'react';
-import ProjectView from './ProjectView';
-import CarouselIndicator from './CarouselIndicator';
+import ProjectCard from './ProjectCard';
 import CarouselControls from './CarouselControls';
 
 class ProjectCarousel extends Component {
@@ -33,7 +31,7 @@ class ProjectCarousel extends Component {
 
     render() {
         let projects = this.props.projects
-        let projectViews = []
+        let projectCards = []
         let numProjects = projects.length
 
         for (let i = 0; i < numProjects; i++) {
@@ -50,7 +48,7 @@ class ProjectCarousel extends Component {
 
             classNames = "project-card-" + classNames
 
-            projectViews.push(<ProjectView
+            projectCards.push(<ProjectCard
                 title={current.title}
                 description={current.description}
                 tags={current.tags}
@@ -63,7 +61,7 @@ class ProjectCarousel extends Component {
         return (
             <div className="project-carousel">
                 <div className="project-display">
-                    {projectViews}
+                    {projectCards}
                 </div>
 
                 <CarouselControls
