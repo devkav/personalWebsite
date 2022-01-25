@@ -105,6 +105,12 @@
     cursor: default !important;
 }
 
+.github-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+}
+
 /*
 @media screen and (min-width: 800px) {
     .project-card {

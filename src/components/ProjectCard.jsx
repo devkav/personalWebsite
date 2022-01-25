@@ -23,7 +23,7 @@ class ProjectCard extends Component {
                     <div className="chips-row">
                         {chips}
                     </div>
-                    <div>
+                    <div className="github-container">
                         <IconButton href={this.props.githubLink}>
                             <AiOutlineGithub className="project-github-icon color-100 clickable" />
                         </IconButton>
