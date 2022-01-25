@@ -17,7 +17,7 @@ class App extends Component {
         <AboutMe />
         <Experience />
         <Projects />
-        <Footer/>
+        <Footer />
       </Col>
     );
   }

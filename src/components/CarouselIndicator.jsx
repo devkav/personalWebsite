@@ -12,7 +12,7 @@ class CarouselIndicator extends Component {
         let bubbles = []
 
         for (let i = 0; i < numBubbles; i++) {
-            bubbles.push(<Bubble active={i === active} key={i} onClick={() => {this.onClick(i)}}/>)
+            bubbles.push(<Bubble active={i === active} key={i} onClick={() => { this.onClick(i) }} />)
         }
 
         return (

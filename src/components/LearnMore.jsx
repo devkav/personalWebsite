@@ -30,7 +30,7 @@ class LearnMore extends Component {
 
     render() {
         let className = this.state.loaded ? "fade-in-end" : "fade-in-start"
-        
+
         return (
             <div className={"learn-more " + className}>
                 <h4 className="learn-more-text gradient-hover" onClick={this.props.onClick}>Learn More <br />

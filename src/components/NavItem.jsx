@@ -19,7 +19,7 @@ class NavItem extends Component {
 
     load = async () => {
         await this.sleep(1500 + (this.props.order * 300))
-        this.setState({loaded: true})
+        this.setState({ loaded: true })
     }
 
     onClick = () => {

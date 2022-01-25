@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-class Bubble  extends Component {
+class Bubble extends Component {
     render() {
         let className = "bubble clickable"
 
