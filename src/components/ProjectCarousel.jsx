@@ -54,6 +54,7 @@ class ProjectCarousel extends Component {
                 tags={current.tags}
                 current={this.state.current}
                 classNames={classNames}
+                githubLink={current.githubLink}
                 key={i}
             />)
         }

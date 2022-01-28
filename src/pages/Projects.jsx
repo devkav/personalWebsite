@@ -53,6 +53,7 @@ class Projects extends Component {
             <div id="projects" className="centered-col">
                 <div className="projects-container">
                     <h2 id="projects-label">Projects</h2>
+                    <h3>Test</h3>
                     <ProjectCarousel projects={this.otherProjects} />
                 </div>
             </div>
