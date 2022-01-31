@@ -55,10 +55,18 @@ class Projects extends Component {
 
         for (let i = 0; i < this.highlightedProjects.length; i++) {
             let current = this.highlightedProjects[i]
+            let title = current.title
+            let description = current.description
+            let tags = current.tags
+            let githubLink = current.githubLink
             let image = imagePrefix + current.image
             let flipped = i % 2 !== 0
 
             projectDisplays.push(<ProjectDisplay
+                title={title}
+                description={description}
+                tags={tags}
+                githubLink={githubLink}
                 img={image}
                 flipped={flipped}
                 key={i}
