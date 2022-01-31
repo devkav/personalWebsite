@@ -1,6 +1,7 @@
 import '../style/Projects.css';
 import { Component } from 'react';
 import ProjectCarousel from '../components/ProjectCarousel';
+import ProjectDisplay from '../components/ProjectDisplay';
 
 class Projects extends Component {
     constructor(props) {
@@ -8,6 +9,12 @@ class Projects extends Component {
 
         this.highlightedProjects = [
             {
+                title: "Artist Portfolio",
+                image: "xsjScreenshot.png",
+                description: "Desc",
+                tags: ["ReactJS", "Firebase", "Web Development"],
+                githubLink: "https://github.com/DevanTurtle7/xavier-portfolio"
+            }, {
                 title: "Corner Clerk",
                 image: "clayhackScreenshot.png",
                 description: "Desc",
@@ -19,12 +26,6 @@ class Projects extends Component {
                 description: "Desc",
                 tags: ["Python", "Machine Learning", "Test Driven Development"],
                 githubLink: "https://github.com/DevanTurtle7/geneticAlgorithm"
-            }, {
-                title: "Artist Portfolio",
-                image: "xsjScreenshot.png",
-                description: "Desc",
-                tags: ["ReactJS", "Firebase", "Web Development"],
-                githubLink: "https://github.com/DevanTurtle7/xavier-portfolio"
             }
         ]
 
@@ -49,11 +50,26 @@ class Projects extends Component {
     }
 
     render() {
+        let projectDisplays = []
+        let imagePrefix = "images/"
+
+        for (let i = 0; i < this.highlightedProjects.length; i++) {
+            let current = this.highlightedProjects[i]
+            let image = imagePrefix + current.image
+            let flipped = i % 2 !== 0
+
+            projectDisplays.push(<ProjectDisplay
+                img={image}
+                flipped={flipped}
+                key={i}
+            />)
+        }
+
         return (
             <div id="projects" className="centered-col">
                 <div className="projects-container">
                     <h2 id="projects-label">Projects</h2>
-                    <h3>Test</h3>
+                    {projectDisplays}
                     <ProjectCarousel projects={this.otherProjects} />
                 </div>
             </div>

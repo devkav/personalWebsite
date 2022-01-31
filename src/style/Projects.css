@@ -56,9 +56,10 @@
     transition: color .3s;
 }
 
-.project-display {
+.project-card-container {
     display: grid;
     align-items: center;
+    justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -119,3 +120,44 @@
     }
 }
 */
+
+.project-display {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 75px;
+}
+
+.project-display-image {
+    display: flex;
+    flex-flow: row;
+    justify-content: end;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.project-display-text {
+    width: 70%
+}
+
+.project-display-image img {
+    object-fit: contain;
+    max-width: 50vw;
+    max-height: 50vh;
+}
+
+@media screen and (max-width: 800px) {
+    .project-display {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .project-display-flipped {
+        display: flex;
+        flex-flow: column-reverse;
+        align-items: center;
+    }
+}

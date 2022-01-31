@@ -61,7 +61,7 @@ class ProjectCarousel extends Component {
 
         return (
             <div className="project-carousel">
-                <div className="project-display">
+                <div className="project-card-container">
                     {projectCards}
                 </div>
 
