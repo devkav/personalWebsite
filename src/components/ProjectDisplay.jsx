@@ -10,6 +10,8 @@ class ProjectDisplay extends Component {
 
         if (flipped) {
             displayClassNames += " project-display-flipped"
+        } else {
+            displayClassNames += " project-display-no-flip"
         }
 
         let imageDisplay = (<div className='project-display-image'>
