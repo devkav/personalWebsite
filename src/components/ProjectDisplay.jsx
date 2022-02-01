@@ -42,7 +42,7 @@ class ProjectDisplay extends Component {
                 <h3>{title}</h3>
                 <div className="display-github-container">
                     <IconButton href={githubLink}>
-                        <AiOutlineGithub className="display-github-icon color-0 clickable" />
+                        <AiOutlineGithub className="display-github-icon color-25 clickable" />
                     </IconButton>
                 </div>
             </div>
