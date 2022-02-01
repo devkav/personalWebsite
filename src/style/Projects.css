@@ -9,7 +9,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 20px;
     position: relative;
-    width: 60vw;
+    max-width: 60vw;
     transition: left .7s, opacity .3s;
     height: fit-content;
     grid-column: 1;
@@ -180,6 +180,11 @@
     font-size: clamp(24px, 4vw, 38px) !important;
     color: #212529;
     margin-bottom: 0.5rem
+}
+
+#other-projects-label {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 800px) {

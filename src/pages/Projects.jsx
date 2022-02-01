@@ -90,6 +90,8 @@ class Projects extends Component {
                 <div className="projects-container">
                     <h2 id="projects-label">Projects</h2>
                     {projectDisplays}
+
+                    <h3 id="other-projects-label">Other Projects</h3>
                     <ProjectCarousel projects={this.otherProjects} />
                 </div>
             </div>
