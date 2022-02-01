@@ -31,7 +31,14 @@ class ProjectDisplay extends Component {
         </div>)
 
         let textDisplay = (<div className='project-display-text'>
-            <h3>{title}</h3>
+            <div className="title-row">
+                <h3>{title}</h3>
+                <div className="display-github-container">
+                    <IconButton href={this.props.githubLink}>
+                        <AiOutlineGithub className="display-github-icon color-0 clickable" />
+                    </IconButton>
+                </div>
+            </div>
             {paragraphs}
         </div>)
 

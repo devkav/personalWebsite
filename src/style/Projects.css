@@ -163,6 +163,25 @@
     max-height: 50vh;
 }
 
+.title-row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.display-github-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-github-icon {
+    font-size: clamp(24px, 4vw, 38px) !important;
+    color: #212529;
+    margin-bottom: 0.5rem
+}
+
 @media screen and (max-width: 800px) {
     .project-display-no-flip {
         display: flex;
