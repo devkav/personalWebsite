@@ -19,13 +19,20 @@ class ProjectDisplay extends Component {
             displayClassNames += " project-display-no-flip"
         }
 
+        let paragraphs = []
+
+        for (let i = 0; i < description.length; i++) {
+            let current = description[i]
+            paragraphs.push(<p>{current}</p>)
+        }
+
         let imageDisplay = (<div className='project-display-image'>
             <img src={image} />
         </div>)
 
         let textDisplay = (<div className='project-display-text'>
             <h3>{title}</h3>
-            <p>{description}</p>
+            {paragraphs}
         </div>)
 
         if (flipped) {

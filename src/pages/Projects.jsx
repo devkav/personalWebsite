@@ -11,19 +11,28 @@ class Projects extends Component {
             {
                 title: "Artist Portfolio",
                 image: "xsjScreenshot.png",
-                description: "Desc",
+                description: ["Desc"],
                 tags: ["ReactJS", "Firebase", "Web Development"],
                 githubLink: "https://github.com/DevanTurtle7/xavier-portfolio"
             }, {
                 title: "Corner Clerk",
                 image: "clayhackScreenshot.png",
-                description: "Desc",
+                description: [`Corner Clerk is an Android and iOS app that was developed to
+                    make grocery shopping more convenient for college students. The app
+                    displays a list of all the available products at RIT's corner store and
+                    their price. Users can add items to their bag, while the app keeps track
+                    of how much money they have left. The app converts meal swipes into
+                    dollars, making it much easier to keep track of spending.`,
+                    "The app was developed during a hackathon with a colleague. We chose to " +
+                    "build the app using Flutter, because allowed us rapidly design and test " +
+                    "the app for " +
+                    "both Android and iOS."],
                 tags: ["Flutter", "Firestore", "Mobile Development"],
                 githubLink: "https://github.com/DevanTurtle7/clayHack2020"
             }, {
                 title: "Genetic Algorithm",
                 image: "geneticAlgorithmScreenshot.png",
-                description: "Desc",
+                description: ["Desc"],
                 tags: ["Python", "Machine Learning", "Test Driven Development"],
                 githubLink: "https://github.com/DevanTurtle7/geneticAlgorithm"
             }
@@ -33,7 +42,8 @@ class Projects extends Component {
             {
                 title: "Full Stack Chat",
                 description: "Desc",
-                tags: ["ReactJS", "Python", "JavaScript", "PostgreSQL", "Flask", "REST APIs", "Test Driven Development"],
+                tags: ["ReactJS", "Python", "JavaScript", "PostgreSQL", "Flask",
+                    "REST APIs", "Test Driven Development"],
                 githubLink: "https://github.com/DevanTurtle7/full-stack-chat"
             }, {
                 title: "Spotify Hue",

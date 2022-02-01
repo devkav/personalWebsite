@@ -133,8 +133,8 @@
 .project-display-image {
     display: flex;
     flex-flow: row;
-    justify-content: end;
-    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-display-no-flip .project-display-image {
@@ -167,13 +167,21 @@
     .project-display-no-flip {
         display: flex;
         flex-flow: column;
-        align-items: center;
     }
 
     .project-display-flipped {
         display: flex;
         flex-flow: column-reverse;
+    }
+
+    .project-display {
         align-items: center;
+    }
+
+    .project-display-text, .project-display-image {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        margin-bottom: 20px;
     }
 }
 
