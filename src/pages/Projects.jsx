@@ -17,6 +17,7 @@ class Projects extends Component {
             }, {
                 title: "Corner Clerk",
                 image: "clayhackScreenshot.png",
+                shadow: true,
                 description: [
                     `Corner Clerk is an Android and iOS app that was developed to
                     make grocery shopping more convenient for college students. The app
@@ -85,6 +86,7 @@ class Projects extends Component {
             let githubLink = current.githubLink
             let image = imagePrefix + current.image
             let flipped = i % 2 !== 0
+            let shadow = current.shadow === true
 
             projectDisplays.push(<ProjectDisplay
                 title={title}
@@ -93,6 +95,7 @@ class Projects extends Component {
                 githubLink={githubLink}
                 img={image}
                 flipped={flipped}
+                shadow={shadow}
                 key={i}
             />)
         }
