@@ -10,6 +10,9 @@ import Footer from './components/Footer';
 
 class App extends Component {
   render() {
+    //document.documentElement.style.setProperty('--bs-body-color', '#fff');
+    //document.documentElement.style.setProperty('--bs-body-bg', 'rgb(30, 30, 30)');
+
     return (
       <Col>
         <Linkbar />

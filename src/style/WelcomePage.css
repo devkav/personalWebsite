@@ -58,7 +58,7 @@ h1.welcome-text {
     font-size: clamp(20px, 2vw, 30px);
     margin: 0;
     padding: 0;
-    color: #212529;
+    color: var(--bs-body-color);
     transition: margin .4s, color .3s;
 }
 

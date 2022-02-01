@@ -107,7 +107,7 @@ p {
   }
 
   .gradient-hover {
-    color: #212529;
+    color: var(--bs-body-color);
     transition: color .3s;
     animation-name: gradient-color-fade-out;
     animation-duration: .3s;

@@ -51,7 +51,7 @@
 }
 
 .project-github-icon {
-    color: #212529;
+    color: var(--bs-body-color);
     font-size: 31px;
     transition: color .3s;
 }
@@ -69,13 +69,13 @@
     width: 10px;
     transform: translateZ(0);
     border-radius: 10px;
-    outline: 2px solid #212529;
+    outline: 2px solid var(--bs-body-color);
     margin: 4px;
-    transition: background-color .4s;
+    transition: background-color .3s, opacity .3s;
 }
 
 .bubble-active {
-    background-color: #212529;
+    background-color: var(--bs-body-color);
 }
 
 .carousel-indicator {
@@ -93,7 +93,7 @@
 
 .carousel-btn {
     font-size: 20px;
-    color: #212529;
+    color: var(--bs-body-color);
     margin-right: 6px;
     margin-left: 6px;
     transition: opacity .3s;
@@ -179,7 +179,7 @@
 
 .display-github-icon {
     font-size: clamp(24px, 4vw, 38px) !important;
-    color: #212529;
+    color: var(--bs-body-color);
     margin-bottom: 0.5rem;
     transition: color .3s;
 }
@@ -229,6 +229,7 @@
 
 @media (hover: hover) {
     .bubble:hover {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: var(--bs-body-color);
+        opacity: .7;
     }
 }

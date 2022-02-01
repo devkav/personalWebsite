@@ -40,7 +40,7 @@ class ProjectDisplay extends Component {
         }
 
         let imageDisplay = (<div className='project-display-image'>
-            <img src={image} className={imageClass} />
+            <img src={image} className={imageClass} alt="project-screenshot" />
         </div>)
 
         let textDisplay = (<div className='project-display-text'>
