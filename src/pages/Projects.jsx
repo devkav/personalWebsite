@@ -34,7 +34,19 @@ class Projects extends Component {
             }, {
                 title: "Genetic Algorithm",
                 image: "geneticAlgorithmScreenshot.png",
-                description: ["Desc"],
+                description: [
+                `This genetic algorithm is a python program. I was inspired to
+                build this program after watching a lecture on genetic algorithms from
+                Fullstack Academy. This program uses object oriented concepts in python,
+                allowing for easy expansion in the future.`,
+                `The algorithm works by using evolutionary concepts found in nature such as
+                survival of the fittest. Each “organism” has their own unique DNA, which they
+                inherit from their parents. Each generation the “fittest” organisms breed,
+                creating a new organism with a mix of their DNA. Over several generations,
+                the population grows more and more fit until it reaches the goal. This
+                algorithm serves as a quick and efficient alternative to brute force solutions
+                to difficult problems.`
+            ],
                 tags: ["Python", "Machine Learning", "Test Driven Development"],
                 githubLink: "https://github.com/DevanTurtle7/geneticAlgorithm"
             }
