@@ -12,6 +12,7 @@ class ProjectDisplay extends Component {
         let image = this.props.img
         let flipped = this.props.flipped
         let displayClassNames = "project-display"
+        let numTags = tags.length
 
         if (flipped) {
             displayClassNames += " project-display-flipped"
@@ -20,10 +21,16 @@ class ProjectDisplay extends Component {
         }
 
         let paragraphs = []
+        let chips = []
 
         for (let i = 0; i < description.length; i++) {
             let current = description[i]
             paragraphs.push(<p>{current}</p>)
+        }
+
+        for (let i = 0; i < numTags; i++) {
+            let current = tags[i]
+            chips.push(<Chip text={current} gradient={true} order={i} numItems={numTags} key={i} />)
         }
 
         let imageDisplay = (<div className='project-display-image'>
@@ -40,6 +47,9 @@ class ProjectDisplay extends Component {
                 </div>
             </div>
             {paragraphs}
+            <div className="chips-row">
+                {chips}
+            </div>
         </div>)
 
         if (flipped) {
