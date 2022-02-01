@@ -202,6 +202,11 @@
         margin-right: 0px !important;
         margin-bottom: 20px;
     }
+
+    .projects-container {
+        margin-left: 20px;
+        margin-right: 0px;
+    }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1000px) {
