@@ -28,9 +28,15 @@
 
 .footer {
     margin-top: 150px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     text-align: center;
     color: rgba(33, 37, 41, 0.7);
+}
+
+.footer a, .footer a:visited {
+    color: rgba(33, 37, 41, 0.7);
+    text-decoration: none;
+    transition: color .3s;
 }
 
 .chip {
@@ -79,5 +85,9 @@
 
     .linkbar-icon:hover {
         cursor: pointer;
+    }
+
+    .footer a:hover {
+        color: rgba(33, 37, 41, 0.5);
     }
 }
