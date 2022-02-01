@@ -41,7 +41,7 @@ class ProjectDisplay extends Component {
             <div className="title-row">
                 <h3>{title}</h3>
                 <div className="display-github-container">
-                    <IconButton href={this.props.githubLink}>
+                    <IconButton href={githubLink}>
                         <AiOutlineGithub className="display-github-icon color-0 clickable" />
                     </IconButton>
                 </div>

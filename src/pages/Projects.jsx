@@ -17,16 +17,18 @@ class Projects extends Component {
             }, {
                 title: "Corner Clerk",
                 image: "clayhackScreenshot.png",
-                description: [`Corner Clerk is an Android and iOS app that was developed to
+                description: [
+                    `Corner Clerk is an Android and iOS app that was developed to
                     make grocery shopping more convenient for college students. The app
                     displays a list of all the available products at RIT's corner store and
                     their price. Users can add items to their bag, while the app keeps track
                     of how much money they have left. The app converts meal swipes into
                     dollars, making it much easier to keep track of spending.`,
-                    "The app was developed during a hackathon with a colleague. We chose to " +
-                    "build the app using Flutter, because allowed us rapidly design and test " +
-                    "the app for " +
-                    "both Android and iOS."],
+                    `The app was developed during a hackathon with a colleague. We chose to
+                    build the app using Flutter, because allowed us rapidly design and test
+                    the app for both Android and iOS. After the hackathon, we went on to
+                    ship multiple version to Android users.`,
+                ],
                 tags: ["Flutter", "Firestore", "Mobile Development"],
                 githubLink: "https://github.com/DevanTurtle7/clayHack2020"
             }, {
