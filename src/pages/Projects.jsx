@@ -21,7 +21,7 @@ class Projects extends Component {
                     `Corner Clerk is an Android and iOS app that was developed to
                     make grocery shopping more convenient for college students. The app
                     displays a list of all the available products at RIT's corner store and
-                    their price. Users can add items to their bag, while the app keeps track
+                    their price. Users can add items to their cart, while the app keeps track
                     of how much money they have left. The app converts meal swipes into
                     dollars, making it much easier to keep track of spending.`,
                     `The app was developed during a hackathon with a colleague. We chose to
