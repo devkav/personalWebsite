@@ -26,8 +26,8 @@ class Projects extends Component {
                     dollars, making it much easier to keep track of spending.`,
                     `The app was developed during a hackathon with a colleague. We chose to
                     build the app using Flutter, because allowed us rapidly design and test
-                    the app for both Android and iOS. After the hackathon, we went on to
-                    ship multiple version to Android users.`,
+                    the app for both Android and iOS. After the hackathon, we shipped
+                    multiple version to Android users.`,
                 ],
                 tags: ["Flutter", "Firestore", "Mobile Development"],
                 githubLink: "https://github.com/DevanTurtle7/clayHack2020"
