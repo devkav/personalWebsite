@@ -8,11 +8,23 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Footer from './components/Footer';
 
-class App extends Component {
-  render() {
-    //document.documentElement.style.setProperty('--bs-body-color', '#fff');
-    //document.documentElement.style.setProperty('--bs-body-bg', 'rgb(30, 30, 30)');
+const darkModeBgColor = 'rgb(30, 30, 30)';
+const darkModeTextColor = '#fff';
 
+const lightModeBgColor = '#fff';
+const lightModeTextColor = '#212529';
+
+class App extends Component {
+  toggleDarkMode = (enabled) => {
+    document.documentElement.style.setProperty(
+      '--bs-body-color', enabled ? darkModeTextColor : lightModeTextColor
+    );
+    document.documentElement.style.setProperty(
+      '--bs-body-bg', enabled ? darkModeBgColor : lightModeBgColor
+    );
+  }
+
+  render() {
     return (
       <Col>
         <Linkbar />
