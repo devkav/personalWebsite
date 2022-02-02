@@ -27,13 +27,13 @@ class ProjectCard extends Component {
 
         return (
             <div className={"project-card " + this.props.classNames}>
-            <div className="title-row">
-                <h3>{title}</h3>
-                <div className="display-github-container">
-                    <IconButton href={githubLink}>
-                        <AiOutlineGithub className="display-github-icon color-25 clickable" />
-                    </IconButton>
-                </div>
+                <div className="title-row">
+                    <h3>{title}</h3>
+                    <div className="display-github-container">
+                        <IconButton href={githubLink}>
+                            <AiOutlineGithub className="display-github-icon color-25 clickable" />
+                        </IconButton>
+                    </div>
                 </div>
                 {description}
 

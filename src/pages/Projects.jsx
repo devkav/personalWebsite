@@ -72,7 +72,17 @@ class Projects extends Component {
                 githubLink: "https://github.com/DevanTurtle7/full-stack-chat"
             }, {
                 title: "Spotify Hue",
-                description: ["Desc"],
+                description: [
+                    `Spotify Hue has been an ongoing project of mine throughout the 
+                    years. This particular iteration is an android application. The app 
+                    syncs Philips Hue smart lights with the album art of the current 
+                    song on Spotify to deliver a unique and immersive listening 
+                    experience to the user. The front end is very much incomplete, but 
+                    the functionality meets my criteria for the minimum viable product.`,
+                    `The app is written in Java, but I hope to convert to Kotlin as 
+                    I continue to learn it. As with almost all of my other work, 
+                    this is a long term passion project and still under development.`
+                ],
                 tags: ["Java", "REST APIs", "Android Development"],
                 githubLink: "https://github.com/DevanTurtle7/SpotifyHueAndroid"
             }, {
