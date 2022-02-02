@@ -7,6 +7,7 @@ import AboutMe from './pages/AboutMe';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Footer from './components/Footer';
+import MetaTags from 'react-meta-tags';
 
 const darkModeBgColor = 'rgb(30, 30, 30)';
 const darkModeTextColor = '#fff';
@@ -25,8 +26,16 @@ class App extends Component {
   }
 
   render() {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    this.toggleDarkMode(prefersDark)
+    let themeColor = prefersDark ? darkModeBgColor : lightModeBgColor;
+
     return (
       <Col>
+        <MetaTags>
+          <meta name="theme-color" content={themeColor} />
+        </MetaTags>
+
         <Linkbar />
         <WelcomePage />
         <AboutMe />
