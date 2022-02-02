@@ -214,6 +214,10 @@
         margin-left: 20px;
         margin-right: 0px;
     }
+
+    .project-card {
+        max-width: calc(100vw - 150px);
+    }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1000px) {
