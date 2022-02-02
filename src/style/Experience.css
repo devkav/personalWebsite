@@ -1,0 +1,51 @@
+.experience-section {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 20px;
+}
+
+#work {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#technologies {
+    grid-column: 2;
+    grid-row: 1;
+    align-items: center;
+}
+
+.chips-container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+}
+
+.experience-container {
+    display: grid;
+    max-width: 1000px;
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+    #work {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #technologies {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .experience-container {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}
