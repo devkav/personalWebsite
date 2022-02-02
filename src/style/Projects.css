@@ -68,11 +68,11 @@
 .bubble {
     height: 10px;
     width: 10px;
-    transform: translateZ(0);
     border-radius: 10px;
     outline: 2px solid var(--bs-body-color);
     margin: 4px;
     transition: background-color .3s, opacity .3s;
+    box-shadow: 0 0 1px 0px white inset, 0 0 1px 0px white;
 }
 
 .bubble-active {
