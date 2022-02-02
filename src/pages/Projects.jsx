@@ -38,7 +38,7 @@ class Projects extends Component {
                 description: [
                 `This genetic algorithm is a python program. I was inspired to
                 build this program after watching a lecture on genetic algorithms from
-                Fullstack Academy. This program uses object oriented concepts in python,
+                Fullstack Academy. This project uses object oriented concepts in python,
                 allowing for easy expansion in the future.`,
                 `The algorithm works by using evolutionary concepts found in nature such as
                 survival of the fittest. Each “organism” has their own unique DNA, which they
@@ -56,18 +56,28 @@ class Projects extends Component {
         this.otherProjects = [
             {
                 title: "Full Stack Chat",
-                description: "Desc",
+                description: [
+                    `The full stack chat is a project that I started to further refine 
+                    my full stack development skills. The program allows users to send 
+                    and receive messages through a web application.`, 
+                    `I built the front end with ReactJS. While designing the front end, 
+                    I focused on the details and tried to improve my UI/UX design 
+                    skills. The back end is composed of a Flask REST API that 
+                    communicates with a PostgreSQL server. When designing the API, I 
+                    utilized test driven development to ensure it was functioning as 
+                    intended.`
+                ],
                 tags: ["ReactJS", "Python", "JavaScript", "PostgreSQL", "Flask",
                     "REST APIs", "Test Driven Development"],
                 githubLink: "https://github.com/DevanTurtle7/full-stack-chat"
             }, {
                 title: "Spotify Hue",
-                description: "Desc",
+                description: ["Desc"],
                 tags: ["Java", "REST APIs", "Android Development"],
                 githubLink: "https://github.com/DevanTurtle7/SpotifyHueAndroid"
             }, {
                 title: "Tempo",
-                description: "Desc",
+                description: ["Desc"],
                 tags: ["JavaScript", "HTML", "Firestore", "REST APIs"],
                 githubLink: "https://github.com/DevanTurtle7/BrickHack7"
             }

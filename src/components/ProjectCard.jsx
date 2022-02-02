@@ -5,29 +5,40 @@ import IconButton from './IconButton';
 
 class ProjectCard extends Component {
     render() {
-        let chips = []
+        let title = this.props.title
+        let descriptionData = this.props.description
         let tags = this.props.tags
+        let githubLink = this.props.githubLink
         let numTags = tags.length
+        let chips = []
+        let description = []
 
         for (let i = 0; i < numTags; i++) {
             let current = tags[i]
             chips.push(<Chip text={current} gradient={true} order={i} numItems={numTags} key={i} />)
         }
 
+        for (let i = 0; i < descriptionData.length; i++) {
+            let current = descriptionData[i]
+            description.push(<p>
+                {current}
+            </p>)
+        }
+
         return (
             <div className={"project-card " + this.props.classNames}>
-                <h3>{this.props.title}</h3>
-                <p>{this.props.description}</p>
+            <div className="title-row">
+                <h3>{title}</h3>
+                <div className="display-github-container">
+                    <IconButton href={githubLink}>
+                        <AiOutlineGithub className="display-github-icon color-25 clickable" />
+                    </IconButton>
+                </div>
+                </div>
+                {description}
 
-                <div className="project-card-footer">
-                    <div className="chips-row">
-                        {chips}
-                    </div>
-                    <div className="github-container">
-                        <IconButton href={this.props.githubLink}>
-                            <AiOutlineGithub className="project-github-icon color-100 clickable" />
-                        </IconButton>
-                    </div>
+                <div className="chips-row">
+                    {chips}
                 </div>
             </div>
         );
