@@ -11,9 +11,11 @@ import MetaTags from 'react-meta-tags';
 
 const darkModeBgColor = 'rgb(30, 30, 30)';
 const darkModeTextColor = '#fff';
+const darkModeCardColor = 'rgb(40, 40, 40)';
 
 const lightModeBgColor = '#fff';
 const lightModeTextColor = '#212529';
+const lightModeCardColor = '#fff'
 
 class App extends Component {
   toggleDarkMode = (enabled) => {
@@ -22,6 +24,9 @@ class App extends Component {
     );
     document.documentElement.style.setProperty(
       '--bs-body-bg', enabled ? darkModeBgColor : lightModeBgColor
+    );
+    document.documentElement.style.setProperty(
+      '--bs-card-color', enabled ? darkModeCardColor : lightModeCardColor
     );
   }
 

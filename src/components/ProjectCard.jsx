@@ -20,7 +20,7 @@ class ProjectCard extends Component {
 
         for (let i = 0; i < descriptionData.length; i++) {
             let current = descriptionData[i]
-            description.push(<p>
+            description.push(<p key={i}>
                 {current}
             </p>)
         }
