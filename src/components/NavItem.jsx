@@ -1,39 +1,33 @@
-import { Component } from 'react';
+import { useState, useEffect } from 'react';
 
-class NavItem extends Component {
-    constructor(props) {
-        super(props)
+function NavItem(props) {
+    const [loaded, setLoaded] = useState(false)
 
-        this.state = {
-            loaded: false
+    useEffect(() => {
+        if (!loaded) {
+            load()
         }
-    }
+    }, [])
 
-    sleep = (ms) => {
+    const sleep = (ms) => {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    componentDidMount() {
-        this.load()
+    const load = async () => {
+        await sleep(1500 + (props.order * 300))
+        setLoaded(true)
     }
 
-    load = async () => {
-        await this.sleep(1500 + (this.props.order * 300))
-        this.setState({ loaded: true })
-    }
-
-    onClick = () => {
-        let section = document.getElementById(this.props.section)
+    const onClick = () => {
+        let section = document.getElementById(props.section)
         section.scrollIntoView({ behavior: 'smooth' })
     }
 
-    render() {
-        let className = this.state.loaded ? "nav-item-loaded" : "nav-item-unloaded"
+    const getClassName = () => loaded ? "nav-item-loaded" : "nav-item-unloaded"
 
-        return (
-            <h4 className={"gradient-hover nav-item " + className} onClick={this.onClick}>{this.props.text}</h4>
-        );
-    }
+    return (
+        <h4 className={"gradient-hover nav-item " + getClassName()} onClick={onClick}>{props.text}</h4>
+    );
 }
 
 export default NavItem;

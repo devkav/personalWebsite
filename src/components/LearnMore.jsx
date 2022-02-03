@@ -8,7 +8,7 @@ function LearnMore(props) {
         if (!loaded) {
             load()
         }
-    })
+    }, [])
 
     const load = async() => {
         const safeDocument = typeof document !== 'undefined' ? document : {};

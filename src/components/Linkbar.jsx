@@ -12,7 +12,7 @@ function Linkbar(props) {
         if (!loaded) {
             load()
         }
-    })
+    }, [])
 
     const load = async () => {
         await sleep(1500)
