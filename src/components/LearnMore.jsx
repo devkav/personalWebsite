@@ -5,7 +5,9 @@ function LearnMore(props) {
     const [loaded, setLoaded] = useState(false)
 
     useEffect(() => {
-        load()
+        if (!loaded) {
+            load()
+        }
     })
 
     const load = async() => {

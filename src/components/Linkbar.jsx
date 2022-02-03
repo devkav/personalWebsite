@@ -9,10 +9,12 @@ function Linkbar(props) {
     const [loaded, setLoaded] = useState(false)
 
     useEffect(() => {
-        load()
+        if (!loaded) {
+            load()
+        }
     })
 
-    const load = async() => {
+    const load = async () => {
         await sleep(1500)
         setLoaded(true)
     }
