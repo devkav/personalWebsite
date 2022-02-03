@@ -1,5 +1,4 @@
 import '../style/Projects.css';
-import { Component } from 'react';
 import ProjectCarousel from '../components/ProjectCarousel';
 import ProjectDisplay from '../components/ProjectDisplay';
 
@@ -104,8 +103,8 @@ const otherProjects = [
 ]
 
 
-class Projects extends Component {
-    render() {
+function Projects(props) {
+    const createProjectDisplays = () => {
         let projectDisplays = []
         let imagePrefix = "images/"
 
@@ -131,18 +130,20 @@ class Projects extends Component {
             />)
         }
 
-        return (
-            <div id="projects" className="centered-col">
-                <div className="projects-container">
-                    <h2 id="projects-label">Projects</h2>
-                    {projectDisplays}
-
-                    <h3 id="other-projects-label">Other Projects</h3>
-                    <ProjectCarousel projects={otherProjects} />
-                </div>
-            </div>
-        );
+        return projectDisplays
     }
+
+    return (
+        <div id="projects" className="centered-col">
+            <div className="projects-container">
+                <h2 id="projects-label">Projects</h2>
+                {createProjectDisplays()}
+
+                <h3 id="other-projects-label">Other Projects</h3>
+                <ProjectCarousel projects={otherProjects} />
+            </div>
+        </div>
+    );
 }
 
 export default Projects;
