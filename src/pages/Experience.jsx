@@ -32,7 +32,7 @@ class Experience extends Component {
         return (
             <div id="experience">
                 <div className="centered-col">
-                    <h2>Experience</h2>
+                    <h2 id="experience-label">Experience</h2>
                     <div className="experience-container">
                         <div id="work" className="experience-section">
                             <h3>Work</h3>

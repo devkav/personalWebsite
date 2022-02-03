@@ -1,46 +1,40 @@
-import { Component } from 'react';
+import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import CarouselControls from './CarouselControls';
+import { useSwipeable } from 'react-swipeable';
 
-class ProjectCarousel extends Component {
-    constructor(props) {
-        super(props)
+function ProjectCarousel(props) {
+    const [current, setCurrent] = useState(0)
 
-        this.state = {
-            current: 0
+    const next = () => {
+        let numProjects = props.projects.length
+
+        if (current < (numProjects - 1)) {
+            setCurrent(current + 1)
         }
     }
 
-    next = () => {
-        let numProjects = this.props.projects.length
-
-        if (this.state.current < (numProjects - 1)) {
-            this.setState({ current: this.state.current + 1 })
+    const previous = () => {
+        if (current > 0) {
+            setCurrent(current - 1)
         }
     }
 
-    previous = () => {
-        if (this.state.current > 0) {
-            this.setState({ current: this.state.current - 1 })
-        }
+    const setActive = (i) => {
+        setCurrent(i)
     }
 
-    setActive = (i) => {
-        this.setState({ current: i })
-    }
-
-    render() {
-        let projects = this.props.projects
+    const setupCards = () => {
+        let projects = props.projects
         let projectCards = []
         let numProjects = projects.length
 
         for (let i = 0; i < numProjects; i++) {
-            let current = projects[i]
             let classNames;
 
-            if (this.state.current === i) {
+            if (current === i) {
                 classNames = "current"
-            } else if (this.state.current < i) {
+            } else if (current < i) {
                 classNames = "next"
             } else {
                 classNames = "prev"
@@ -48,33 +42,36 @@ class ProjectCarousel extends Component {
 
             classNames = "project-card-" + classNames
 
+            let currentProj = projects[i]
             projectCards.push(<ProjectCard
-                title={current.title}
-                description={current.description}
-                tags={current.tags}
-                current={this.state.current}
+                title={currentProj.title}
+                description={currentProj.description}
+                tags={currentProj.tags}
+                current={current}
                 classNames={classNames}
-                githubLink={current.githubLink}
+                githubLink={currentProj.githubLink}
                 key={i}
             />)
         }
 
-        return (
-            <div className="project-carousel">
-                <div className="project-card-container">
-                    {projectCards}
-                </div>
-
-                <CarouselControls
-                    numBubbles={numProjects}
-                    active={this.state.current}
-                    previousCallback={this.previous}
-                    nextCallback={this.next}
-                    setActive={this.setActive}
-                />
-            </div>
-        );
+        return projectCards
     }
+
+    return (
+        <div className="project-carousel">
+            <div className="project-card-container">
+                {setupCards()}
+            </div>
+
+            <CarouselControls
+                numBubbles={props.projects.length}
+                active={current}
+                previousCallback={previous}
+                nextCallback={next}
+                setActive={setActive}
+            />
+        </div>
+    );
 }
 
 export default ProjectCarousel;

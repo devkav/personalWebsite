@@ -16,6 +16,11 @@
     align-items: center;
 }
 
+#experience-label {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
 .chips-container {
     display: flex;
     flex-flow: row;
