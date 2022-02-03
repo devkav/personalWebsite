@@ -24,6 +24,11 @@ function ProjectCarousel(props) {
         setCurrent(i)
     }
 
+    const handlers = useSwipeable({
+        onSwipedLeft: (eventData) => next(),
+        onSwipedRight: (eventData) => previous()
+    });
+
     const setupCards = () => {
         let projects = props.projects
         let projectCards = []
@@ -59,7 +64,7 @@ function ProjectCarousel(props) {
 
     return (
         <div className="project-carousel">
-            <div className="project-card-container">
+            <div className="project-card-container" {...handlers}>
                 {setupCards()}
             </div>
 
