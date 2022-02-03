@@ -25,8 +25,8 @@ function ProjectCarousel(props) {
     }
 
     const handlers = useSwipeable({
-        onSwipedLeft: (eventData) => next(),
-        onSwipedRight: (eventData) => previous()
+        onSwipedLeft: () => next(),
+        onSwipedRight: () => previous()
     });
 
     const setupCards = () => {
