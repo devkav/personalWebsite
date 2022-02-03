@@ -1,20 +1,11 @@
-import { Component } from 'react';
 import { AiOutlineGithub } from 'react-icons/ai';
 import Chip from './Chip';
 import IconButton from './IconButton';
 
-class ProjectDisplay extends Component {
-    render() {
-        let title = this.props.title
-        let description = this.props.description
-        let githubLink = this.props.githubLink
-        let tags = this.props.tags
-        let image = this.props.img
-        let flipped = this.props.flipped
+function ProjectDisplay(props) {
+    const getDisplayClassNames = () => {
         let displayClassNames = "project-display"
-        let numTags = tags.length
-        let shadow = this.props.shadow === true
-        let imageClass = ""
+        let flipped = props.flipped
 
         if (flipped) {
             displayClassNames += " project-display-flipped"
@@ -22,57 +13,85 @@ class ProjectDisplay extends Component {
             displayClassNames += " project-display-no-flip"
         }
 
+        return displayClassNames
+    }
+
+    const getImageClassNames = () => {
+        let imageClass = ""
+        let shadow = props.shadow === true
+
         if (shadow) {
             imageClass += " img-shadow"
         }
 
-        let paragraphs = []
-        let chips = []
+        return imageClass
+    }
 
-        for (let i = 0; i < description.length; i++) {
-            let current = description[i]
-            paragraphs.push(<p key={i}>{current}</p>)
-        }
+    const createChips = () => {
+        let chips = []
+        let tags = props.tags
+        let numTags = tags.length
 
         for (let i = 0; i < numTags; i++) {
             let current = tags[i]
             chips.push(<Chip text={current} gradient={true} order={i} numItems={numTags} key={i} />)
         }
 
+        return chips
+    }
+
+    const createParagraphs = () => {
+        let paragraphs = []
+        let description = props.description
+
+        for (let i = 0; i < description.length; i++) {
+            let current = description[i]
+            paragraphs.push(<p key={i}>{current}</p>)
+        }
+
+        return paragraphs
+    }
+
+    const createImageDisplay = () => {
+        let image = props.img
+
         let imageDisplay = (<div className='project-display-image'>
-            <img src={image} className={imageClass} alt="project-screenshot" />
+            <img src={image} className={getImageClassNames()} alt="project-screenshot" />
         </div>)
 
-        let textDisplay = (<div className='project-display-text'>
+        return imageDisplay
+    }
+
+    const createTextDisplay = () => (
+        <div className='project-display-text'>
             <div className="title-row">
-                <h3>{title}</h3>
+                <h3>{props.title}</h3>
                 <div className="display-github-container">
-                    <IconButton href={githubLink}>
+                    <IconButton href={props.githubLink}>
                         <AiOutlineGithub className="display-github-icon color-25 clickable" />
                     </IconButton>
                 </div>
             </div>
-            {paragraphs}
+            {createParagraphs()}
             <div className="chips-row">
-                {chips}
+                {createChips()}
             </div>
         </div>)
 
-        if (flipped) {
-            return (
-                <div className={displayClassNames}>
-                    {textDisplay}
-                    {imageDisplay}
-                </div>
-            );
-        } else {
-            return (
-                <div className={displayClassNames}>
-                    {imageDisplay}
-                    {textDisplay}
-                </div>
-            );
-        }
+    if (props.flipped) {
+        return (
+            <div className={getDisplayClassNames()}>
+                {createTextDisplay()}
+                {createImageDisplay()}
+            </div>
+        );
+    } else {
+        return (
+            <div className={getDisplayClassNames()}>
+                {createImageDisplay()}
+                {createTextDisplay()}
+            </div>
+        );
     }
 }
 

@@ -29,7 +29,7 @@ function ProjectCarousel(props) {
         onSwipedRight: () => previous()
     });
 
-    const setupCards = () => {
+    const createCards = () => {
         let projects = props.projects
         let projectCards = []
         let numProjects = projects.length
@@ -65,7 +65,7 @@ function ProjectCarousel(props) {
     return (
         <div className="project-carousel">
             <div className="project-card-container" {...handlers}>
-                {setupCards()}
+                {createCards()}
             </div>
 
             <CarouselControls
