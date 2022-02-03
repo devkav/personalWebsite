@@ -2,7 +2,7 @@ function Footer(props) {
     return (
         <div className="footer">
             <h5>&#169; Devan Kavalchek 2022 <br /> Website inspired by <a
-                href="https://brittanychiang.com" target="_blank">
+                href="https://brittanychiang.com" target="_blank" rel="noreferrer">
                 Brittany Chiang
             </a>
             </h5>

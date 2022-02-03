@@ -111,7 +111,7 @@
 .github-container {
     display: flex;
     flex-flow: column;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 /*
