@@ -1,19 +1,18 @@
-import { Component } from 'react';
 import NavItem from './NavItem';
 
-class Navbar extends Component {
-    render() {
-        let items = [{
-            text: "About Me",
-            section: "aboutMe"
-        }, {
-            text: "Experience",
-            section: "experience"
-        }, {
-            text: "Projects",
-            section: "projects"
-        }]
+const items = [{
+    text: "About Me",
+    section: "aboutMe"
+}, {
+    text: "Experience",
+    section: "experience"
+}, {
+    text: "Projects",
+    section: "projects"
+}]
 
+function Navbar(props) {
+    const createNavItems = () => {
         let navItems = []
 
         for (let i = 0; i < items.length; i++) {
@@ -25,10 +24,12 @@ class Navbar extends Component {
             navItems.push(<NavItem text={text} section={section} order={order} key={i} />)
         }
 
-        return (
-            <div className="nav-header">{navItems}</div>
-        );
+        return navItems
     }
+
+    return (
+        <div className="nav-header">{createNavItems()}</div>
+    );
 }
 
 export default Navbar;

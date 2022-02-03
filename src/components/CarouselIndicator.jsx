@@ -1,26 +1,27 @@
-import { Component } from 'react';
 import Bubble from './Bubble';
 
-class CarouselIndicator extends Component {
-    onClick = (i) => {
-        this.props.setActive(i)
+function CarouselIndicator(props) {
+    const onClick = (i) => {
+        props.setActive(i)
     }
 
-    render() {
-        let active = this.props.active
-        let numBubbles = this.props.numBubbles
+    const createBubbles = () => {
+        let active = props.active
+        let numBubbles = props.numBubbles
         let bubbles = []
 
         for (let i = 0; i < numBubbles; i++) {
-            bubbles.push(<Bubble active={i === active} key={i} onClick={() => { this.onClick(i) }} />)
+            bubbles.push(<Bubble active={i === active} key={i} onClick={() => { onClick(i) }} />)
         }
 
-        return (
-            <div className="carousel-indicator">
-                {bubbles}
-            </div>
-        );
+        return bubbles
     }
+
+    return (
+        <div className="carousel-indicator">
+            {createBubbles()}
+        </div>
+    );
 }
 
 export default CarouselIndicator;

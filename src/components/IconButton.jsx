@@ -1,13 +1,9 @@
-import { Component } from 'react';
-
-class IconButton extends Component {
-    render() {
-        return (
-            <a href={this.props.href} className="icon-btn" target="_blank">
-                {this.props.children}
-            </a>
-        );
-    }
+function IconButton(props) {
+    return (
+        <a href={props.href} className="icon-btn" target="_blank">
+            {props.children}
+        </a>
+    );
 }
 
 export default IconButton;

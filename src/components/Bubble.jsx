@@ -1,17 +1,17 @@
-import { Component } from 'react';
-
-class Bubble extends Component {
-    render() {
+function Bubble(props) {
+    const getClassNames = () => {
         let className = "bubble clickable"
 
-        if (this.props.active) {
+        if (props.active) {
             className += " bubble-active"
         }
 
-        return (
-            <div className={className} onClick={this.props.onClick} />
-        );
+        return className
     }
+
+    return (
+        <div className={getClassNames()} onClick={props.onClick} />
+    );
 }
 
 export default Bubble;
