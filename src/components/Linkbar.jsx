@@ -39,7 +39,7 @@ function Linkbar(props) {
             <IconButton href="mailto:devan.kavalchek@gmail.com">
                 <MdEmail className="linkbar-icon color-75" />
             </IconButton>
-            <IconButton href="./resume.pdf">
+            <IconButton href="./Devan Kavalchek Resume.pdf">
                 <AiFillFile className="linkbar-icon color-100" />
             </IconButton>
         </div>

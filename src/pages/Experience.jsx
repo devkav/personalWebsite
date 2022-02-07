@@ -35,16 +35,28 @@ function Experience(props) {
             <div className="centered-col">
                 <h2 id="experience-label">Experience</h2>
                 <div className="experience-container">
-                    <div id="work" className="experience-section">
-                        <h3>Work</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                    <div id="left-panel">
+                        <div id="education" className="experience-section">
+                            <h3>Education</h3>
+                            <p>Lorem Ipsum</p>
+                        </div>
+                        <div id="work" className="experience-section">
+                            <h3>Work</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
                     </div>
-                    <div id="technologies" className="experience-section">
-                        <h3>Technologies</h3>
-                        <div className="chips-container">
-                            {createChips()}
+                    <div id="right-panel" className="experience-section">
+                        <div id="technologies" className="experience-section">
+                            <h3>Technologies</h3>
+                            <div className="chips-container">
+                                {createChips()}
+                            </div>
+                        </div>
+                        <div id="awards" className="experience-section">
+                            <h3>Awards</h3>
+                            <p>Lorem Ipsum</p>
                         </div>
                     </div>
                 </div>

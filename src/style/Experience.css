@@ -5,12 +5,12 @@
     margin: 20px;
 }
 
-#work {
+#left-panel {
     grid-column: 1;
     grid-row: 1;
 }
 
-#technologies {
+#right-panel {
     grid-column: 2;
     grid-row: 1;
     align-items: center;
@@ -39,12 +39,12 @@
 }
 
 @media screen and (max-width: 1000px) {
-    #work {
+    #left-panel {
         grid-column: 1;
         grid-row: 1;
     }
 
-    #technologies {
+    #right-panel {
         grid-column: 1;
         grid-row: 2;
     }
