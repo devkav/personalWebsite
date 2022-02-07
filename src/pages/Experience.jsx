@@ -56,7 +56,9 @@ function Experience(props) {
                         </div>
                         <div id="awards" className="experience-section">
                             <h3>Awards</h3>
-                            <p>Lorem Ipsum</p>
+                            <p><b>BrickHack7</b> - Best Usage of Google Cloud</p>
+                            <p><b>ClayHack 2020</b> - Best Project Design</p>
+                            <p><b>Meet & Hack 2022</b> - 2nd Place Commnunity Hack</p>
                         </div>
                     </div>
                 </div>

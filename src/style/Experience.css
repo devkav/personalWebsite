@@ -38,6 +38,10 @@
     justify-content: center;
 }
 
+#awards p {
+    text-align: center;
+}
+
 @media screen and (max-width: 1000px) {
     #left-panel {
         grid-column: 1;
