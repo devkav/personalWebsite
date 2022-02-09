@@ -7,7 +7,7 @@ const highlightedProjects = [
         title: "Artist Portfolio",
         image: "xsjScreenshot.png",
         description: ["Desc"],
-        tags: ["ReactJS", "Firebase", "Web Development"],
+        tags: ["ReactJS", "Firebase", "AWS S3", "Web Development"],
         githubLink: "https://github.com/DevanTurtle7/xavier-portfolio"
     }, {
         title: "Corner Clerk",
