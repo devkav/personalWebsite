@@ -11,6 +11,7 @@
 }
 
 #right-panel {
+    margin-top: 0px;
     grid-column: 2;
     grid-row: 1;
     align-items: center;
@@ -57,4 +58,13 @@
         margin-left: 60px;
         margin-right: 60px;
     }
+}
+
+#experience {
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+.school-description span {
+    margin-left: 24px;
 }
