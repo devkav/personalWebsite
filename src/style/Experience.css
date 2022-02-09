@@ -65,6 +65,14 @@
     padding-bottom: 50px;
 }
 
-.school-description span {
-    margin-left: 24px;
+.education-label {
+    margin-bottom: 5px;
+}
+
+.education-container li {
+    margin-bottom: -5px;
+}
+
+.education-container ul {
+    margin-bottom: 5px;
 }

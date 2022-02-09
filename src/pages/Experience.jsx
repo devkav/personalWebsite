@@ -38,22 +38,16 @@ function Experience(props) {
                     <div id="left-panel">
                         <div id="education" className="experience-section">
                             <h3>Education</h3>
-                            <p>
-                                <span className='school-name'>
+                            <div className='education-container'>
+                                <p className='education-label'>
                                     <b>Rochester Institute of Technology</b><br />
-                                </span>
-                                <span className='school-description'>
-                                    <span>
-                                        Pursuing B.S. in Software Engineering <br />
-                                    </span>
-                                    <span>
-                                        (Second year of a 5 year program) <br />
-                                    </span>
-                                    <span>
-                                        <b>Deans List</b> Spring 2021 to Present
-                                    </span>
-                                </span>
-                            </p>
+                                </p>
+                                <ul>
+                                    <li><p>Pursing B.S. in Software Engineering</p></li>
+                                    <li><p><b>Deans List</b> Spring 2021 to Present</p></li>
+                                    <li><p>Expected Graduation: May 2025 (5 year program)</p></li>
+                                </ul>
+                            </div>
                         </div>
                         <div id="work" className="experience-section">
                             <h3>Work</h3>
