@@ -20,7 +20,7 @@ function WelcomePage(props) {
         window.scrollTo(0,0)
         await sleep(500)
         window.scrollTo(0,0)
-        await sleep(1000)
+        await sleep(500)
         window.scrollTo(0,0)
         setLoaded(true)
     }
