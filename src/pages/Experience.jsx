@@ -43,7 +43,7 @@ function Experience(props) {
                                     <b>Rochester Institute of Technology</b><br />
                                 </p>
                                 <ul>
-                                    <li><p>Pursing B.S. in Software Engineering</p></li>
+                                    <li><p>B.S. in Software Engineering</p></li>
                                     <li><p><b>Deans List</b> Spring 2021 to Present</p></li>
                                     <li><p>Expected Graduation: May 2025 (5 year program)</p></li>
                                 </ul>
