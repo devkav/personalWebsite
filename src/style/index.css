@@ -1,121 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 ::selection {
-  background-color: rgba(126, 63, 242, .3);
+    background-color: rgba(126, 63, 242, .3);
 }
 
 body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 * {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  font-size: clamp(54px, 15vw, 96px) !important;
-  font-weight: 900 !important;
+    font-size: clamp(54px, 15vw, 96px) !important;
+    font-weight: 900 !important;
 }
 
 h2 {
-  font-size: clamp(40px, 5vw, 64px) !important;
-  font-weight: 700 !important;
+    font-size: clamp(40px, 5vw, 64px) !important;
+    font-weight: 700 !important;
 }
 
 h3 {
-  font-size: clamp(24px, 4vw, 38px) !important;
-  font-weight: 600 !important;
+    font-size: clamp(24px, 4vw, 38px) !important;
+    font-weight: 600 !important;
 }
 
 h4 {
-  font-size: clamp(16px, 1.5vw, 20px) !important;
-  font-weight: 500 !important;
+    font-size: clamp(16px, 1.5vw, 20px) !important;
+    font-weight: 500 !important;
 }
 
 h5 {
-  font-size: 14px !important;
-  font-weight: 500 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
 }
 
 p {
-  font-size: clamp(18px, 1.5vw, 20px) !important;
-  font-weight: 400 !important;
+    font-size: clamp(18px, 1.5vw, 20px) !important;
+    font-weight: 400 !important;
 }
 
 .centered-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .fade-in-start {
-  opacity: 0;
+    opacity: 0;
 }
 
 .fade-in-end {
-  opacity: 1;
-  transition: opacity 1s;
+    opacity: 1;
+    transition: opacity 1s;
 }
 
 .fit-content {
-  height: fit-content;
-  width: fit-content;
+    height: fit-content;
+    width: fit-content;
 }
 
 .clickable {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 @keyframes gradient-color-fade-in {
-  from {
-    background: -webkit-linear-gradient(330deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
+    from {
+        background: -webkit-linear-gradient(330deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
 
-  to {
-    background: -webkit-linear-gradient(330deg, #7E3FF2, #f23fb3);
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
+    to {
+        background: -webkit-linear-gradient(330deg, #7E3FF2, #f23fb3);
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
 }
 
 @keyframes gradient-color-fade-out {
-  from {
-    background: -webkit-linear-gradient(330deg, #7E3FF2, #f23fb3);
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
+    from {
+        background: -webkit-linear-gradient(330deg, #7E3FF2, #f23fb3);
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
 
-  to {
-    background: -webkit-linear-gradient(330deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
+    to {
+        background: -webkit-linear-gradient(330deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
 }
 
 @media (hover: hover) {
-  .gradient-hover:hover {
-    color: rgba(0, 0, 0, 0);
-    cursor: pointer;
-    animation-name: gradient-color-fade-in;
-    animation-delay: 0ms;
-    animation-duration: 0ms;
-    animation-timing-function: step-start;
-    animation-fill-mode: forwards;
-  }
+    .gradient-hover:hover {
+        color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+        animation-name: gradient-color-fade-in;
+        animation-delay: 0ms;
+        animation-duration: 0ms;
+        animation-timing-function: step-start;
+        animation-fill-mode: forwards;
+    }
 
-  .gradient-hover {
-    color: var(--bs-body-color);
-    transition: color .3s;
-    animation-name: gradient-color-fade-out;
-    animation-duration: .3s;
-    animation-timing-function: step-end;
-    animation-fill-mode: forwards;
-  }
+    .gradient-hover {
+        color: var(--bs-body-color);
+        transition: color .3s;
+        animation-name: gradient-color-fade-out;
+        animation-duration: .3s;
+        animation-timing-function: step-end;
+        animation-fill-mode: forwards;
+    }
 }
