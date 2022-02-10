@@ -10,7 +10,7 @@ const technologies = [
     "PostgreSQL",
     "Kotlin",
     "HTML & CSS",
-    "ReactJS",
+    "React",
     "Flutter",
     "Spark Java",
     "Flask",
@@ -43,7 +43,7 @@ function Experience(props) {
                                     <b>Rochester Institute of Technology</b><br />
                                 </p>
                                 <ul>
-                                    <li><p>Pursing B.S. in Software Engineering</p></li>
+                                    <li><p>B.S. in Software Engineering</p></li>
                                     <li><p><b>Deans List</b> Spring 2021 to Present</p></li>
                                     <li><p>Expected Graduation: May 2025 (5 year program)</p></li>
                                 </ul>
@@ -82,7 +82,7 @@ function Experience(props) {
                             <h3>Awards</h3>
                             <p><b>BrickHack7</b> - Best Usage of Google Cloud</p>
                             <p><b>ClayHack 2020</b> - Best Project Design</p>
-                            <p><b>Meet & Hack 2022</b> - 2nd Place Commnunity Hack</p>
+                            <p><b>Meet & Hack 2022</b> - 2nd Place Community Hack</p>
                         </div>
                     </div>
                 </div>
