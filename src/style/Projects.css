@@ -72,7 +72,7 @@
     outline: 2px solid var(--bs-body-color);
     margin: 4px;
     transition: background-color .3s, opacity .3s;
-    box-shadow: 0 0 1px 0px white inset, 0 0 1px 0px white;
+    box-shadow: 0 0 1px 0px var(--bs-body-color) inset, 0 0 1px 0px var(--bs-body-color);
 }
 
 .bubble-active {
