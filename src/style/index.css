@@ -46,6 +46,11 @@ p {
     font-weight: 400 !important;
 }
 
+a, a:visited {
+    color: var(--bs-body-color) !important;
+    text-decoration: none !important;
+}
+
 .centered-col {
     display: flex;
     flex-direction: column;

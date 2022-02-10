@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SiteContent from './pages/SiteContent';
 import { Fragment } from 'react/cjs/react.production.min';
 import MetaTags from 'react-meta-tags';
+import PageNotFound from './pages/PageNotFound';
 
 const darkModeBgColor = 'rgb(30, 30, 30)';
 const darkModeTextColor = '#fff';
@@ -41,7 +42,7 @@ function App(props) {
             <Router>
                 <Routes>
                     <Route path="/" element={<SiteContent />} exact />
-                    <Route path="*" element={<div><h1>404 no</h1></div>} />
+                    <Route path="*" element={<PageNotFound />} />
                 </Routes>
             </Router>
         </Fragment>

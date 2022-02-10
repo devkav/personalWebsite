@@ -48,7 +48,7 @@ function WelcomePage(props) {
             <div className="header-col centered-col">
                 <Container className="welcome-text-container">
                     <h4 className="welcome-text">Hi, my name is</h4>
-                    <TitleText mouseX={mouseX} mouseY={mouseY} />
+                    <TitleText text={"Devan\nKavalchek"} mouseX={mouseX} mouseY={mouseY} />
                     <h4 className="welcome-text">A detail oriented software engineer.</h4>
                 </Container>
             </div>
