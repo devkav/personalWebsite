@@ -14,11 +14,14 @@ function WelcomePage(props) {
     useEffect(() => {
         load()
         const welcome = document.getElementById("welcome")
-        welcome.scrollIntoView()
     }, [])
 
     const load = async () => {
+        window.scrollTo(0,0)
+        await sleep(500)
+        window.scrollTo(0,0)
         await sleep(1000)
+        window.scrollTo(0,0)
         setLoaded(true)
     }
 
