@@ -51,12 +51,27 @@ function Experience(props) {
                         </div>
                         <div id="work" className="experience-section">
                             <h3>Work</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
+                            <div className='work-content'>
+                                <p><b>Course Assistant</b></p>
+                                <p><i>Rochester Institute of Technology</i></p>
+                                <p>August 2021 - Present</p>
+                                <ul>
+                                    <li>
+                                        Assisted in teaching students the fundamentals of programming including data
+                                        structures, algorithms, object oriented programming and test driven development
+                                        using Python and Java
+                                    </li>
+                                    <li>
+                                        Attended classes to assist with in class activities and problem solving activities
+                                    </li>
+                                    <li>
+                                        Graded and provided feedback on over 130 assignments a week
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div id="right-panel" className="experience-section">
+                    <div id="right-panel">
                         <div id="technologies" className="experience-section">
                             <h3>Technologies</h3>
                             <div className="chips-container">

@@ -6,7 +6,17 @@ const highlightedProjects = [
     {
         title: "Artist Portfolio",
         image: "xsjScreenshot.png",
-        description: ["Desc"],
+        description: [
+            `This project is a website and digital portfolio that I built for a 
+            friend of mine. The design of the site was a collaborative effort, with 
+            most of the main decisions being made by them. The site is designed to 
+            display art work in a unique and customizable way. I built an admin page 
+            that allows the artist to upload and edit the content of the site at 
+            any time.`,
+            `The site was built using ReactJS for the front end. The back end uses 
+            Firebase to store image metadata and Amazon Web Service’s S3 to host the 
+            images.`
+        ],
         tags: ["ReactJS", "Firebase", "AWS S3", "Web Development"],
         githubLink: "https://github.com/DevanTurtle7/xavier-portfolio"
     }, {

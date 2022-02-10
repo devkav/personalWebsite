@@ -2,7 +2,8 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #left-panel {
@@ -43,7 +44,7 @@
     text-align: center;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
     #left-panel {
         grid-column: 1;
         grid-row: 1;
@@ -53,10 +54,15 @@
         grid-column: 1;
         grid-row: 2;
     }
+}
 
-    .experience-container {
-        margin-left: 60px;
-        margin-right: 60px;
+@media screen and (min-width: 850px) {
+    #left-panel {
+        margin-right: 50px;
+    }
+
+    #right-panel {
+        margin-left: 50px;
     }
 }
 
@@ -75,4 +81,10 @@
 
 .education-container ul {
     margin-bottom: 5px;
+}
+
+.work-content p {
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 600px;
 }
