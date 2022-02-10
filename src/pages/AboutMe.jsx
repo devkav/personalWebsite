@@ -9,7 +9,7 @@ function AboutMe(props) {
                     Hi, my name is Devan Kavalchek, I'm a passionate and detail oriented
                     software engineer. I'm a second year student at the Rochester Institute
                     of Technology pursuing a B.S. degree in Software Engineering. Recently,
-                    I've been enjoying working with ReactJS, SQL, Java, and learning Kotlin.
+                    I've been enjoying working with React, SQL, Java, and learning Kotlin.
                 </p>
                 <p>
                     I'm extremely passionate about software and love expressing my 

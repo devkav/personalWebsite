@@ -13,11 +13,11 @@ const highlightedProjects = [
             display art work in a unique and customizable way. I built an admin page 
             that allows the artist to upload and edit the content of the site at 
             any time.`,
-            `The site was built using ReactJS for the front end. The back end uses 
+            `The site was built using React for the front end. The back end uses 
             Firebase to store image metadata and Amazon Web Service’s S3 to host the 
             images.`
         ],
-        tags: ["ReactJS", "Firebase", "AWS S3", "Web Development"],
+        tags: ["React", "Firebase", "AWS S3", "Web Development"],
         githubLink: "https://github.com/DevanTurtle7/xavier-portfolio"
     }, {
         title: "Corner Clerk",
@@ -65,14 +65,14 @@ const otherProjects = [
             `The full stack chat is a project that I started to further refine 
             my full stack development skills. The program allows users to send 
             and receive messages through a web application.`,
-            `I built the front end with ReactJS. While designing the front end, 
+            `I built the front end with React. While designing the front end, 
             I focused on the details and tried to improve my UI/UX design 
             skills. The back end is composed of a Flask REST API that 
             communicates with a PostgreSQL server. When designing the API, I 
             utilized test driven development to ensure it was functioning as 
             intended.`
         ],
-        tags: ["ReactJS", "Python", "JavaScript", "PostgreSQL", "Flask",
+        tags: ["React", "Python", "JavaScript", "PostgreSQL", "Flask",
             "REST APIs", "Test Driven Development"],
         githubLink: "https://github.com/DevanTurtle7/full-stack-chat"
     }, {
@@ -99,7 +99,7 @@ const otherProjects = [
             during a 24 hour hackathon in collaboration with two colleagues.`,
             `This project is a great example of my ability to push the limits 
             of whatever technology I’m using to achieve my vision of the 
-            project. I created this project before I knew ReactJS, so we 
+            project. I created this project before I knew React, so we 
             used vanilla HTML and JavaScript which made it difficult to build 
             a dynamic web application. Additionally, we had to find workarounds 
             in the Spotify API to implement the functionality we were looking 
