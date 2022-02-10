@@ -27,7 +27,9 @@ function TitleText(props) {
 			"backgroundImage": "-webkit-linear-gradient(" + getDegrees() + "deg, #7E3FF2, #f23fb3)",
 			"backgroundClip": "text",
 			"WebkitTextFillColor": "transparent"
-		}}>Devan<br />Kavalchek</h1>
+		}}>
+			{props.text}
+		</h1>
 	);
 }
 

@@ -1,13 +1,9 @@
 import './style/App.css';
-import { Component } from 'react';
-import { Col } from 'reactstrap';
-import Linkbar from './components/Linkbar';
-import WelcomePage from './pages/WelcomePage';
-import AboutMe from './pages/AboutMe';
-import Experience from './pages/Experience';
-import Projects from './pages/Projects';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SiteContent from './pages/SiteContent';
+import { Fragment } from 'react/cjs/react.production.min';
 import MetaTags from 'react-meta-tags';
+import PageNotFound from './pages/PageNotFound';
 
 const darkModeBgColor = 'rgb(30, 30, 30)';
 const darkModeTextColor = '#fff';
@@ -17,8 +13,8 @@ const lightModeBgColor = '#fff';
 const lightModeTextColor = '#212529';
 const lightModeCardColor = '#fff'
 
-class App extends Component {
-    toggleDarkMode = (enabled) => {
+function App(props) {
+    const toggleDarkMode = (enabled) => {
         document.documentElement.style.setProperty(
             '--bs-body-color', enabled ? darkModeTextColor : lightModeTextColor
         );
@@ -30,26 +26,27 @@ class App extends Component {
         );
     }
 
-    render() {
+    const getThemeColor = () => {
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        this.toggleDarkMode(prefersDark)
+        toggleDarkMode(prefersDark)
         let themeColor = prefersDark ? darkModeBgColor : lightModeBgColor;
 
-        return (
-            <Col>
-                <MetaTags>
-                    <meta name="theme-color" content={themeColor} />
-                </MetaTags>
-
-                <Linkbar />
-                <WelcomePage />
-                <AboutMe />
-                <Experience />
-                <Projects />
-                <Footer />
-            </Col>
-        );
+        return themeColor
     }
+
+    return (
+        <Fragment>
+            <MetaTags>
+                <meta name="theme-color" content={getThemeColor()} />
+            </MetaTags>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<SiteContent />} exact />
+                    <Route path="*" element={<PageNotFound />} />
+                </Routes>
+            </Router>
+        </Fragment>
+    )
 }
 
 export default App;
