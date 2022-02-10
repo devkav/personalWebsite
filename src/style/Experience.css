@@ -54,6 +54,11 @@
         grid-column: 1;
         grid-row: 2;
     }
+
+    .experience-container {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
 }
 
 @media screen and (min-width: 850px) {
@@ -85,6 +90,9 @@
 
 .work-content p {
     margin-bottom: 5px;
+}
+
+.work-content {
     width: 100%;
-    max-width: 600px;
+    max-width: 550px;
 }
