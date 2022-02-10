@@ -1,11 +1,11 @@
 #aboutMe {
-    min-height: 100vh;
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin-bottom: 150px;
 }
 
-#about-me-par {
+#about-me-content {
     max-width: 1000px;
     margin-top: 50px;
     margin-left: 100px;
