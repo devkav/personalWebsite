@@ -1,0 +1,100 @@
+.linkbar {
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    bottom: 50px;
+    left: 35px;
+    z-index: 100;
+}
+
+.linkbar-icon {
+    font-size: clamp(24px, 3.25vh, 36px);
+    color: var(--bs-body-color);
+    background-color: rgba(0, 0, 0, 0);
+    transition: color .3s;
+    margin-bottom: clamp(4px, 1.25vh, 16px);
+}
+
+.linkbar-unloaded {
+    left: -35px;
+    opacity: 0;
+}
+
+.linkbar-loaded {
+    left: 35px;
+    opacity: 1;
+    transition: left 1s, opacity 1s;
+}
+
+.footer {
+    margin-top: 150px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--bs-body-color);
+    opacity: 0.7;
+}
+
+.footer a, .footer a:visited {
+    color: var(--bs-body-color);
+    opacity: 0.7;
+    text-decoration: none;
+    transition: color .3s, opacity .3s;
+}
+
+.chip {
+    background-color: rgb(126, 63, 242);
+    color: #FFF;
+    border-radius: 100px;
+    width: fit-content;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: 8px;
+    margin-top: 4px;
+    height: 30.5px;
+}
+
+.chip-text {
+    margin: 0;
+    font-size: 15px !important;
+}
+
+@media (hover: hover) {
+    .linkbar-icon:hover {
+        color: #7E3FF2;
+    }
+
+    .color-0:hover {
+        color: #7E3FF2;
+    }
+
+    .color-25:hover {
+        color: #9B3FE2;
+    }
+
+    .color-50:hover {
+        color: #B83FD3;
+    }
+
+    .color-75:hover {
+        color: #D53FC3;
+    }
+
+    .color-100:hover {
+        color: #f23fb3;
+    }
+
+    .linkbar-icon:hover {
+        cursor: pointer;
+    }
+
+    .footer a:hover {
+        color: var(--bs-body-color);
+        opacity: 0.4;
+    }
+}
+
+.img-shadow {
+    box-shadow: 0px 2px 10px 5px rgb(0, 0, 0, .25) !important
+}

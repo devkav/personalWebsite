@@ -1,0 +1,20 @@
+#aboutMe {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+#about-me-content {
+    max-width: 1000px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+@media screen and (max-width: 800px) {
+    #about-me-par {
+        margin-left: 85px;
+        margin-right: 30px;
+    }
+}
