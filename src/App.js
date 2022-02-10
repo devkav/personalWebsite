@@ -18,38 +18,38 @@ const lightModeTextColor = '#212529';
 const lightModeCardColor = '#fff'
 
 class App extends Component {
-  toggleDarkMode = (enabled) => {
-    document.documentElement.style.setProperty(
-      '--bs-body-color', enabled ? darkModeTextColor : lightModeTextColor
-    );
-    document.documentElement.style.setProperty(
-      '--bs-body-bg', enabled ? darkModeBgColor : lightModeBgColor
-    );
-    document.documentElement.style.setProperty(
-      '--bs-card-color', enabled ? darkModeCardColor : lightModeCardColor
-    );
-  }
+    toggleDarkMode = (enabled) => {
+        document.documentElement.style.setProperty(
+            '--bs-body-color', enabled ? darkModeTextColor : lightModeTextColor
+        );
+        document.documentElement.style.setProperty(
+            '--bs-body-bg', enabled ? darkModeBgColor : lightModeBgColor
+        );
+        document.documentElement.style.setProperty(
+            '--bs-card-color', enabled ? darkModeCardColor : lightModeCardColor
+        );
+    }
 
-  render() {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    this.toggleDarkMode(prefersDark)
-    let themeColor = prefersDark ? darkModeBgColor : lightModeBgColor;
+    render() {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        this.toggleDarkMode(prefersDark)
+        let themeColor = prefersDark ? darkModeBgColor : lightModeBgColor;
 
-    return (
-      <Col>
-        <MetaTags>
-          <meta name="theme-color" content={themeColor} />
-        </MetaTags>
+        return (
+            <Col>
+                <MetaTags>
+                    <meta name="theme-color" content={themeColor} />
+                </MetaTags>
 
-        <Linkbar />
-        <WelcomePage />
-        <AboutMe />
-        <Experience />
-        <Projects />
-        <Footer />
-      </Col>
-    );
-  }
+                <Linkbar />
+                <WelcomePage />
+                <AboutMe />
+                <Experience />
+                <Projects />
+                <Footer />
+            </Col>
+        );
+    }
 }
 
 export default App;
