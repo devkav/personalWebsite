@@ -2,19 +2,19 @@ import '../style/Experience.css';
 import Chip from '../components/Chip';
 
 const technologies = [
-    "Python",
-    "Dart",
     "Java",
+    "Python",
     "JavaScript",
-    "JQuery",
-    "PostgreSQL",
     "Kotlin",
-    "HTML & CSS",
     "React",
+    "PostgreSQL",
+    "Dart",
     "Flutter",
-    "Spark Java",
     "Flask",
-    "Firebase"
+    "JQuery",
+    "Firebase",
+    "HTML & CSS",
+    "Spark Java",
 ]
 
 function Experience(props) {
