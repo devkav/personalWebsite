@@ -102,7 +102,8 @@ const otherProjects = [
             process, I learned how to properly encapsulate classes in Javascript. `
         ],
         tags: ["React", "Object Oriented Programming"],
-        githubLink: "https://github.com/DevanTurtle7/react-minesweeper"
+        githubLink: "https://github.com/DevanTurtle7/react-minesweeper",
+        link: "https://devanturtle7.github.io/react-minesweeper/"
 
     }, {
         title: "Tempo",
@@ -137,6 +138,7 @@ function Projects(props) {
             let description = current.description
             let tags = current.tags
             let githubLink = current.githubLink
+            let link = current.link
             let image = imagePrefix + current.image
             let flipped = i % 2 !== 0
             let shadow = current.shadow === true
@@ -146,6 +148,7 @@ function Projects(props) {
                 description={description}
                 tags={tags}
                 githubLink={githubLink}
+                link={link}
                 img={image}
                 flipped={flipped}
                 shadow={shadow}

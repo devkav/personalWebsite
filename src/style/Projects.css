@@ -51,7 +51,7 @@
     justify-content: space-between;
 }
 
-.project-github-icon {
+.project-icon {
     color: var(--bs-body-color);
     font-size: 31px;
     transition: color .3s;
@@ -171,14 +171,15 @@
     justify-content: space-between;
 }
 
-.display-github-container {
+.icon-container {
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     justify-content: center;
     align-items: center;
+    width: fit-content;
 }
 
-.display-github-icon {
+.display-icon {
     font-size: clamp(24px, 4vw, 38px) !important;
     color: var(--bs-body-color);
     margin-bottom: 0.5rem;
