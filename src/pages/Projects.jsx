@@ -92,6 +92,19 @@ const otherProjects = [
         tags: ["Java", "REST APIs", "Android Development"],
         githubLink: "https://github.com/DevanTurtle7/SpotifyHueAndroid"
     }, {
+        title: "Minesweeper",
+        description: [
+            `I enjoy playing minesweeper, so I decided to build it myself. I 
+            used React to build the game. While working on this project I struggled 
+            with optimization and keeping track of the games state. Every time the 
+            player was clicking a tile, the entire board had to rerender. I fixed 
+            this by using the model view controller design pattern. Through this 
+            process, I learned how to properly encapsulate classes in Javascript. `
+        ],
+        tags: ["React", "Object Oriented Programming"],
+        githubLink: "https://github.com/DevanTurtle7/react-minesweeper"
+
+    }, {
         title: "Tempo",
         description: [
             `Tempo is a web application that syncs users’ Spotify 
