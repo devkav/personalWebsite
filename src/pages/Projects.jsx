@@ -18,7 +18,8 @@ const highlightedProjects = [
             images.`
         ],
         tags: ["React", "Firebase", "AWS S3", "Web Development"],
-        githubLink: "https://github.com/DevanTurtle7/xavier-portfolio"
+        githubLink: "https://github.com/DevanTurtle7/xavier-portfolio",
+        link: "https://xaviersylviajackson.com/"
     }, {
         title: "Corner Clerk",
         image: "clayhackScreenshot.png",
@@ -122,7 +123,8 @@ const otherProjects = [
             skip songs they dislike.`
         ],
         tags: ["JavaScript", "HTML", "Firestore", "REST APIs"],
-        githubLink: "https://github.com/DevanTurtle7/BrickHack7"
+        githubLink: "https://github.com/DevanTurtle7/BrickHack7",
+        link: "https://devanturtle7.github.io/BrickHack7/"
     }
 ]
 
