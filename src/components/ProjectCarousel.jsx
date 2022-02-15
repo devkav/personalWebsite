@@ -55,6 +55,7 @@ function ProjectCarousel(props) {
                 current={current}
                 classNames={classNames}
                 githubLink={currentProj.githubLink}
+                link={currentProj.link}
                 key={i}
             />)
         }

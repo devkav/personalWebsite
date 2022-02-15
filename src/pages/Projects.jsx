@@ -18,7 +18,8 @@ const highlightedProjects = [
             images.`
         ],
         tags: ["React", "Firebase", "AWS S3", "Web Development"],
-        githubLink: "https://github.com/DevanTurtle7/xavier-portfolio"
+        githubLink: "https://github.com/DevanTurtle7/xavier-portfolio",
+        link: "https://xaviersylviajackson.com/"
     }, {
         title: "Corner Clerk",
         image: "clayhackScreenshot.png",
@@ -92,6 +93,20 @@ const otherProjects = [
         tags: ["Java", "REST APIs", "Android Development"],
         githubLink: "https://github.com/DevanTurtle7/SpotifyHueAndroid"
     }, {
+        title: "Minesweeper",
+        description: [
+            `I enjoy playing minesweeper, so I decided to build it myself. I 
+            used React to build the game. While working on this project I struggled 
+            with optimization and keeping track of the games state. Every time the 
+            player was clicking a tile, the entire board had to rerender. I fixed 
+            this by using the model view controller design pattern. Through this 
+            process, I learned how to properly encapsulate classes in Javascript. `
+        ],
+        tags: ["React", "Object Oriented Programming"],
+        githubLink: "https://github.com/DevanTurtle7/react-minesweeper",
+        link: "https://devanturtle7.github.io/react-minesweeper/"
+
+    }, {
         title: "Tempo",
         description: [
             `Tempo is a web application that syncs users’ Spotify 
@@ -108,7 +123,8 @@ const otherProjects = [
             skip songs they dislike.`
         ],
         tags: ["JavaScript", "HTML", "Firestore", "REST APIs"],
-        githubLink: "https://github.com/DevanTurtle7/BrickHack7"
+        githubLink: "https://github.com/DevanTurtle7/BrickHack7",
+        link: "https://devanturtle7.github.io/BrickHack7/"
     }
 ]
 
@@ -124,6 +140,7 @@ function Projects(props) {
             let description = current.description
             let tags = current.tags
             let githubLink = current.githubLink
+            let link = current.link
             let image = imagePrefix + current.image
             let flipped = i % 2 !== 0
             let shadow = current.shadow === true
@@ -133,6 +150,7 @@ function Projects(props) {
                 description={description}
                 tags={tags}
                 githubLink={githubLink}
+                link={link}
                 img={image}
                 flipped={flipped}
                 shadow={shadow}
