@@ -46,12 +46,12 @@
 @media screen and (max-width: 850px) {
     #left-panel {
         grid-column: 1;
-        grid-row: 1;
+        grid-row: 2;
     }
 
     #right-panel {
         grid-column: 1;
-        grid-row: 2;
+        grid-row: 1;
     }
 
     .experience-container {

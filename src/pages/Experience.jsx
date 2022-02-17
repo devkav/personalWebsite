@@ -44,11 +44,21 @@ function Experience(props) {
                                 </p>
                                 <ul>
                                     <li><p>B.S. in Software Engineering</p></li>
-                                    <li><p><b>Deans List</b> Spring 2021 to Present</p></li>
                                     <li><p>Expected Graduation: May 2025 (5 year program)</p></li>
+                                    <li><p><b>Deans List</b> Spring 2021 to Present</p></li>
+                                    <li><p>Member of Society of Software Engineers</p></li>
                                 </ul>
                             </div>
                         </div>
+                        <div id="awards" className="experience-section">
+                            <h3>Awards</h3>
+                            <p><b>BrickHack7</b> - Best Usage of Google Cloud</p>
+                            <p><b>ClayHack 2020</b> - Best Project Design</p>
+                            <p><b>Meet & Hack 2022</b> - 2nd Place Community Hack</p>
+                        </div>
+                    </div>
+
+                    <div id="right-panel">
                         <div id="work" className="experience-section">
                             <h3>Work</h3>
                             <div className='work-content'>
@@ -70,19 +80,11 @@ function Experience(props) {
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div id="right-panel">
                         <div id="technologies" className="experience-section">
                             <h3>Technologies</h3>
                             <div className="chips-container">
                                 {createChips()}
                             </div>
-                        </div>
-                        <div id="awards" className="experience-section">
-                            <h3>Awards</h3>
-                            <p><b>BrickHack7</b> - Best Usage of Google Cloud</p>
-                            <p><b>ClayHack 2020</b> - Best Project Design</p>
-                            <p><b>Meet & Hack 2022</b> - 2nd Place Community Hack</p>
                         </div>
                     </div>
                 </div>
