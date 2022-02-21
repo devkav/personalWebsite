@@ -1,10 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 import CarouselControls from './CarouselControls';
 import { useSwipeable } from 'react-swipeable';
 
 function ProjectCarousel(props) {
     const [current, setCurrent] = useState(0)
+
+    useEffect(() => {
+        document.addEventListener("keydown", keyDown, false);
+
+        return () => {
+            document.removeEventListener("keydown", keyDown, false)
+        }
+    })
+
+    const keyDown = (e) => {
+        if (e.key === "ArrowRight") {
+            next()
+        } else if (e.key === "ArrowLeft") {
+            previous()
+        }
+    }
 
     const next = () => {
         let numProjects = props.projects.length
