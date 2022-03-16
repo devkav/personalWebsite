@@ -6,26 +6,26 @@ import Navbar from '../components/Navbar';
 import TitleText from '../components/TitleText';
 import { isMobile } from 'react-device-detect';
 
+const INIT_TIME = 500
+
 function WelcomePage(props) {
     const [mouseX, setMouseX] = useState(0)
     const [mouseY, setMouseY] = useState(0)
     const [loaded, setLoaded] = useState(false)
 
     useEffect(() => {
-        load()
-        const welcome = document.getElementById("welcome")
-    }, [])
+        let timeout;
 
-    const load = async () => {
-        window.scrollTo(0,0)
-        await sleep(500)
-        window.scrollTo(0,0)
-        setLoaded(true)
-    }
+        if (!loaded) {
+            window.scrollTo(0, 0)
+            timeout = setTimeout(() => {
+                window.scrollTo(0, 0)
+                setLoaded(true)
+            }, INIT_TIME)
+        }
 
-    const sleep = (ms) => {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
+        return () => clearTimeout(timeout)
+    }, [loaded])
 
     const onMouseMove = (e) => {
         if (!isMobile) {

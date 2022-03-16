@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import TitleText from "../components/TitleText";
 
+const INIT_TIME = 500;
+
 function PageNotFound(props) {
     const [mouseX, setMouseX] = useState(0)
     const [mouseY, setMouseY] = useState(0)
@@ -17,23 +19,21 @@ function PageNotFound(props) {
     }
 
     useEffect(() => {
-        load()
-        const welcome = document.getElementById("welcome")
-    }, [])
+        let timeout;
 
-    const load = async () => {
-        window.scrollTo(0,0)
-        await sleep(500)
-        window.scrollTo(0,0)
-        setLoaded(true)
-    }
+        if (!loaded) {
+            window.scrollTo(0,0)
 
-    const sleep = (ms) => {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
+            timeout = setTimeout(() => {
+                window.scrollTo(0,0)
+                setLoaded(true)
+            }, INIT_TIME)
+        }
+        
+        return () => clearTimeout(timeout)
+    }, [loaded])
 
     const getClassName = () => loaded ? "fade-in-end" : "fade-in-start"
-    
 
     return (
         <div id="page-not-found" onMouseMove={onMouseMove}>

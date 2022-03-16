@@ -1,31 +1,29 @@
 import { useEffect, useState } from 'react';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
+const INIT_TIME = 3000
+
 function LearnMore(props) {
     const [loaded, setLoaded] = useState(false)
 
     useEffect(() => {
+        let timeout;
+
         if (!loaded) {
-            load()
+            const safeDocument = typeof document !== 'undefined' ? document : {};
+            const html = safeDocument.documentElement;
+
+            html.style.overflow = "hidden"
+            timeout = setTimeout(() => {
+                setLoaded(true)
+                html.style.overflow = "visible"
+            }, INIT_TIME)
         }
-    }, [])
 
-    const load = async() => {
-        const safeDocument = typeof document !== 'undefined' ? document : {};
-        const html = safeDocument.documentElement;
-
-        html.style.overflow = "hidden"
-        await sleep(3000)
-        setLoaded(true)
-        html.style.overflow = "visible"
-    }
-
-    const sleep = (ms) => {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
+        return () => clearTimeout(timeout)
+    }, [loaded])
 
     const getClassName = () => loaded ? "fade-in-end" : "fade-in-start"
-
 
     return (
         <div className={"learn-more " + getClassName()}>

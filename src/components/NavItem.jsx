@@ -1,22 +1,19 @@
 import { useState, useEffect } from 'react';
 
+
 function NavItem(props) {
     const [loaded, setLoaded] = useState(false)
+    const INIT_TIME = 1500 + (props.order * 300)
 
     useEffect(() => {
+        let timeout;
+
         if (!loaded) {
-            load()
+            timeout = setTimeout(() => setLoaded(true), INIT_TIME)
         }
-    }, [])
 
-    const sleep = (ms) => {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
-    const load = async () => {
-        await sleep(1500 + (props.order * 300))
-        setLoaded(true)
-    }
+        return () => clearTimeout(timeout)
+    }, [loaded, INIT_TIME])
 
     const onClick = () => {
         let section = document.getElementById(props.section)

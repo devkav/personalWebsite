@@ -5,23 +5,20 @@ import { SiDevpost } from 'react-icons/si';
 import { MdEmail } from 'react-icons/md';
 import IconButton from './IconButton';
 
+const INIT_TIME = 1500
+
 function Linkbar(props) {
     const [loaded, setLoaded] = useState(false)
 
     useEffect(() => {
+        let timeout;
+
         if (!loaded) {
-            load()
+            timeout = setTimeout(() => setLoaded(true), INIT_TIME)
         }
-    }, [])
 
-    const load = async () => {
-        await sleep(1500)
-        setLoaded(true)
-    }
-
-    const sleep = (ms) => {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
+        return () => clearTimeout(timeout)
+    }, [loaded])
 
     const getClassName = () => loaded ? "linkbar-loaded" : "linkbar-unloaded"
 
