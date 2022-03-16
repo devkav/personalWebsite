@@ -73,7 +73,7 @@ const otherProjects = [
             utilized test driven development to ensure it was functioning as 
             intended.`
         ],
-        tags: ["React", "Python", "JavaScript", "PostgreSQL", "Flask",
+        tags: ["React", "Python", "PostgreSQL", "Flask",
             "REST APIs", "Test Driven Development"],
         githubLink: "https://github.com/DevanTurtle7/full-stack-chat"
     }, {
@@ -105,7 +105,20 @@ const otherProjects = [
         tags: ["React", "Object Oriented Programming"],
         githubLink: "https://github.com/DevanTurtle7/react-minesweeper",
         link: "https://devanturtle7.github.io/react-minesweeper/"
+    }, {
+        title: "WUPHF Weather",
+        description: [
 
+       ],
+       tags: ["React Native", "Mobile Development"],
+       githubLink: "https://github.com/DevanTurtle7/WUPHF-Weather",
+    }, {
+        title: "Twotor",
+        description: [
+
+       ],
+       tags: ["React"],
+       githubLink: "https://github.com/DevanTurtle7/twotor",
     }, {
         title: "Tempo",
         description: [
