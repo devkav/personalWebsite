@@ -101,10 +101,6 @@ const otherProjects = [
             player was clicking a tile, the entire board had to rerender. I fixed 
             this by using the model view controller design pattern. Through this 
             process, I learned how to properly encapsulate classes in Javascript.`,
-            `The app sends weather notifications to you on every platform possible. It 
-            calls, texts, and emails you. If time permitted, we would have loved to 
-            work with other APIs and expand the list of supported platforms such as 
-            Twitter and Instagram.`
         ],
         tags: ["React", "Object Oriented Programming"],
         githubLink: "https://github.com/DevanTurtle7/react-minesweeper",
@@ -137,7 +133,11 @@ const otherProjects = [
             worked with React Native before, but I was proficient with React and had worked 
             with several mobile frameworks in the past. Over the course of 24 hours, I was 
             able to build and deploy a working app that utilized the custom API built by my 
-            teammates.`
+            teammates.`,
+            `The app sends weather notifications to you on every platform possible. It 
+            calls, texts, and emails you. If time permitted, we would have loved to 
+            work with other APIs and expand the list of supported platforms such as 
+            Twitter and Instagram.`
         ],
         tags: ["React Native", "Mobile Development"],
         githubLink: "https://github.com/DevanTurtle7/WUPHF-Weather",
