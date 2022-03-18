@@ -106,19 +106,37 @@ const otherProjects = [
         githubLink: "https://github.com/DevanTurtle7/react-minesweeper",
         link: "https://devanturtle7.github.io/react-minesweeper/"
     }, {
-        title: "WUPHF Weather",
-        description: [
-
-       ],
-       tags: ["React Native", "Mobile Development"],
-       githubLink: "https://github.com/DevanTurtle7/WUPHF-Weather",
-    }, {
         title: "Twotor",
         description: [
-
-       ],
-       tags: ["React"],
-       githubLink: "https://github.com/DevanTurtle7/twotor",
+            `Twotor is a web application that connect students in real time. Twotor 
+            creates a learning community that addresses problems with the outdated tutoring 
+            methods. In person tutoring can be hard for students to find time and online 
+            forums take too long to get a response. Twotor solves this by providing instant 
+            matchmaking and messaging. It creates a symbiotic relationship between students. 
+            Users can get help with a subject they struggle in and provide tutoring for 
+            subjects they excel in.`,
+            `This project was built during a 24 hour hackathon in collaboration with two 
+            colleagues. I focused on building the front end with React, while my teammates 
+            built a custom database and API. I helped keep the team together in the face of 
+            the major bug. My full stack experience allowed me to help fix the error in the 
+            backend and get us back on track.`
+        ],
+        tags: ["React"],
+        githubLink: "https://github.com/DevanTurtle7/twotor",
+    }, {
+        title: "WUPHF Weather",
+        description: [
+            `For BrickHack 8, my teammates and I wanted to explore new technologies 
+            and just have fun. I proposed the idea of recreating the WUPHF app from the 
+            show, The Office. This allowed my teammates to explore new backend technologies 
+            such as CockroachDB and Twilio, while I explored React Native. I had never 
+            worked with React Native before, but I was proficient with React and had worked 
+            with several mobile frameworks in the past. Over the course of 24 hours, I was 
+            able to build and deploy a working app that utilized the custom API built by my 
+            teammates.`
+        ],
+        tags: ["React Native", "Mobile Development"],
+        githubLink: "https://github.com/DevanTurtle7/WUPHF-Weather",
     }, {
         title: "Tempo",
         description: [
