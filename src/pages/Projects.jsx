@@ -100,7 +100,11 @@ const otherProjects = [
             with optimization and keeping track of the games state. Every time the 
             player was clicking a tile, the entire board had to rerender. I fixed 
             this by using the model view controller design pattern. Through this 
-            process, I learned how to properly encapsulate classes in Javascript. `
+            process, I learned how to properly encapsulate classes in Javascript.`,
+            `The app sends weather notifications to you on every platform possible. It 
+            calls, texts, and emails you. If time permitted, we would have loved to 
+            work with other APIs and expand the list of supported platforms such as 
+            Twitter and Instagram.`
         ],
         tags: ["React", "Object Oriented Programming"],
         githubLink: "https://github.com/DevanTurtle7/react-minesweeper",
