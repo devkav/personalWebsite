@@ -5,6 +5,7 @@ import { useSwipeable } from 'react-swipeable';
 
 function ProjectCarousel(props) {
     const [current, setCurrent] = useState(0)
+    const [currentFromLeft, setCurrentFromLeft] = useState(false)
 
     useEffect(() => {
         document.addEventListener("keydown", keyDown, false);
@@ -26,12 +27,14 @@ function ProjectCarousel(props) {
         let numProjects = props.projects.length
 
         if (current < (numProjects - 1)) {
+            setCurrentFromLeft(false)
             setCurrent(current + 1)
         }
     }
 
     const previous = () => {
         if (current > 0) {
+            setCurrentFromLeft(true)
             setCurrent(current - 1)
         }
     }
@@ -54,7 +57,7 @@ function ProjectCarousel(props) {
             let classNames;
 
             if (current === i) {
-                classNames = "current"
+                classNames = (currentFromLeft ? "current-from-left" : "current-from-right")
             } else if (current < i) {
                 classNames = "next"
             } else {

@@ -10,26 +10,93 @@
     padding: 20px;
     position: relative;
     max-width: 60vw;
-    transition: left .7s, opacity .3s;
+    transition: opacity .3s;
     height: fit-content;
     grid-column: 1;
     grid-row: 1;
     background-color: var(--bs-card-color);
+    
+    --animation-speed: 0.7s
 }
 
 .project-card-next {
-    left: 80vw;
     opacity: 0;
+    animation: slide-right var(--animation-speed) forwards;
+    -webkit-animation: slide-right var(--animation-speed) forwards;
 }
 
 .project-card-prev {
-    left: -80vw;
     opacity: 0;
+    animation: slide-left var(--animation-speed) forwards;
+    -webkit-animation: slide-left var(--animation-speed) forwards;
 }
 
-.project-card-current {
-    left: 0vw;
+.project-card-current-from-left {
     opacity: 1;
+    animation: slide-center-from-left var(--animation-speed) forwards;
+    -webkit-animation: slide-center-from-left var(--animation-speed) forwards;
+}
+
+.project-card-current-from-right {
+    opacity: 1;
+    animation: slide-center-from-right var(--animation-speed) forwards;
+    -webkit-animation: slide-center-from-right var(--animation-speed) forwards;
+}
+
+@keyframes slide-right {
+    100% {
+        transform: translateX(150%);
+    }
+}
+@-webkit-keyframes slide-right {
+    100% {
+        -webkit-transform: translateX(150%);
+    }
+}
+
+@keyframes slide-left {
+    100% {
+        transform: translateX(-150%);
+    }
+}
+@-webkit-keyframes slide-left {
+    100% {
+        -webkit-transform: translateX(-150%);
+    }
+}
+
+@keyframes slide-center-from-left {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@-webkit-keyframes slide-center-from-left {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@keyframes slide-center-from-right {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@-webkit-keyframes slide-center-from-right {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+    }
 }
 
 #projects-label {
