@@ -40,6 +40,11 @@ function ProjectCarousel(props) {
     }
 
     const setActive = (i) => {
+        if (current < i) {
+            setCurrentFromLeft(false)
+        } else {
+            setCurrentFromLeft(true)
+        }
         setCurrent(i)
     }
 
