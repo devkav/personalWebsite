@@ -11,12 +11,13 @@ function ProjectCarousel(props) {
     const [running, setRunning] = useState(false)
 
     useEffect(() => {
-        document.addEventListener("keydown", keyDown, false);
         let timeout;
 
         if (running) {
             timeout = setTimeout(() => setRunning(false), DELAY)
         }
+
+        document.addEventListener("keydown", keyDown, false);
 
         return () => {
             document.removeEventListener("keydown", keyDown, false)
