@@ -229,7 +229,7 @@
 .project-display-image img {
     object-fit: contain;
     max-width: 50vw;
-    max-height: 50vh;
+    max-height: min(50vh, 400px);
 }
 
 .title-row {
