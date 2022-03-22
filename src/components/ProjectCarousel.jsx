@@ -3,15 +3,24 @@ import ProjectCard from './ProjectCard';
 import CarouselControls from './CarouselControls';
 import { useSwipeable } from 'react-swipeable';
 
+const DELAY = 400;
+
 function ProjectCarousel(props) {
     const [current, setCurrent] = useState(0)
     const [currentFromLeft, setCurrentFromLeft] = useState(false)
+    const [running, setRunning] = useState(false)
 
     useEffect(() => {
         document.addEventListener("keydown", keyDown, false);
+        let timeout;
+
+        if (running) {
+            timeout = setTimeout(() => setRunning(false), DELAY)
+        }
 
         return () => {
             document.removeEventListener("keydown", keyDown, false)
+            clearTimeout(timeout)
         }
     })
 
@@ -24,18 +33,24 @@ function ProjectCarousel(props) {
     }
 
     const next = () => {
-        let numProjects = props.projects.length
+        if (!running) {
+            setRunning(true)
+            let numProjects = props.projects.length
 
-        if (current < (numProjects - 1)) {
-            setCurrentFromLeft(false)
-            setCurrent(current + 1)
+            if (current < (numProjects - 1)) {
+                setCurrentFromLeft(false)
+                setCurrent(current + 1)
+            }
         }
     }
 
     const previous = () => {
-        if (current > 0) {
-            setCurrentFromLeft(true)
-            setCurrent(current - 1)
+        if (!running) {
+            setRunning(true)
+            if (current > 0) {
+                setCurrentFromLeft(true)
+                setCurrent(current - 1)
+            }
         }
     }
 
