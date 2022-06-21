@@ -17,6 +17,27 @@ const technologies = [
     "Spark Java",
 ]
 
+const work = [
+    {
+        title: "Software Engineer",
+        company: "Wayfair",
+        dates: "July 2022 - Present",
+        descriptions: []
+    },
+    {
+        title: "Course Assistant",
+        company: "Rochester Institute of Technology",
+        dates: "August 2021 - May 2022",
+        descriptions: [
+            `Assisted in teaching students the fundamentals of programming including data
+            structures, algorithms, object oriented programming and test driven development
+            using Python and Java`,
+            `Attended classes to assist with in class activities and problem solving activities`,
+            `Graded and provided feedback on over 130 assignments a week`
+        ]
+    }
+]
+
 function Experience(props) {
     const createChips = () => {
         let chips = []
@@ -28,6 +49,34 @@ function Experience(props) {
         }
 
         return chips
+    }
+
+    const createWork = () => {
+        let elements = []
+        let numWork = work.length
+
+        for (let i = 0; i < numWork; i++) {
+            let current = work[i];
+            let descriptions = []
+            let numDescriptions = current.descriptions.length
+
+            for (let j = 0; j < numDescriptions; j++) {
+                descriptions.push(<li>{current.descriptions[j]}</li>)
+            }
+
+            elements.push(
+                <div className="work-item">
+                    <p><b>{current.title}</b></p>
+                    <p><i>{current.company}</i></p>
+                    <p>{current.dates}</p>
+                    <ul>
+                        {descriptions}
+                    </ul>
+                </div>
+            )
+        }
+
+        return elements
     }
 
     return (
@@ -62,22 +111,7 @@ function Experience(props) {
                         <div id="work" className="experience-section">
                             <h3>Work</h3>
                             <div className='work-content'>
-                                <p><b>Course Assistant</b></p>
-                                <p><i>Rochester Institute of Technology</i></p>
-                                <p>August 2021 - Present</p>
-                                <ul>
-                                    <li>
-                                        Assisted in teaching students the fundamentals of programming including data
-                                        structures, algorithms, object oriented programming and test driven development
-                                        using Python and Java
-                                    </li>
-                                    <li>
-                                        Attended classes to assist with in class activities and problem solving activities
-                                    </li>
-                                    <li>
-                                        Graded and provided feedback on over 130 assignments a week
-                                    </li>
-                                </ul>
+                                {createWork()}
                             </div>
                         </div>
                         <div id="technologies" className="experience-section">
