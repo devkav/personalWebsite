@@ -17,7 +17,7 @@ const highlightedProjects = [
             Firebase to store image metadata and Amazon Web Service’s S3 to host the 
             images.`
         ],
-        tags: ["React", "Firebase", "AWS S3", "Web Development"],
+        tags: ["React", "Redux", "Firebase", "AWS S3", "Web Development"],
         githubLink: "https://github.com/DevanTurtle7/xavier-portfolio",
         link: "https://xaviersylviajackson.com/"
     }, {
