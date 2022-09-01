@@ -22,23 +22,22 @@ const highlightedProjects = [
     link: 'https://xaviersylviajackson.com/',
   },
   {
-    title: 'Corner Clerk',
-    image: 'clayhackScreenshot.png',
-    shadow: true,
+    title: 'Redpoint',
+    image: 'redpointScreenshot.png',
     description: [
-      `Corner Clerk is an Android and iOS app that was developed to
-            make grocery shopping more convenient for college students. The app
-            displays a list of all the available products at RIT's corner store and
-            their price. Users can add items to their cart, while the app keeps track
-            of how much money they have left. The app converts meal swipes into
-            dollars, making it much easier to keep track of spending.`,
-      `The app was developed during a hackathon with a colleague. We chose to
-            build the app using Flutter, because it allowed us rapidly design and test
-            the app for both Android and iOS. After the hackathon, we shipped
-            multiple version to Android users.`,
+      `Redpoint is an Android and iOS application for tracking rock climbing progress. The goal of
+      the app is to encourage healthy progression through reflection.`,
+      `This project is a collaboration with a friend. Throughout development, we have both
+      been able to practice the skills that we have been learning in the industry. 
+      To keep our code clean and consistent we created a document to keep track of development standards 
+      such as stylistic 
+      conventions and best practices. Additionally, we agreed on a Scrum-like development methodology that 
+      keeps us productive even with our asynchronous schedule.`,
+      `This project has been a great outlet for me to refine my UI design skills. I've been having lots of
+      fun designing the app from the ground up to be minimal and highly functional.`,
     ],
-    tags: ['Flutter', 'Firestore', 'Mobile Development'],
-    githubLink: 'https://github.com/DevanTurtle7/clayHack2020',
+    tags: ['Flutter', 'Mobile Development'],
+    githubLink: 'https://github.com/Redpoint-app/Redpoint',
   },
   {
     title: 'Genetic Algorithm',
@@ -153,6 +152,23 @@ const otherProjects = [
     ],
     tags: ['React Native', 'Mobile Development'],
     githubLink: 'https://github.com/DevanTurtle7/WUPHF-Weather',
+  },
+  {
+    title: 'Corner Clerk',
+    description: [
+      `Corner Clerk is an Android and iOS app that was developed to
+            make grocery shopping more convenient for college students. The app
+            displays a list of all the available products at RIT's corner store and
+            their price. Users can add items to their cart, while the app keeps track
+            of how much money they have left. The app converts meal swipes into
+            dollars, making it much easier to keep track of spending.`,
+      `The app was developed during a hackathon with a colleague. We chose to
+            build the app using Flutter, because it allowed us rapidly design and test
+            the app for both Android and iOS. After the hackathon, we shipped
+            multiple version to Android users.`,
+    ],
+    tags: ['Flutter', 'Firestore', 'Mobile Development'],
+    githubLink: 'https://github.com/DevanTurtle7/clayHack2020',
   },
   {
     title: 'Tempo',
