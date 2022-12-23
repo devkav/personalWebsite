@@ -27,7 +27,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "",
-    "deploy": ""
+    "deploy": "",
+    "update-resume": "cp ~/Documents/'Devan Kavalchek Resume.pdf' ./public"
   },
   "eslintConfig": {
     "extends": [
