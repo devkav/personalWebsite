@@ -6,8 +6,21 @@ const highlightedProjects = [
   {
     title: 'froggy.app',
     image: 'froggyScreenshot.png',
-    description: [],
-    tags: ['React', 'Redux', 'TypeScript', 'Go', 'SQL', 'Web Development'],
+    description: [
+      `froggy is a project centered around learning and the love of programming. froggy is a link shortener built with a colleague of mine. Our goal is to push ourselves technically and creatively to build a full-fledged web application from the ground up. This project gives us a space to practice technologies we used in industry, want to learn, or just love using.`,
+      `froggy uses a custom component library, lilypad, built and designed by me. This lets me fine-tune the look of the interface while also learning more about npm packages. I use Storybook to prototype components and npm to publish.
+      The majority of my development work is on the frontend, where I use React, Redux and Typescript. However, I also learned Go, Docker and Google Cloud Platform to help my colleague develop our API on the backend.`,
+    ],
+    tags: [
+      'React',
+      'Redux',
+      'TypeScript',
+      'SASS',
+      'Go',
+      'SQL',
+      'Storybook',
+      'Web Development',
+    ],
     githubLink: 'https://github.com/froggy-app',
     link: 'https://froggy.app',
   },
@@ -70,6 +83,39 @@ const highlightedProjects = [
 
 const otherProjects = [
   {
+    title: 'Twotor',
+    description: [
+      `Twotor is a web application that connect students in real time. Twotor 
+            creates a learning community that addresses problems with the outdated tutoring 
+            methods. In person tutoring can be hard for students to find time and online 
+            forums take too long to get a response. Twotor solves this by providing instant 
+            matchmaking and messaging. It creates a symbiotic relationship between students. 
+            Users can get help with a subject they struggle in and provide tutoring for 
+            subjects they excel in.`,
+      `This project was built during a 24 hour hackathon in collaboration with two 
+            colleagues. I focused on building the front end with React, while my teammates 
+            built a custom database and API. I helped keep the team together in the face of 
+            the major bug. My full stack experience allowed me to help fix the error in the 
+            backend and get us back on track.`,
+    ],
+    tags: ['React'],
+    githubLink: 'https://github.com/DevanTurtle7/twotor',
+  },
+  {
+    title: 'Minesweeper',
+    description: [
+      `I enjoy playing minesweeper, so I decided to build it myself. I 
+            used React to build the game. While working on this project I struggled 
+            with optimization and keeping track of the games state. Every time the 
+            player was clicking a tile, the entire board had to rerender. I fixed 
+            this by using the model view controller design pattern. Through this 
+            process, I learned how to properly encapsulate classes in Javascript.`,
+    ],
+    tags: ['React', 'Object Oriented Programming'],
+    githubLink: 'https://github.com/DevanTurtle7/react-minesweeper',
+    link: 'https://devanturtle7.github.io/react-minesweeper/',
+  },
+  {
     title: 'Full Stack Chat',
     description: [
       `The full stack chat is a project that I started to further refine 
@@ -108,39 +154,6 @@ const otherProjects = [
     ],
     tags: ['Java', 'REST APIs', 'Android Development'],
     githubLink: 'https://github.com/DevanTurtle7/SpotifyHueAndroid',
-  },
-  {
-    title: 'Minesweeper',
-    description: [
-      `I enjoy playing minesweeper, so I decided to build it myself. I 
-            used React to build the game. While working on this project I struggled 
-            with optimization and keeping track of the games state. Every time the 
-            player was clicking a tile, the entire board had to rerender. I fixed 
-            this by using the model view controller design pattern. Through this 
-            process, I learned how to properly encapsulate classes in Javascript.`,
-    ],
-    tags: ['React', 'Object Oriented Programming'],
-    githubLink: 'https://github.com/DevanTurtle7/react-minesweeper',
-    link: 'https://devanturtle7.github.io/react-minesweeper/',
-  },
-  {
-    title: 'Twotor',
-    description: [
-      `Twotor is a web application that connect students in real time. Twotor 
-            creates a learning community that addresses problems with the outdated tutoring 
-            methods. In person tutoring can be hard for students to find time and online 
-            forums take too long to get a response. Twotor solves this by providing instant 
-            matchmaking and messaging. It creates a symbiotic relationship between students. 
-            Users can get help with a subject they struggle in and provide tutoring for 
-            subjects they excel in.`,
-      `This project was built during a 24 hour hackathon in collaboration with two 
-            colleagues. I focused on building the front end with React, while my teammates 
-            built a custom database and API. I helped keep the team together in the face of 
-            the major bug. My full stack experience allowed me to help fix the error in the 
-            backend and get us back on track.`,
-    ],
-    tags: ['React'],
-    githubLink: 'https://github.com/DevanTurtle7/twotor',
   },
   {
     title: 'WUPHF Weather',

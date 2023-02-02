@@ -8,8 +8,8 @@
 #about-me-content {
   max-width: 1000px;
   margin-top: 50px;
-  margin-left: 5.5rem;
-  margin-right: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 @media screen and (max-width: 800px) {
