@@ -4,6 +4,14 @@ import ProjectDisplay from '../components/ProjectDisplay';
 
 const highlightedProjects = [
   {
+    title: 'froggy.app',
+    image: 'froggyScreenshot.png',
+    description: [],
+    tags: ['React', 'Redux', 'TypeScript', 'Go', 'SQL', 'Web Development'],
+    githubLink: 'https://github.com/froggy-app',
+    link: 'https://froggy.app',
+  },
+  {
     title: 'Artist Portfolio',
     image: 'xsjScreenshot.png',
     description: [
