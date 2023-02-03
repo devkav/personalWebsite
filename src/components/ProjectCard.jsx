@@ -1,6 +1,5 @@
 import {AiOutlineGithub} from 'react-icons/ai';
 import {HiOutlineExternalLink} from 'react-icons/hi';
-import {isMobile} from 'react-device-detect';
 import Chip from './Chip';
 import IconButton from './IconButton';
 
