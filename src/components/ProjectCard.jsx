@@ -35,11 +35,7 @@ function ProjectCard(props) {
       description.push(<p key={i}>{current}</p>);
     }
 
-    return (
-      <div className={`project-description${isMobile ? '-mobile' : ''}`}>
-        {description}
-      </div>
-    );
+    return <div className={'project-description'}>{description}</div>;
   };
 
   const createLinkButton = () => {
@@ -57,11 +53,7 @@ function ProjectCard(props) {
   };
 
   return (
-    <div
-      className={`project-card ${isMobile ? 'project-card-mobile' : ''} ${
-        props.classNames
-      }`}
-    >
+    <div className={`project-card ${props.classNames}`}>
       <div className='title-row'>
         <h3>{props.title}</h3>
         <div className='icon-container ms-2'>
