@@ -8,6 +8,7 @@ const highlightedProjects = [
     image: 'froggyScreenshot.png',
     description: [
       `froggy is a project centered around learning and the love of programming. froggy is a link shortener built with a colleague of mine. Our goal is to push ourselves technically and creatively to build a full-fledged web application from the ground up. This project gives us a space to practice technologies we used in industry, want to learn, or just love using.`,
+      `We use a SCRUM development lifecycle to track progress. Additionally, we have written documentation and coding standards to keep the codebase clear and consistent.`,
       `froggy uses a custom component library, lilypad, built and designed by me. This lets me fine-tune the look of the interface while also learning more about npm packages. I use Storybook to prototype components and npm to publish.
       The majority of my development work is on the frontend, where I use React, Redux and Typescript. However, I also learned Go, Docker and Google Cloud Platform to help my colleague develop our API on the backend.`,
     ],
