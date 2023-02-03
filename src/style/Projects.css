@@ -1,184 +1,192 @@
 .projects-container {
-    max-width: 1000px;
-    margin-left: 100px;
-    margin-right: 100px;
+  max-width: 1000px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .project-card {
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    position: relative;
-    max-width: 60vw;
-    transition: opacity .3s;
-    height: fit-content;
-    grid-column: 1;
-    grid-row: 1;
-    background-color: var(--bs-card-color);
-    
-    --animation-speed: 0.7s
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  position: relative;
+  max-width: 60vw;
+  transition: opacity .3s;
+  height: fit-content;
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--bs-card-color);
+
+  --animation-speed: 0.7s
 }
 
 .project-card-next {
-    opacity: 0;
-    animation: slide-right var(--animation-speed) forwards;
-    -webkit-animation: slide-right var(--animation-speed) forwards;
+  opacity: 0;
+  animation: slide-right var(--animation-speed) forwards;
+  -webkit-animation: slide-right var(--animation-speed) forwards;
 }
 
 .project-card-prev {
-    opacity: 0;
-    animation: slide-left var(--animation-speed) forwards;
-    -webkit-animation: slide-left var(--animation-speed) forwards;
+  opacity: 0;
+  animation: slide-left var(--animation-speed) forwards;
+  -webkit-animation: slide-left var(--animation-speed) forwards;
 }
 
 .project-card-current-from-left {
-    opacity: 1;
-    animation: slide-center-from-left var(--animation-speed) forwards;
-    -webkit-animation: slide-center-from-left var(--animation-speed) forwards;
+  opacity: 1;
+  animation: slide-center-from-left var(--animation-speed) forwards;
+  -webkit-animation: slide-center-from-left var(--animation-speed) forwards;
 }
 
 .project-card-current-from-right {
-    opacity: 1;
-    animation: slide-center-from-right var(--animation-speed) forwards;
-    -webkit-animation: slide-center-from-right var(--animation-speed) forwards;
+  opacity: 1;
+  animation: slide-center-from-right var(--animation-speed) forwards;
+  -webkit-animation: slide-center-from-right var(--animation-speed) forwards;
 }
 
 @keyframes slide-right {
-    100% {
-        transform: translateX(150%);
-    }
+  100% {
+    transform: translateX(150%);
+  }
 }
+
 @-webkit-keyframes slide-right {
-    100% {
-        -webkit-transform: translateX(150%);
-    }
+  100% {
+    -webkit-transform: translateX(150%);
+  }
 }
 
 @keyframes slide-left {
-    100% {
-        transform: translateX(-150%);
-    }
+  100% {
+    transform: translateX(-150%);
+  }
 }
+
 @-webkit-keyframes slide-left {
-    100% {
-        -webkit-transform: translateX(-150%);
-    }
+  100% {
+    -webkit-transform: translateX(-150%);
+  }
 }
 
 @keyframes slide-center-from-left {
-    0% {
-        transform: translateX(-150%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
+  0% {
+    transform: translateX(-150%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
+
 @-webkit-keyframes slide-center-from-left {
-    0% {
-        transform: translateX(-150%);
-    }
-    100% {
-        -webkit-transform: translateX(0%);
-    }
+  0% {
+    transform: translateX(-150%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
+  }
 }
 
 @keyframes slide-center-from-right {
-    0% {
-        transform: translateX(150%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
+
 @-webkit-keyframes slide-center-from-right {
-    0% {
-        transform: translateX(150%);
-    }
-    100% {
-        -webkit-transform: translateX(0%);
-    }
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
+  }
 }
 
 #projects-label {
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 .chips-row {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
 }
 
 .project-card-footer {
-    display: flex;
-    flex-flow: row;
-    margin-top: 16px;
-    justify-content: space-between;
+  display: flex;
+  flex-flow: row;
+  margin-top: 16px;
+  justify-content: space-between;
 }
 
 .project-icon {
-    color: var(--bs-body-color);
-    font-size: 31px;
-    transition: color .3s;
+  color: var(--bs-body-color);
+  font-size: 31px;
+  transition: color .3s;
 }
 
 .project-card-container {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .bubble {
-    height: 10px;
-    width: 10px;
-    border-radius: 10px;
-    outline: 2px solid var(--bs-body-color);
-    margin: 4px;
-    transition: background-color .3s, opacity .3s;
-    box-shadow: 0 0 1px 0px var(--bs-body-color) inset, 0 0 1px 0px var(--bs-body-color);
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  outline: 2px solid var(--bs-body-color);
+  margin: 4px;
+  transition: background-color .3s, opacity .3s;
+  box-shadow: 0 0 1px 0px var(--bs-body-color) inset, 0 0 1px 0px var(--bs-body-color);
 }
 
 .bubble-active {
-    background-color: var(--bs-body-color);
+  background-color: var(--bs-body-color);
 }
 
 .carousel-indicator {
-    width: fit-content;
-    display: flex;
-    flex-flow: row;
+  width: fit-content;
+  display: flex;
+  flex-flow: row;
 }
 
 .carousel-controls {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-btn {
-    font-size: 20px;
-    color: var(--bs-body-color);
-    margin-right: 6px;
-    margin-left: 6px;
-    transition: opacity .3s;
+  font-size: 20px;
+  color: var(--bs-body-color);
+  margin-right: 6px;
+  margin-left: 6px;
+  transition: opacity .3s;
 }
 
 .carousel-btn-inactive {
-    opacity: 0;
+  opacity: 0;
 }
 
 .carousel-btn-inactive:hover {
-    cursor: default !important;
+  cursor: default !important;
 }
 
 .github-container {
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-end;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
 }
 
 /*
@@ -191,118 +199,127 @@
 */
 
 .project-display {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 30px;
-    margin-bottom: clamp(100px, 15vw, 150px);
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+  margin-bottom: clamp(100px, 15vw, 150px);
 }
 
 .project-display-image {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-display-no-flip .project-display-image {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 .project-display-flipped .project-display-image {
-    margin-left: 50px;
+  margin-left: 50px;
 }
 
 .project-display-no-flip .project-display-text {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 .project-display-flipped .project-display-text {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .project-display-text {
-    width: 70%
+  width: 70%
 }
 
 .project-display-image img {
-    object-fit: contain;
-    max-width: 50vw;
-    max-height: min(50vh, 400px);
+  object-fit: contain;
+  max-width: 50vw;
+  max-height: min(50vh, 400px);
 }
 
 .title-row {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
 }
 
 .icon-container {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
 }
 
 .display-icon {
-    font-size: clamp(24px, 4vw, 38px) !important;
-    color: var(--bs-body-color);
-    margin-bottom: 0.5rem;
-    transition: color .3s;
+  font-size: clamp(24px, 4vw, 38px) !important;
+  color: var(--bs-body-color);
+  margin-bottom: 0.5rem;
+  transition: color .3s;
 }
 
 #other-projects-label {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-card-mobile {
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.project-description-mobile {
+  overflow: scroll;
 }
 
 @media screen and (max-width: 800px) {
-    .project-display-no-flip {
-        display: flex;
-        flex-flow: column;
-    }
+  .project-display-no-flip {
+    display: flex;
+    flex-flow: column;
+  }
 
-    .project-display-flipped {
-        display: flex;
-        flex-flow: column-reverse;
-    }
+  .project-display-flipped {
+    display: flex;
+    flex-flow: column-reverse;
+  }
 
-    .project-display {
-        align-items: center;
-    }
+  .project-display {
+    align-items: center;
+  }
 
-    .project-display-text, .project-display-image {
-        margin-left: 0px !important;
-        margin-right: 0px !important;
-        margin-bottom: 20px;
-    }
+  .project-display-text, .project-display-image {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 20px;
+  }
 
-    .projects-container {
-        margin-left: 20px;
-        margin-right: 0px;
-    }
+  .projects-container {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
 
-    .project-card {
-        max-width: calc(100vw - 150px);
-    }
+  .project-card {
+    max-width: calc(100vw - 150px);
+  }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1000px) {
-    .project-display-image {
-        width: 50%
-    }
+  .project-display-image {
+    width: 50%
+  }
 
-    .project-display-image img {
-        object-fit: contain;
-        max-width: 100%;
-    }
+  .project-display-image img {
+    object-fit: contain;
+    max-width: 100%;
+  }
 }
 
 @media (hover: hover) {
-    .bubble:hover {
-        background-color: var(--bs-body-color);
-        opacity: .7;
-    }
+  .bubble:hover {
+    background-color: var(--bs-body-color);
+    opacity: .7;
+  }
 }
