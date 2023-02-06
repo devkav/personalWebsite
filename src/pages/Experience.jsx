@@ -20,8 +20,8 @@ const technologies = [
 
 const work = [
   {
-    title: 'Software Engineer',
     company: 'Wayfair',
+    title: 'Software Engineer',
     dates: 'July 2022 - December 2022',
     descriptions: [
       `Utilized TypeScript and Redux to fix, maintain and update internal marketing tools that are used to design and deliver billions of emails and push notifications every day.`,
@@ -35,8 +35,8 @@ const work = [
     ],
   },
   {
-    title: 'Course Assistant',
     company: 'Rochester Institute of Technology',
+    title: 'Course Assistant',
     dates: 'August 2021 - May 2022',
     descriptions: [
       `Assisted in teaching students the fundamentals of programming including data
@@ -85,10 +85,10 @@ function Experience(props) {
       elements.push(
         <div className='work-item'>
           <p>
-            <b>{current.title}</b>
+            <b>{current.company}</b>
           </p>
           <p>
-            <i>{current.company}</i>
+            <i>{current.title}</i>
           </p>
           <p>{current.dates}</p>
           <ul>{descriptions}</ul>
