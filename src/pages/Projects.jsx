@@ -58,7 +58,7 @@ const highlightedProjects = [
       `This project has been a great outlet for me to refine my UI design skills. I've been having lots of
       fun designing the app from the ground up to be minimal and highly functional.`,
     ],
-    tags: ['Flutter', 'Mobile Development'],
+    tags: ['Flutter', 'Dart', 'Mobile Development'],
     githubLink: 'https://github.com/Redpoint-app/Redpoint',
   },
   {
@@ -99,7 +99,7 @@ const otherProjects = [
             the major bug. My full stack experience allowed me to help fix the error in the 
             backend and get us back on track.`,
     ],
-    tags: ['React'],
+    tags: ['React', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/twotor',
   },
   {
@@ -112,7 +112,7 @@ const otherProjects = [
             this by using the model view controller design pattern. Through this 
             process, I learned how to properly encapsulate classes in Javascript.`,
     ],
-    tags: ['React', 'Object Oriented Programming'],
+    tags: ['React', 'Redux', 'TypeScript', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/react-minesweeper',
     link: 'https://devanturtle7.github.io/react-minesweeper/',
   },
@@ -189,7 +189,7 @@ const otherProjects = [
             the app for both Android and iOS. After the hackathon, we shipped
             multiple version to Android users.`,
     ],
-    tags: ['Flutter', 'Firestore', 'Mobile Development'],
+    tags: ['Flutter', 'Dart', 'Firestore', 'Mobile Development'],
     githubLink: 'https://github.com/DevanTurtle7/clayHack2020',
   },
   {
@@ -208,7 +208,7 @@ const otherProjects = [
             to sync their songs, add new ones to the queue, and even vote to 
             skip songs they dislike.`,
     ],
-    tags: ['JavaScript', 'HTML', 'Firestore', 'REST APIs'],
+    tags: ['JavaScript', 'HTML', 'Firestore', 'REST APIs', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/BrickHack7',
     link: 'https://devanturtle7.github.io/BrickHack7/',
   },
