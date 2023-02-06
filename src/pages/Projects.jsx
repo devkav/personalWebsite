@@ -105,12 +105,7 @@ const otherProjects = [
   {
     title: 'Minesweeper',
     description: [
-      `I enjoy playing minesweeper, so I decided to build it myself. I 
-            used React to build the game. While working on this project I struggled 
-            with optimization and keeping track of the games state. Every time the 
-            player was clicking a tile, the entire board had to rerender. I fixed 
-            this by using the model view controller design pattern. Through this 
-            process, I learned how to properly encapsulate classes in Javascript.`,
+      `I enjoy playing minesweeper, so I decided to build it myself. This gave me a good excuse to get more familiar with Redux and TypeScript, which I was using on my co-op at the time. `,
     ],
     tags: ['React', 'Redux', 'TypeScript', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/react-minesweeper',
@@ -174,6 +169,15 @@ const otherProjects = [
     ],
     tags: ['React Native', 'Mobile Development'],
     githubLink: 'https://github.com/DevanTurtle7/WUPHF-Weather',
+  },
+  {
+    title: 'Rope Physics Simulator',
+    description: [
+      `This project was inspired Day #9 from the 2022 Advent of Code. This problem required you to simulate the physics of a rope being dragged along a surface. This problem was very interesting and engaging for me. After writing my solution in Python, I wanted to visualize it so that I could interact with the rope. I translated my Python solution into TypeScript and built a website where you could interact with the Rope yourself.`,
+    ],
+    tags: ['React', 'TypeScript', 'Web Development'],
+    githubLink: 'https://github.com/DevanTurtle7/rope-physics',
+    link: 'https://devanturtle7.github.io/rope-physics/',
   },
   {
     title: 'Corner Clerk',
