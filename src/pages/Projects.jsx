@@ -10,10 +10,10 @@ const highlightedProjects = [
       `froggy is a project centered around learning and the love of programming. froggy is a link shortener built with a colleague of mine. Our goal is to push ourselves technically and creatively to build a full-fledged web application from the ground up. This project gives us a space to practice technologies we used in industry, want to learn, or just love using.`,
       `We use a SCRUM development lifecycle to track progress. Additionally, we have written documentation and coding standards to keep the codebase clear and consistent.`,
       `froggy uses a custom component library, lilypad, built and designed by me. This lets me fine-tune the look of the interface while also learning more about npm packages. I use Storybook to prototype components and npm to publish.
-      The majority of my development work is on the frontend, where I use React, Redux and Typescript. However, I also learned Go, Docker and Google Cloud Platform to help my colleague develop our API on the backend.`,
+      The majority of my development work is on the frontend, where I use ReactJS, Redux and Typescript. However, I also learned Go, Docker and Google Cloud Platform to help my colleague develop our API on the backend.`,
     ],
     tags: [
-      'React',
+      'ReactJS',
       'Redux',
       'TypeScript',
       'SASS',
@@ -35,11 +35,11 @@ const highlightedProjects = [
             display art work in a unique and customizable way. I built an admin page 
             that allows the artist to upload and edit the content of the site at 
             any time.`,
-      `The site was built using React for the front end. The back end uses 
+      `The site was built using ReactJS for the front end. The back end uses 
             Firebase to store image metadata and Amazon Web Service’s S3 to host the 
             images.`,
     ],
-    tags: ['React', 'Redux', 'Firebase', 'AWS S3', 'Web Development'],
+    tags: ['ReactJS', 'Redux', 'Firebase', 'AWS S3', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/xavier-portfolio',
     link: 'https://xaviersylviajackson.com/',
   },
@@ -94,12 +94,12 @@ const otherProjects = [
             Users can get help with a subject they struggle in and provide tutoring for 
             subjects they excel in.`,
       `This project was built during a 24 hour hackathon in collaboration with two 
-            colleagues. I focused on building the front end with React, while my teammates 
+            colleagues. I focused on building the front end with ReactJS, while my teammates 
             built a custom database and API. I helped keep the team together in the face of 
             the major bug. My full stack experience allowed me to help fix the error in the 
             backend and get us back on track.`,
     ],
-    tags: ['React', 'Web Development'],
+    tags: ['ReactJS', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/twotor',
   },
   {
@@ -107,7 +107,7 @@ const otherProjects = [
     description: [
       `I enjoy playing minesweeper, so I decided to build it myself. This gave me a good excuse to get more familiar with Redux and TypeScript, which I was using on my co-op at the time. `,
     ],
-    tags: ['React', 'Redux', 'TypeScript', 'Web Development'],
+    tags: ['ReactJS', 'Redux', 'TypeScript', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/react-minesweeper',
     link: 'https://devanturtle7.github.io/react-minesweeper/',
   },
@@ -117,7 +117,7 @@ const otherProjects = [
       `The full stack chat is a project that I started to further refine 
             my full stack development skills. The program allows users to send 
             and receive messages through a web application.`,
-      `I built the front end with React. While designing the front end, 
+      `I built the front end with ReactJS. While designing the front end, 
             I focused on the details and tried to improve my UI/UX design 
             skills. The back end is composed of a Flask REST API that 
             communicates with a PostgreSQL server. When designing the API, I 
@@ -125,7 +125,7 @@ const otherProjects = [
             intended.`,
     ],
     tags: [
-      'React',
+      'ReactJS',
       'Python',
       'PostgreSQL',
       'Flask',
@@ -175,7 +175,7 @@ const otherProjects = [
     description: [
       `This project was inspired Day #9 from the 2022 Advent of Code. This problem required you to simulate the physics of a rope being dragged along a surface. This problem was very interesting and engaging for me. After writing my solution in Python, I wanted to visualize it so that I could interact with the rope. I translated my Python solution into TypeScript and built a website where you could interact with the Rope yourself.`,
     ],
-    tags: ['React', 'TypeScript', 'Web Development'],
+    tags: ['ReactJS', 'TypeScript', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/rope-physics',
     link: 'https://devanturtle7.github.io/rope-physics/',
   },
@@ -204,7 +204,7 @@ const otherProjects = [
             during a 24 hour hackathon in collaboration with two colleagues.`,
       `This project is a great example of my ability to push the limits 
             of whatever technology I’m using to achieve my vision of the 
-            project. I created this project before I knew React, so we 
+            project. I created this project before I knew ReactJS, so we 
             used vanilla HTML and JavaScript which made it difficult to build 
             a dynamic web application. Additionally, we had to find workarounds 
             in the Spotify API to implement the functionality we were looking 

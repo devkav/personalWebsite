@@ -2,7 +2,7 @@ import '../style/Experience.css';
 import Chip from '../components/Chip';
 
 const technologies = [
-  'React',
+  'ReactJS',
   'JavaScript',
   'TypeScript',
   'Java',
@@ -24,9 +24,10 @@ const work = [
     title: 'Software Engineer',
     dates: 'July 2022 - December 2022',
     descriptions: [
-      `Utilized TypeScript and Redux to fix, maintain and update internal marketing tools that are used to design and deliver billions of emails and push notifications every day.`,
+      `Utilized ReactJS, TypeScript and Redux to fix, maintain and update internal marketing tools that are used to design and deliver billions of emails and push notifications every day.
+      `,
       `Resolved the highest number of story points in a single month on the frontend notifications team for the year.`,
-      `Eliminated hundreds of code smells in the codebase to improve code health.`,
+      `Improved code health by eliminating hundreds of code smells in the codebase.`,
       `Passed JavaScript and coding standards proficiency assessment.`,
       `Took ownership of OKR objective to migrate API endpoints from PHP Monolith to
       Java Spring Boot. Migrated existing SQL data into the new database.`,
@@ -41,9 +42,9 @@ const work = [
     descriptions: [
       `Assisted in teaching students the fundamentals of programming including data
             structures, algorithms, object oriented programming and test driven development
-            using Python and Java`,
-      `Attended classes to assist with in class activities and problem solving activities`,
-      `Graded and provided feedback on over 130 assignments a week`,
+            using Python and Java.`,
+      `Attended classes to assist with in class activities and problem solving activities.`,
+      `Graded and provided feedback on over 130 assignments a week.`,
     ],
   },
 ];
