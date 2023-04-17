@@ -1,8 +1,18 @@
 import '../style/Projects.css';
 import ProjectCarousel from '../components/ProjectCarousel';
 import ProjectDisplay from '../components/ProjectDisplay';
+import React from 'react';
 
-const highlightedProjects = [
+interface Project {
+  title: String;
+  image?: String;
+  description: String[];
+  tags: String[];
+  githubLink?: String;
+  link?: String;
+}
+
+const highlightedProjects: Project[] = [
   {
     title: 'froggy.app',
     image: 'froggyScreenshot.png',
@@ -10,7 +20,7 @@ const highlightedProjects = [
       `froggy is a project centered around learning and the love of programming. froggy is a link shortener built with a colleague of mine. Our goal is to push ourselves technically and creatively to build a full-fledged web application from the ground up. This project gives us a space to practice technologies we used in industry, want to learn, or just love using.`,
       `We use a SCRUM development lifecycle to track progress. Additionally, we have written documentation and coding standards to keep the codebase clear and consistent.`,
       `froggy uses a custom component library, lilypad, built and designed by me. This lets me fine-tune the look of the interface while also learning more about npm packages. I use Storybook to prototype components and npm to publish.
-      The majority of my development work is on the frontend, where I use ReactJS, Redux and Typescript. However, I also learned Go, Docker and Google Cloud Platform to help my colleague develop our API on the backend.`,
+      The majority of my development work is on the frontend, where I use ReactJS, Redux and Typescript. However, I also learned Go, Docker and Google Cloud Platform to help my colleague develop our API on the backend.`
     ],
     tags: [
       'ReactJS',
@@ -20,10 +30,10 @@ const highlightedProjects = [
       'Go',
       'SQL',
       'Storybook',
-      'Web Development',
+      'Web Development'
     ],
     githubLink: 'https://github.com/froggy-app',
-    link: 'https://froggy.app',
+    link: 'https://froggy.app'
   },
   {
     title: 'Artist Portfolio',
@@ -37,11 +47,11 @@ const highlightedProjects = [
             any time.`,
       `The site was built using ReactJS for the front end. The back end uses 
             Firebase to store image metadata and Amazon Web Service’s S3 to host the 
-            images.`,
+            images.`
     ],
     tags: ['ReactJS', 'Redux', 'Firebase', 'AWS S3', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/xavier-portfolio',
-    link: 'https://xaviersylviajackson.com/',
+    link: 'https://xaviersylviajackson.com/'
   },
   {
     title: 'MathFlow',
@@ -55,9 +65,11 @@ const highlightedProjects = [
       `We built MathFlow during a 24 hour hackathon using React and TypeScript. I utilized vanilla TypeScript classes 
       to model the different data types that were necessary for the application. We also used a React drag and drop 
       library which was difficult to learn and gave us some unique bugs. However, we were able to build a working 
-      prototype with lots of functionality that surpassed our goals.`,
+      prototype with lots of functionality that surpassed our goals.`
     ],
     tags: ['ReactJS', 'Web Development'],
+    githubLink: 'https://github.com/MathFlow-tech/mathflow-tech.github.io',
+    link: 'https://mathflow-tech.github.io/'
   },
   {
     title: 'Redpoint',
@@ -72,10 +84,10 @@ const highlightedProjects = [
       conventions and best practices. Additionally, we agreed on a Scrum-like development methodology that 
       keeps us productive even with our asynchronous schedule.`,
       `This project has been a great outlet for me to refine my UI design skills. I've been having lots of
-      fun designing the app from the ground up to be minimal and highly functional.`,
+      fun designing the app from the ground up to be minimal and highly functional.`
     ],
     tags: ['Flutter', 'Dart', 'Mobile Development'],
-    githubLink: 'https://github.com/Redpoint-app/Redpoint',
+    githubLink: 'https://github.com/Redpoint-app/Redpoint'
   },
   {
     title: 'Genetic Algorithm',
@@ -91,14 +103,14 @@ const highlightedProjects = [
         creating a new organism with a mix of their DNA. Over several generations,
         the population grows more and more fit until it reaches the goal. This
         algorithm serves as a quick and efficient alternative to brute force solutions
-        to difficult problems.`,
+        to difficult problems.`
     ],
     tags: ['Python', 'Machine Learning', 'Test Driven Development'],
-    githubLink: 'https://github.com/DevanTurtle7/geneticAlgorithm',
-  },
+    githubLink: 'https://github.com/DevanTurtle7/geneticAlgorithm'
+  }
 ];
 
-const otherProjects = [
+const otherProjects: Project[] = [
   {
     title: 'Twotor',
     description: [
@@ -113,19 +125,19 @@ const otherProjects = [
             colleagues. I focused on building the front end with ReactJS, while my teammates 
             built a custom database and API. I helped keep the team together in the face of 
             the major bug. My full stack experience allowed me to help fix the error in the 
-            backend and get us back on track.`,
+            backend and get us back on track.`
     ],
     tags: ['ReactJS', 'Web Development'],
-    githubLink: 'https://github.com/DevanTurtle7/twotor',
+    githubLink: 'https://github.com/DevanTurtle7/twotor'
   },
   {
     title: 'Minesweeper',
     description: [
-      `I enjoy playing minesweeper, so I decided to build it myself. This gave me a good excuse to get more familiar with Redux and TypeScript, which I was using on my co-op at the time. `,
+      `I enjoy playing minesweeper, so I decided to build it myself. This gave me a good excuse to get more familiar with Redux and TypeScript, which I was using on my co-op at the time. `
     ],
     tags: ['ReactJS', 'Redux', 'TypeScript', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/react-minesweeper',
-    link: 'https://devanturtle7.github.io/react-minesweeper/',
+    link: 'https://devanturtle7.github.io/react-minesweeper/'
   },
   {
     title: 'Full Stack Chat',
@@ -138,7 +150,7 @@ const otherProjects = [
             skills. The back end is composed of a Flask REST API that 
             communicates with a PostgreSQL server. When designing the API, I 
             utilized test driven development to ensure it was functioning as 
-            intended.`,
+            intended.`
     ],
     tags: [
       'ReactJS',
@@ -146,9 +158,9 @@ const otherProjects = [
       'PostgreSQL',
       'Flask',
       'REST APIs',
-      'Test Driven Development',
+      'Test Driven Development'
     ],
-    githubLink: 'https://github.com/DevanTurtle7/full-stack-chat',
+    githubLink: 'https://github.com/DevanTurtle7/full-stack-chat'
   },
   {
     title: 'Spotify Hue',
@@ -162,10 +174,10 @@ const otherProjects = [
             minimum viable product.`,
       `The app is written in Java, but I hope to convert to Kotlin as 
             I continue to learn it. As with almost all of my other work, 
-            this is a long term passion project and still under development.`,
+            this is a long term passion project and still under development.`
     ],
     tags: ['Java', 'REST APIs', 'Android Development'],
-    githubLink: 'https://github.com/DevanTurtle7/SpotifyHueAndroid',
+    githubLink: 'https://github.com/DevanTurtle7/SpotifyHueAndroid'
   },
   {
     title: 'WUPHF Weather',
@@ -181,19 +193,19 @@ const otherProjects = [
       `The app sends weather notifications to you on every platform possible. It 
             calls, texts, and emails you. If time permitted, we would have loved to 
             work with other APIs and expand the list of supported platforms such as 
-            Twitter and Instagram.`,
+            Twitter and Instagram.`
     ],
     tags: ['React Native', 'Mobile Development'],
-    githubLink: 'https://github.com/DevanTurtle7/WUPHF-Weather',
+    githubLink: 'https://github.com/DevanTurtle7/WUPHF-Weather'
   },
   {
     title: 'Rope Physics Simulator',
     description: [
-      `This project was inspired Day #9 from the 2022 Advent of Code. This problem required you to simulate the physics of a rope being dragged along a surface. This problem was very interesting and engaging for me. After writing my solution in Python, I wanted to visualize it so that I could interact with the rope. I translated my Python solution into TypeScript and built a website where you could interact with the Rope yourself.`,
+      `This project was inspired Day #9 from the 2022 Advent of Code. This problem required you to simulate the physics of a rope being dragged along a surface. This problem was very interesting and engaging for me. After writing my solution in Python, I wanted to visualize it so that I could interact with the rope. I translated my Python solution into TypeScript and built a website where you could interact with the Rope yourself.`
     ],
     tags: ['ReactJS', 'TypeScript', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/rope-physics',
-    link: 'https://devanturtle7.github.io/rope-physics/',
+    link: 'https://devanturtle7.github.io/rope-physics/'
   },
   {
     title: 'Corner Clerk',
@@ -207,10 +219,10 @@ const otherProjects = [
       `The app was developed during a hackathon with a colleague. We chose to
             build the app using Flutter, because it allowed us rapidly design and test
             the app for both Android and iOS. After the hackathon, we shipped
-            multiple version to Android users.`,
+            multiple version to Android users.`
     ],
     tags: ['Flutter', 'Dart', 'Firestore', 'Mobile Development'],
-    githubLink: 'https://github.com/DevanTurtle7/clayHack2020',
+    githubLink: 'https://github.com/DevanTurtle7/clayHack2020'
   },
   {
     title: 'Tempo',
@@ -226,55 +238,36 @@ const otherProjects = [
             in the Spotify API to implement the functionality we were looking 
             for. The app uses Firestore as the back end, which allows users 
             to sync their songs, add new ones to the queue, and even vote to 
-            skip songs they dislike.`,
+            skip songs they dislike.`
     ],
     tags: ['JavaScript', 'HTML', 'Firestore', 'REST APIs', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/BrickHack7',
-    link: 'https://devanturtle7.github.io/BrickHack7/',
-  },
+    link: 'https://devanturtle7.github.io/BrickHack7/'
+  }
 ];
 
-function Projects(props) {
-  const createProjectDisplays = () => {
-    let projectDisplays = [];
-    let imagePrefix = 'images/';
-
-    for (let i = 0; i < highlightedProjects.length; i++) {
-      let current = highlightedProjects[i];
-      let title = current.title;
-      let description = current.description;
-      let tags = current.tags;
-      let githubLink = current.githubLink;
-      let link = current.link;
-      let image = imagePrefix + current.image;
-      let flipped = i % 2 !== 0;
-      let shadow = current.shadow === true;
-
-      projectDisplays.push(
-        <ProjectDisplay
-          title={title}
-          description={description}
-          tags={tags}
-          githubLink={githubLink}
-          link={link}
-          img={image}
-          flipped={flipped}
-          shadow={shadow}
-          key={i}
-        />
-      );
-    }
-
-    return projectDisplays;
-  };
-
+function Projects() {
   return (
-    <div id='projects' className='centered-col'>
-      <div className='projects-container'>
-        <h2 id='projects-label'>Projects</h2>
-        {createProjectDisplays()}
+    <div id="projects" className="centered-col">
+      <div className="projects-container">
+        <h2 id="projects-label">Projects</h2>
+        {highlightedProjects.map(
+          ({title, description, tags, githubLink, link, image}, i) => (
+            <ProjectDisplay
+              title={title}
+              description={description}
+              tags={tags}
+              githubLink={githubLink}
+              link={link}
+              img={'images/' + image}
+              flipped={i % 2 !== 0}
+              shadow={false}
+              key={i}
+            />
+          )
+        )}
 
-        <h3 id='other-projects-label'>Other Projects</h3>
+        <h3 id="other-projects-label">Other Projects</h3>
         <ProjectCarousel projects={otherProjects} />
       </div>
     </div>

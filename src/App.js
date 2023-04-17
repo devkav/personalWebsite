@@ -42,12 +42,12 @@ function App(props) {
   return (
     <Fragment>
       <Helmet>
-        <meta name='theme-color' content={getThemeColor()} />
+        <meta name="theme-color" content={getThemeColor()} />
       </Helmet>
       <Router>
         <Routes>
-          <Route path='/' element={<SiteContent />} exact />
-          <Route path='*' element={<PageNotFound />} />
+          <Route path="/" element={<SiteContent />} exact />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
     </Fragment>
