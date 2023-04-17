@@ -44,6 +44,22 @@ const highlightedProjects = [
     link: 'https://xaviersylviajackson.com/',
   },
   {
+    title: 'MathFlow',
+    image: 'mathFlowScreenshot.png',
+    description: [
+      `MathFlow makes math intuitive by turning math problems into interactive puzzles. I had this idea for a while, 
+      but was always scared of the implementation. The idea of building a drag-and-drop workspace that obeyed the rules 
+      of math always seemed too complicated. But, when BrickHack 9 came, my friend and I decided to commit to the idea. 
+      We are both very happy with how it came out and how much we were able to accomplish in the little time we had. 
+      `,
+      `We built MathFlow during a 24 hour hackathon using React and TypeScript. I utilized vanilla TypeScript classes 
+      to model the different data types that were necessary for the application. We also used a React drag and drop 
+      library which was difficult to learn and gave us some unique bugs. However, we were able to build a working 
+      prototype with lots of functionality that surpassed our goals.`,
+    ],
+    tags: ['ReactJS', 'Web Development'],
+  },
+  {
     title: 'Redpoint',
     image: 'redpointScreenshot.png',
     description: [
