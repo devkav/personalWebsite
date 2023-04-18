@@ -1,11 +1,16 @@
 import '../style/Projects.css';
 import ProjectCarousel from '../components/ProjectCarousel';
 import ProjectDisplay from '../components/ProjectDisplay';
-import React from 'react';
+
+import froggyScreenshot from 'assets/images/froggyScreenshot.png';
+import geneticAlgorithmScreenshot from 'assets/images/geneticAlgorithmScreenshot.png';
+import mathFlowScreenshot from 'assets/images/mathFlowScreenshot.png';
+import redpointScreenshot from 'assets/images/redpointScreenshot.png';
+import xsjScreenshot from 'assets/images/xsjScreenshot.png';
 
 interface Project {
   title: String;
-  image?: String;
+  image?: any;
   description: String[];
   tags: String[];
   githubLink?: String;
@@ -15,7 +20,7 @@ interface Project {
 const highlightedProjects: Project[] = [
   {
     title: 'froggy.app',
-    image: 'froggyScreenshot.png',
+    image: froggyScreenshot,
     description: [
       `froggy is a project centered around learning and the love of programming. froggy is a link shortener built with a colleague of mine. Our goal is to push ourselves technically and creatively to build a full-fledged web application from the ground up. This project gives us a space to practice technologies we used in industry, want to learn, or just love using.`,
       `We use a SCRUM development lifecycle to track progress. Additionally, we have written documentation and coding standards to keep the codebase clear and consistent.`,
@@ -37,7 +42,7 @@ const highlightedProjects: Project[] = [
   },
   {
     title: 'Artist Portfolio',
-    image: 'xsjScreenshot.png',
+    image: xsjScreenshot,
     description: [
       `This project is a website and digital portfolio that I built for a 
             friend of mine. The design of the site was a collaborative effort, with 
@@ -55,7 +60,7 @@ const highlightedProjects: Project[] = [
   },
   {
     title: 'MathFlow',
-    image: 'mathFlowScreenshot.png',
+    image: mathFlowScreenshot,
     description: [
       `MathFlow makes math intuitive by turning math problems into interactive puzzles. I had this idea for a while, 
       but was always scared of the implementation. The idea of building a drag-and-drop workspace that obeyed the rules 
@@ -73,7 +78,7 @@ const highlightedProjects: Project[] = [
   },
   {
     title: 'Redpoint',
-    image: 'redpointScreenshot.png',
+    image: redpointScreenshot,
     description: [
       `Redpoint is an Android and iOS application for tracking rock climbing progress. The goal of
       the app is to encourage healthy progression through reflection.`,
@@ -91,7 +96,7 @@ const highlightedProjects: Project[] = [
   },
   {
     title: 'Genetic Algorithm',
-    image: 'geneticAlgorithmScreenshot.png',
+    image: geneticAlgorithmScreenshot,
     description: [
       `This genetic algorithm is a python program. I was inspired to
         build this program after watching a lecture on genetic algorithms from
@@ -259,7 +264,7 @@ function Projects() {
               tags={tags}
               githubLink={githubLink}
               link={link}
-              img={'images/' + image}
+              img={image}
               flipped={i % 2 !== 0}
               shadow={false}
               key={i}
