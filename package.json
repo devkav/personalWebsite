@@ -33,7 +33,7 @@
     "eject": "react-scripts eject",
     "predeploy": "",
     "deploy": "",
-    "update-resume": "cp ~/Documents/'Devan Kavalchek Resume.pdf' ./public"
+    "update-resume": "cp ~/Documents/'Devan Kavalchek Resume.pdf' ./src/assets/docs"
   },
   "eslintConfig": {
     "extends": [

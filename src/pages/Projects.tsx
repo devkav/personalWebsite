@@ -251,7 +251,7 @@ const otherProjects: Project[] = [
   }
 ];
 
-function Projects() {
+const Projects = () => {
   return (
     <div id="projects" className="centered-col">
       <div className="projects-container">
@@ -277,6 +277,6 @@ function Projects() {
       </div>
     </div>
   );
-}
+};
 
 export default Projects;
