@@ -18,7 +18,7 @@ const CarouselIndicator = ({active, setActive, numBubbles}: Props) => {
       bubbles.push(
         <Bubble
           active={i === active}
-          key={i}
+          key={`carInd${i}`}
           onClick={() => {
             onClick(i);
           }}

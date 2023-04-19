@@ -17,7 +17,7 @@ function ProjectCard(props) {
           gradient={true}
           order={i}
           numItems={numTags}
-          key={i}
+          key={`chip${i}`}
         />
       );
     }
@@ -31,7 +31,7 @@ function ProjectCard(props) {
 
     for (let i = 0; i < descriptionData.length; i++) {
       let current = descriptionData[i];
-      description.push(<p key={i}>{current}</p>);
+      description.push(<p key={`projectDesc${i}`}>{current}</p>);
     }
 
     return <div className={'project-description'}>{description}</div>;
@@ -43,7 +43,7 @@ function ProjectCard(props) {
     if (link !== undefined) {
       return (
         <IconButton href={link}>
-          <HiOutlineExternalLink className='display-icon color-25 clickable me-2' />
+          <HiOutlineExternalLink className="display-icon color-25 clickable me-2" />
         </IconButton>
       );
     } else {
@@ -53,19 +53,19 @@ function ProjectCard(props) {
 
   return (
     <div className={`project-card ${props.classNames}`}>
-      <div className='title-row'>
+      <div className="title-row">
         <h3>{props.title}</h3>
-        <div className='icon-container ms-2'>
+        <div className="icon-container ms-2">
           {createLinkButton()}
           <IconButton href={props.githubLink}>
-            <AiOutlineGithub className='display-icon color-25 clickable' />
+            <AiOutlineGithub className="display-icon color-25 clickable" />
           </IconButton>
         </div>
       </div>
 
       {createDescription()}
 
-      <div className='chips-row'>{createChips()}</div>
+      <div className="chips-row">{createChips()}</div>
     </div>
   );
 }

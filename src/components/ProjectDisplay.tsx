@@ -62,7 +62,7 @@ const ProjectDisplay = ({
         </div>
       </div>
       {description.map((paragraph, i) => (
-        <p key={i}>{paragraph}</p>
+        <p key={`projDesc${i}`}>{paragraph}</p>
       ))}
       <div className="chips-row">
         {tags.map((tag, i) => (
@@ -71,7 +71,7 @@ const ProjectDisplay = ({
             gradient={true}
             order={i}
             numItems={tags.length}
-            key={i}
+            key={`projChip${i}`}
           />
         ))}
       </div>

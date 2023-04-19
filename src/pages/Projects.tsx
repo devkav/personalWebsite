@@ -267,7 +267,7 @@ const Projects = () => {
               image={image}
               flipped={i % 2 !== 0}
               shadow={false}
-              key={i}
+              key={`projDisp${i}`}
             />
           )
         )}

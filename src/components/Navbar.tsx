@@ -28,7 +28,7 @@ const Navbar = () => {
           label={label}
           section={section}
           order={items.length - 1 - i}
-          key={i}
+          key={`navItem${i}`}
         />
       ))}
     </div>

@@ -106,8 +106,8 @@ const Experience = () => {
             <div id="work" className="experience-section">
               <h3>Work</h3>
               <div className="work-content">
-                {work.map(({company, title, dates, descriptions}) => (
-                  <div className="work-item">
+                {work.map(({company, title, dates, descriptions}, i) => (
+                  <div className="work-item" key={`workItem${i}`}>
                     <p>
                       <b>{company}</b>
                     </p>
@@ -116,8 +116,8 @@ const Experience = () => {
                     </p>
                     <p>{dates}</p>
                     <ul>
-                      {descriptions.map((description) => (
-                        <li>{description}</li>
+                      {descriptions.map((description, i) => (
+                        <li key={`expDesc${i}`}>{description}</li>
                       ))}
                     </ul>
                   </div>
@@ -133,7 +133,7 @@ const Experience = () => {
                     gradient={true}
                     order={i}
                     numItems={technologies.length}
-                    key={i}
+                    key={`tech${i}`}
                   />
                 ))}
               </div>
