@@ -1,10 +1,10 @@
 import '../style/AboutMe.css';
 
-function AboutMe(props) {
+const AboutMe = () => {
   return (
-    <div id='aboutMe'>
-      <div className='fit-content' id='about-me-content'>
-        <h2 className='fit-content'>About Me</h2>
+    <div id="aboutMe">
+      <div className="fit-content" id="about-me-content">
+        <h2 className="fit-content">About Me</h2>
         <p>
           Hi, my name is Devan Kavalchek, I'm a passionate and detail oriented
           software engineer. I'm a third year student at the Rochester Institute
@@ -23,6 +23,6 @@ function AboutMe(props) {
       </div>
     </div>
   );
-}
+};
 
 export default AboutMe;

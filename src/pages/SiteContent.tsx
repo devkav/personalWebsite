@@ -7,7 +7,7 @@ import Experience from './Experience';
 import Projects from './Projects';
 import Footer from '../components/Footer';
 
-function SiteContent(props) {
+const SiteContent = () => {
   return (
     <Col>
       <Linkbar />
@@ -18,6 +18,6 @@ function SiteContent(props) {
       <Footer />
     </Col>
   );
-}
+};
 
 export default SiteContent;
