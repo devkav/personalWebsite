@@ -2,13 +2,13 @@ import '../style/Experience.css';
 import Chip from '../components/Chip';
 
 interface Work {
-  company: String;
-  title: String;
-  dates: String;
-  descriptions: String[];
+  company: string;
+  title: string;
+  dates: string;
+  descriptions: string[];
 }
 
-const technologies: String[] = [
+const technologies: string[] = [
   'ReactJS',
   'JavaScript',
   'TypeScript',

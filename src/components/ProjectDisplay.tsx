@@ -6,12 +6,12 @@ import IconButton from './IconButton';
 interface Props {
   flipped: boolean;
   shadow: boolean;
-  tags: String[];
-  description: String[];
+  tags: string[];
+  description: string[];
   image: any;
-  link?: String;
-  githubLink: String;
-  title: String;
+  link?: string;
+  githubLink: string;
+  title: string;
 }
 
 const ProjectDisplay = ({

@@ -9,12 +9,12 @@ import redpointScreenshot from 'assets/images/redpointScreenshot.png';
 import xsjScreenshot from 'assets/images/xsjScreenshot.png';
 
 interface Project {
-  title: String;
+  title: string;
   image?: any;
-  description: String[];
-  tags: String[];
-  githubLink: String;
-  link?: String;
+  description: string[];
+  tags: string[];
+  githubLink: string;
+  link?: string;
 }
 
 const highlightedProjects: Project[] = [

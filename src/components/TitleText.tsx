@@ -1,7 +1,7 @@
 interface Props {
   mouseX: number;
   mouseY: number;
-  text: String;
+  text: string;
 }
 
 const TitleText = ({mouseX, mouseY, text}: Props) => {
