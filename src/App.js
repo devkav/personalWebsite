@@ -2,7 +2,7 @@ import './style/App.css';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import SiteContent from './pages/SiteContent';
 import {Fragment} from 'react/cjs/react.production.min';
-import {Helmet} from 'react-helmet';
+import {Helmet} from 'react-helmet-async';
 import PageNotFound from './pages/PageNotFound';
 
 const darkModeBgColor = 'rgb(30, 30, 30)';
@@ -13,7 +13,7 @@ const lightModeBgColor = '#fff';
 const lightModeTextColor = '#212529';
 const lightModeCardColor = '#fff';
 
-function App(props) {
+const App = () => {
   const toggleDarkMode = (enabled) => {
     document.documentElement.style.setProperty(
       '--bs-body-color',
@@ -52,6 +52,6 @@ function App(props) {
       </Router>
     </Fragment>
   );
-}
+};
 
 export default App;
