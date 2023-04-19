@@ -1,17 +1,22 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import ProjectCard from './ProjectCard';
 import CarouselControls from './CarouselControls';
 import {useSwipeable} from 'react-swipeable';
+import {Project} from 'pages/Projects';
 
 const DELAY = 400;
 
-function ProjectCarousel(props) {
+interface Props {
+  projects: Project[];
+}
+
+const ProjectCarousel = ({projects}: Props) => {
   const [current, setCurrent] = useState(0);
   const [currentFromLeft, setCurrentFromLeft] = useState(false);
   const [running, setRunning] = useState(false);
 
   useEffect(() => {
-    let timeout;
+    let timeout: NodeJS.Timeout;
 
     if (running) {
       timeout = setTimeout(() => setRunning(false), DELAY);
@@ -25,10 +30,10 @@ function ProjectCarousel(props) {
     };
   });
 
-  const keyDown = (e) => {
-    if (e.key === 'ArrowRight') {
+  const keyDown = ({key}: KeyboardEvent) => {
+    if (key === 'ArrowRight') {
       next();
-    } else if (e.key === 'ArrowLeft') {
+    } else if (key === 'ArrowLeft') {
       previous();
     }
   };
@@ -36,7 +41,7 @@ function ProjectCarousel(props) {
   const next = () => {
     if (!running) {
       setRunning(true);
-      let numProjects = props.projects.length;
+      let numProjects = projects.length;
 
       if (current < numProjects - 1) {
         setCurrentFromLeft(false);
@@ -55,7 +60,7 @@ function ProjectCarousel(props) {
     }
   };
 
-  const setActive = (i) => {
+  const setActive = (i: number) => {
     if (current < i) {
       setCurrentFromLeft(false);
     } else {
@@ -69,52 +74,41 @@ function ProjectCarousel(props) {
     onSwipedRight: () => previous()
   });
 
-  const createCards = () => {
-    let projects = props.projects;
-    let projectCards = [];
-    let numProjects = projects.length;
+  const getCardClassNames = (i: number) => {
+    let classNames;
 
-    for (let i = 0; i < numProjects; i++) {
-      let classNames;
-
-      if (current === i) {
-        classNames = currentFromLeft
-          ? 'current-from-left'
-          : 'current-from-right';
-      } else if (current < i) {
-        classNames = 'next';
-      } else {
-        classNames = 'prev';
-      }
-
-      classNames = 'project-card-' + classNames;
-
-      let currentProj = projects[i];
-      projectCards.push(
-        <ProjectCard
-          title={currentProj.title}
-          description={currentProj.description}
-          tags={currentProj.tags}
-          current={current}
-          classNames={classNames}
-          githubLink={currentProj.githubLink}
-          link={currentProj.link}
-          key={`projCard${i}`}
-        />
-      );
+    if (current === i) {
+      classNames = currentFromLeft ? 'current-from-left' : 'current-from-right';
+    } else if (current < i) {
+      classNames = 'next';
+    } else {
+      classNames = 'prev';
     }
 
-    return projectCards;
+    classNames = 'project-card-' + classNames;
+
+    return classNames;
   };
 
   return (
     <div className="project-carousel">
       <div className="project-card-container" {...handlers}>
-        {createCards()}
+        {projects.map(({title, description, tags, githubLink, link}, i) => (
+          <ProjectCard
+            title={title}
+            description={description}
+            tags={tags}
+            current={current}
+            classNames={getCardClassNames(i)}
+            githubLink={githubLink}
+            link={link}
+            key={`projCard${i}`}
+          />
+        ))}
       </div>
 
       <CarouselControls
-        numBubbles={props.projects.length}
+        numBubbles={projects.length}
         active={current}
         previousCallback={previous}
         nextCallback={next}
@@ -122,6 +116,6 @@ function ProjectCarousel(props) {
       />
     </div>
   );
-}
+};
 
 export default ProjectCarousel;

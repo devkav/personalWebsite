@@ -8,7 +8,7 @@ import mathFlowScreenshot from 'assets/images/mathFlowScreenshot.png';
 import redpointScreenshot from 'assets/images/redpointScreenshot.png';
 import xsjScreenshot from 'assets/images/xsjScreenshot.png';
 
-interface Project {
+export interface Project {
   title: string;
   image?: any;
   description: string[];
