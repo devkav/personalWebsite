@@ -1,5 +1,5 @@
 import '../style/WelcomePage.css';
-import '../style/PageNotFound.css';
+import '../style/PageNotFound.scss';
 import {useEffect, useState} from 'react';
 import {isMobile} from 'react-device-detect';
 import TitleText from '../components/TitleText';
