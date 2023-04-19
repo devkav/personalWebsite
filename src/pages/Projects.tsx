@@ -13,7 +13,7 @@ interface Project {
   image?: any;
   description: String[];
   tags: String[];
-  githubLink?: String;
+  githubLink: String;
   link?: String;
 }
 
@@ -264,7 +264,7 @@ const Projects = () => {
               tags={tags}
               githubLink={githubLink}
               link={link}
-              img={image}
+              image={image}
               flipped={i % 2 !== 0}
               shadow={false}
               key={i}

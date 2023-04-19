@@ -1,7 +1,14 @@
 import '../style/Experience.css';
 import Chip from '../components/Chip';
 
-const technologies = [
+interface Work {
+  company: String;
+  title: String;
+  dates: String;
+  descriptions: String[];
+}
+
+const technologies: String[] = [
   'ReactJS',
   'JavaScript',
   'TypeScript',
@@ -15,10 +22,10 @@ const technologies = [
   'Firebase',
   'HTML',
   'CSS',
-  'SASS',
+  'SASS'
 ];
 
-const work = [
+const work: Work[] = [
   {
     company: 'Wayfair',
     title: 'Software Engineer',
@@ -32,8 +39,8 @@ const work = [
       `Took ownership of OKR objective to migrate API endpoints from PHP Monolith to
       Java Spring Boot. Migrated existing SQL data into the new database.`,
       `Took complete ownership of a feature from idea to completion. Utilized algorithmic
-      principles to design and implement it independently. Demoed the feature to stakeholders, keeping them updated with the progress. Received overwhelmingly positive feedback from stakeholders upon completion.`,
-    ],
+      principles to design and implement it independently. Demoed the feature to stakeholders, keeping them updated with the progress. Received overwhelmingly positive feedback from stakeholders upon completion.`
+    ]
   },
   {
     company: 'Rochester Institute of Technology',
@@ -44,72 +51,22 @@ const work = [
             structures, algorithms, object oriented programming and test driven development
             using Python and Java.`,
       `Attended classes to assist with in class activities and problem solving activities.`,
-      `Graded and provided feedback on over 130 assignments a week.`,
-    ],
-  },
+      `Graded and provided feedback on over 130 assignments a week.`
+    ]
+  }
 ];
 
-function Experience(props) {
-  const createChips = () => {
-    let chips = [];
-    let numTechnologies = technologies.length;
-
-    for (let i = 0; i < numTechnologies; i++) {
-      let current = technologies[i];
-      chips.push(
-        <Chip
-          text={current}
-          gradient={true}
-          order={i}
-          numItems={numTechnologies}
-          key={i}
-        />
-      );
-    }
-
-    return chips;
-  };
-
-  const createWork = () => {
-    let elements = [];
-    let numWork = work.length;
-
-    for (let i = 0; i < numWork; i++) {
-      let current = work[i];
-      let descriptions = [];
-      let numDescriptions = current.descriptions.length;
-
-      for (let j = 0; j < numDescriptions; j++) {
-        descriptions.push(<li>{current.descriptions[j]}</li>);
-      }
-
-      elements.push(
-        <div className='work-item'>
-          <p>
-            <b>{current.company}</b>
-          </p>
-          <p>
-            <i>{current.title}</i>
-          </p>
-          <p>{current.dates}</p>
-          <ul>{descriptions}</ul>
-        </div>
-      );
-    }
-
-    return elements;
-  };
-
+const Experience = () => {
   return (
-    <div id='experience'>
-      <div className='centered-col'>
-        <h2 id='experience-label'>Experience</h2>
-        <div className='experience-container'>
-          <div id='left-panel'>
-            <div id='education' className='experience-section'>
+    <div id="experience">
+      <div className="centered-col">
+        <h2 id="experience-label">Experience</h2>
+        <div className="experience-container">
+          <div id="left-panel">
+            <div id="education" className="experience-section">
               <h3>Education</h3>
-              <div className='education-container'>
-                <p className='education-label'>
+              <div className="education-container">
+                <p className="education-label">
                   <b>Rochester Institute of Technology</b>
                   <br />
                 </p>
@@ -131,7 +88,7 @@ function Experience(props) {
                 </ul>
               </div>
             </div>
-            <div id='awards' className='experience-section'>
+            <div id="awards" className="experience-section">
               <h3>Awards</h3>
               <p>
                 <b>BrickHack7</b> - Best Usage of Google Cloud
@@ -145,20 +102,47 @@ function Experience(props) {
             </div>
           </div>
 
-          <div id='right-panel'>
-            <div id='work' className='experience-section'>
+          <div id="right-panel">
+            <div id="work" className="experience-section">
               <h3>Work</h3>
-              <div className='work-content'>{createWork()}</div>
+              <div className="work-content">
+                {work.map(({company, title, dates, descriptions}) => (
+                  <div className="work-item">
+                    <p>
+                      <b>{company}</b>
+                    </p>
+                    <p>
+                      <i>{title}</i>
+                    </p>
+                    <p>{dates}</p>
+                    <ul>
+                      {descriptions.map((description) => (
+                        <li>{description}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div id='technologies' className='experience-section'>
+            <div id="technologies" className="experience-section">
               <h3>Technologies</h3>
-              <div className='chips-container'>{createChips()}</div>
+              <div className="chips-container">
+                {technologies.map((technology, i) => (
+                  <Chip
+                    text={technology}
+                    gradient={true}
+                    order={i}
+                    numItems={technologies.length}
+                    key={i}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Experience;
