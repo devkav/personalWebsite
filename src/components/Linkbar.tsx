@@ -12,7 +12,7 @@ const Linkbar = () => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    let timeout;
+    let timeout: NodeJS.Timeout;
 
     if (!loaded) {
       timeout = setTimeout(() => setLoaded(true), INIT_TIME);
