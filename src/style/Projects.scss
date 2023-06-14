@@ -1,0 +1,61 @@
+.projects-container {
+  max-width: 1000px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.project-card {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  position: relative;
+  max-width: 60vw;
+  transition: opacity 0.3s;
+  height: fit-content;
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--bs-card-color);
+
+  --animation-speed: 0.7s;
+
+  &-next {
+    opacity: 0;
+    animation: slide-right var(--animation-speed) forwards;
+    -webkit-animation: slide-right var(--animation-speed) forwards;
+  }
+
+  &-prev {
+    opacity: 0;
+    animation: slide-left var(--animation-speed) forwards;
+    -webkit-animation: slide-left var(--animation-speed) forwards;
+  }
+
+  &-current-from {
+    &-left {
+      opacity: 1;
+      animation: slide-center-from-left var(--animation-speed) forwards;
+      -webkit-animation: slide-center-from-left var(--animation-speed) forwards;
+    }
+
+    &-right {
+      opacity: 1;
+      animation: slide-center-from-right var(--animation-speed) forwards;
+      -webkit-animation: slide-center-from-right var(--animation-speed) forwards;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    flex-flow: row;
+    margin-top: 16px;
+    justify-content: space-between;
+  }
+
+  &-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

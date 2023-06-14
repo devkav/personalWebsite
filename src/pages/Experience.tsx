@@ -27,6 +27,12 @@ const technologies: string[] = [
 
 const work: Work[] = [
   {
+    company: 'Phoenicia Labs',
+    title: 'Software Engineer',
+    dates: 'June 2023 - Present',
+    descriptions: []
+  },
+  {
     company: 'Wayfair',
     title: 'Software Engineer',
     dates: 'July 2022 - December 2022',
@@ -63,6 +69,30 @@ const Experience = () => {
         <h2 id="experience-label">Experience</h2>
         <div className="experience-container">
           <div id="left-panel">
+            <div id="work" className="experience-section">
+              <h3>Work</h3>
+              <div className="work-content">
+                {work.map(({company, title, dates, descriptions}, i) => (
+                  <div className="work-item" key={`workItem${i}`}>
+                    <p>
+                      <b>{company}</b>
+                    </p>
+                    <p>
+                      <i>{title}</i>
+                    </p>
+                    <p>{dates}</p>
+                    <ul>
+                      {descriptions.map((description, i) => (
+                        <li key={`expDesc${i}`}>{description}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div id="right-panel">
             <div id="education" className="experience-section">
               <h3>Education</h3>
               <div className="education-container">
@@ -99,30 +129,6 @@ const Experience = () => {
               <p>
                 <b>Meet & Hack 2022</b> - 2nd Place Community Hack
               </p>
-            </div>
-          </div>
-
-          <div id="right-panel">
-            <div id="work" className="experience-section">
-              <h3>Work</h3>
-              <div className="work-content">
-                {work.map(({company, title, dates, descriptions}, i) => (
-                  <div className="work-item" key={`workItem${i}`}>
-                    <p>
-                      <b>{company}</b>
-                    </p>
-                    <p>
-                      <i>{title}</i>
-                    </p>
-                    <p>{dates}</p>
-                    <ul>
-                      {descriptions.map((description, i) => (
-                        <li key={`expDesc${i}`}>{description}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
             </div>
             <div id="technologies" className="experience-section">
               <h3>Technologies</h3>
