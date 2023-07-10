@@ -28,7 +28,7 @@ const technologies: string[] = [
 const work: Work[] = [
   {
     company: 'Phoenicia Labs',
-    title: 'Software Engineer',
+    title: 'Lead Mobile Engineer, Full Stack Engineer',
     dates: 'June 2023 - Present',
     descriptions: []
   },
