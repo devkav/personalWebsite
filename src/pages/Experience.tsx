@@ -34,7 +34,7 @@ const work: Work[] = [
   },
   {
     company: 'Wayfair',
-    title: 'Software Engineer',
+    title: 'Full Stack Engineer',
     dates: 'July 2022 - December 2022',
     descriptions: [
       `Utilized ReactJS, TypeScript and Redux to fix, maintain and update internal marketing tools that are used to design and deliver billions of emails and push notifications every day.
