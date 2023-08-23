@@ -34,13 +34,13 @@ const work: Work[] = [
   },
   {
     company: 'Phoenicia Labs',
-    title: 'Lead Mobile Engineer, Full Stack Engineer',
+    title: 'Mobile & Full Stack Engineer Co-op',
     dates: 'June 2023 - August 2023',
     descriptions: []
   },
   {
     company: 'Wayfair',
-    title: 'Full Stack Engineer',
+    title: 'Full Stack Engineer Co-op',
     dates: 'July 2022 - December 2022',
     descriptions: [
       `Utilized ReactJS, TypeScript and Redux to fix, maintain and update internal marketing tools that are used to design and deliver billions of emails and push notifications every day.
