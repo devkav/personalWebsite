@@ -27,9 +27,15 @@ const technologies: string[] = [
 
 const work: Work[] = [
   {
+    company: 'AMD',
+    title: 'Software Engineer Co-op',
+    dates: 'August 2023 - Present',
+    descriptions: []
+  },
+  {
     company: 'Phoenicia Labs',
     title: 'Lead Mobile Engineer, Full Stack Engineer',
-    dates: 'June 2023 - Present',
+    dates: 'June 2023 - August 2023',
     descriptions: []
   },
   {
