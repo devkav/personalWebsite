@@ -30,40 +30,28 @@ const work: Work[] = [
     company: 'AMD',
     title: 'Software Engineer Co-op',
     dates: 'August 2023 - Present',
-    descriptions: []
+    descriptions: [
+      `Enhanced flask web server to display new metrics and improve user workflows.`,
+      `Created a program to periodically log metrics that were used to optimize emulator scheduling and usage.`
+    ]
   },
   {
     company: 'Phoenicia Labs',
     title: 'Mobile & Full Stack Engineer Co-op',
     dates: 'June 2023 - August 2023',
-    descriptions: []
+    descriptions: [
+      `Utilized Flutter to build a client banking mobile application from the ground up.`,
+      `Helped quickly build a MVP payroll system that raised $1.1 million from investors.`,
+      `Worked around constantly shifting requirements and deadlines on a small, fast-paced team.`
+    ]
   },
   {
     company: 'Wayfair',
     title: 'Full Stack Engineer Co-op',
     dates: 'July 2022 - December 2022',
     descriptions: [
-      `Utilized ReactJS, TypeScript and Redux to fix, maintain and update internal marketing tools that are used to design and deliver billions of emails and push notifications every day.
-      `,
-      `Resolved the highest number of story points in a single month on the frontend notifications team for the year.`,
-      `Improved code health by eliminating hundreds of code smells in the codebase.`,
-      `Passed JavaScript and coding standards proficiency assessment.`,
-      `Took ownership of OKR objective to migrate API endpoints from PHP Monolith to
-      Java Spring Boot. Migrated existing SQL data into the new database.`,
-      `Took complete ownership of a feature from idea to completion. Utilized algorithmic
-      principles to design and implement it independently. Demoed the feature to stakeholders, keeping them updated with the progress. Received overwhelmingly positive feedback from stakeholders upon completion.`
-    ]
-  },
-  {
-    company: 'Rochester Institute of Technology',
-    title: 'Course Assistant',
-    dates: 'August 2021 - May 2022',
-    descriptions: [
-      `Assisted in teaching students the fundamentals of programming including data
-            structures, algorithms, object oriented programming and test driven development
-            using Python and Java.`,
-      `Attended classes to assist with in class activities and problem solving activities.`,
-      `Graded and provided feedback on over 130 assignments a week.`
+      `Utilized ReactJS, TypeScript and Redux to fix, maintain and update internal marketing tools that are used to design and deliver billions of emails and push notifications every day.`,
+      `Took ownership of the objective to migrate SQL tables and API endpoints from outdated PHP Monolith to Java Spring Boot.`
     ]
   }
 ];
