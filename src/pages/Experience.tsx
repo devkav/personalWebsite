@@ -29,7 +29,7 @@ const work: Work[] = [
   {
     company: 'AMD',
     title: 'Software Engineer Co-op',
-    dates: 'August 2023 - Present',
+    dates: 'August 2023 - December 2023',
     descriptions: [
       `Enhanced flask web server to display new metrics and improve user workflows.`,
       `Created a program to periodically log metrics that were used to optimize emulator scheduling and usage.`
