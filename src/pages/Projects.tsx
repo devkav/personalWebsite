@@ -38,7 +38,6 @@ const highlightedProjects: Project[] = [
       'Web Development'
     ],
     githubLink: 'https://github.com/froggy-app',
-    link: 'https://froggy.app'
   },
   {
     title: 'Artist Portfolio',
@@ -56,7 +55,6 @@ const highlightedProjects: Project[] = [
     ],
     tags: ['ReactJS', 'Redux', 'Firebase', 'AWS S3', 'Web Development'],
     githubLink: 'https://github.com/DevanTurtle7/xavier-portfolio',
-    link: 'https://xaviersylviajackson.com/'
   },
   {
     title: 'MathFlow',
