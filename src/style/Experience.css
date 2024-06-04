@@ -99,3 +99,22 @@
 .work-item {
     margin-bottom: 30px;
 }
+
+.work-item:last-of-type {
+    margin-bottom: 50px;
+}
+
+#resume-link {
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+@media (hover: hover) {
+    #resume-link:hover {
+        opacity: 0.6;
+    }
+}
+
+#resume-link>svg {
+    font-size: 20px;
+}

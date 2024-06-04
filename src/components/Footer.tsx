@@ -8,7 +8,7 @@ const Footer = () => {
           Brittany Chiang{' '}
         </a>
       </h5>
-      <h5>&#169; 2023 </h5>
+      <h5>&#169; 2024 </h5>
     </div>
   );
 };

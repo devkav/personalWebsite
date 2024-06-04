@@ -117,17 +117,18 @@ a, a:visited {
 
 @media (hover: hover) {
   .gradient-hover:hover {
-    color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0) !important;
     cursor: pointer;
     animation-name: gradient-color-fade-in;
     animation-delay: 0ms;
     animation-duration: 0ms;
     animation-timing-function: step-start;
     animation-fill-mode: forwards;
+    fill: red;
   }
 
   .gradient-hover {
-    color: var(--bs-body-color);
+    color: var(--bs-body-color) !important;
     transition: color .3s;
     animation-name: gradient-color-fade-out;
     animation-duration: .3s;

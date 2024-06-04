@@ -1,5 +1,8 @@
 import '../style/Experience.css';
 import Chip from '../components/Chip';
+import Resume from '../assets/docs/Devan Kavalchek Resume.pdf';
+import IconButton from 'components/IconButton';
+import { HiOutlineExternalLink } from 'react-icons/hi';
 
 interface Work {
   company: string;
@@ -82,6 +85,11 @@ const Experience = () => {
                     </ul>
                   </div>
                 ))}
+
+                <a id="resume-link" target="_blank" rel="noreferrer" href={Resume}>
+                    View Full Resume
+                    <HiOutlineExternalLink className="ms-1" />
+                </a>
               </div>
             </div>
           </div>
