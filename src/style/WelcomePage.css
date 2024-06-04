@@ -22,11 +22,12 @@ h1.welcome-text {
 
 .welcome-text-container {
     width: fit-content !important;
+    margin-bottom: clamp(0rem, -15.625rem + 50vh, 6.25rem);
 }
 
 .nav-header {
     height: 80px;
-    padding-right: 40px;
+    padding-right: 35px;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -53,6 +54,15 @@ h1.welcome-text {
     height: fit-content;
     margin: 0;
     padding: 0;
+    transition: margin .7s
+}
+
+.slide-up-start {
+    margin-top: 10px;
+}
+
+.slide-up-end {
+    margin-bottom: 0px;
 }
 
 .down-icon {
@@ -66,11 +76,27 @@ h1.welcome-text {
 .nav-item {
     height: fit-content;
     width: fit-content;
-    margin-left: 12px;
-    margin-right: 12px;
     margin-bottom: 0px;
     margin-top: 0px;
     transition: margin 1s, opacity 1s, color .3s;
+}
+
+@media screen and (min-width: 400px) {
+    .nav-item {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nav-item {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+}
+
+.nav-item:last-of-type {
+    margin-right: 0px;
 }
 
 .nav-item-unloaded {

@@ -30,7 +30,7 @@ const LearnMore = ({onClick}: Props) => {
 
   return (
     <div className={'learn-more ' + getClassName()}>
-      <h4 className="learn-more-text gradient-hover" onClick={onClick}>
+      <h4 className={`learn-more-text gradient-hover ${loaded ? 'slide-up-end' : 'slide-up-start'}`} onClick={onClick}>
         Learn More <br />
         <MdKeyboardArrowDown className="down-icon" />
       </h4>
