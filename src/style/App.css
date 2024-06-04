@@ -1,18 +1,19 @@
 .linkbar {
-    position: fixed;
-    display: flex;
-    flex-flow: column;
-    bottom: 50px;
-    left: 35px;
-    z-index: 100;
+    margin-top: 4rem;
 }
 
 .linkbar-icon {
-    font-size: clamp(24px, 3.25vh, 36px);
+    font-size: 28px;
     color: var(--bs-body-color);
     background-color: rgba(0, 0, 0, 0);
     transition: color .3s;
-    margin-bottom: clamp(4px, 1.25vh, 16px);
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .linkbar-icon {
+        margin-right: 0.75rem;
+    }
 }
 
 .linkbar-unloaded {

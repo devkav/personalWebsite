@@ -1,6 +1,5 @@
 import '../style/App.css';
 import {Col} from 'reactstrap';
-import Linkbar from '../components/Linkbar';
 import WelcomePage from './WelcomePage';
 import AboutMe from './AboutMe';
 import Experience from './Experience';
@@ -10,7 +9,6 @@ import Footer from '../components/Footer';
 const SiteContent = () => {
   return (
     <Col>
-      <Linkbar />
       <WelcomePage />
       <AboutMe />
       <Experience />

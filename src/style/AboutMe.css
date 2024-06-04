@@ -20,10 +20,7 @@
 
   #about-me-content {
     margin: 0;
-    width: 70%;
-  }
-
-  #aboutMe {
-    margin-left: 20px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }

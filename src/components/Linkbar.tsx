@@ -1,4 +1,3 @@
-import {useEffect, useState} from 'react';
 import {AiOutlineGithub, AiFillFile} from 'react-icons/ai';
 import {FaLinkedinIn} from 'react-icons/fa';
 import {SiDevpost} from 'react-icons/si';
@@ -6,25 +5,9 @@ import {MdEmail} from 'react-icons/md';
 import IconButton from './IconButton';
 import Resume from '../assets/docs/Devan Kavalchek Resume.pdf';
 
-const INIT_TIME = 1500;
-
 const Linkbar = () => {
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    let timeout: NodeJS.Timeout;
-
-    if (!loaded) {
-      timeout = setTimeout(() => setLoaded(true), INIT_TIME);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [loaded]);
-
-  const getClassName = () => (loaded ? 'linkbar-loaded' : 'linkbar-unloaded');
-
   return (
-    <div className={'linkbar ' + getClassName()}>
+    <div className='linkbar'>
       <IconButton href="https://github.com/DevanTurtle7">
         <AiOutlineGithub className="linkbar-icon color-0" />
       </IconButton>

@@ -1,3 +1,4 @@
+import Linkbar from 'components/Linkbar';
 import '../style/AboutMe.css';
 
 const AboutMe = () => {
@@ -20,6 +21,8 @@ const AboutMe = () => {
           always looking for a new technology to learn.
         </p>
         <p>Keep scrolling to see what I've been working on!</p>
+
+        <Linkbar/>
       </div>
     </div>
   );

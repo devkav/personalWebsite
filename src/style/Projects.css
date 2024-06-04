@@ -9,7 +9,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 20px;
   position: relative;
-  max-width: 60vw;
+  max-width: calc(100vw - 3rem);
   transition: opacity .3s;
   height: fit-content;
   grid-column: 1;
@@ -224,21 +224,9 @@
   margin-left: 50px;
 }
 
-.project-display-no-flip .project-display-text {
-  margin-right: 30px;
-}
-
-.project-display-flipped .project-display-text {
-  margin-left: 30px;
-}
-
-.project-display-text {
-  width: 70%
-}
-
 .project-display-image img {
   object-fit: contain;
-  max-width: 50vw;
+  max-width: 100%;
   max-height: min(50vh, 400px);
 }
 
@@ -301,16 +289,16 @@
   }
 
   .projects-container {
-    margin-left: 20px;
-    margin-right: 0px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 
   .project-card {
-    max-width: calc(100vw - 150px);
+    max-width: calc(100vw - 3rem);
   }
 }
 
-@media screen and (min-width: 800px) and (max-width: 1000px) {
+@media screen and (min-width: 800px) {
   .project-display-image {
     width: 50%
   }
@@ -318,6 +306,10 @@
   .project-display-image img {
     object-fit: contain;
     max-width: 100%;
+  }
+
+  .project-display-text {
+    width: 50%;
   }
 }
 
