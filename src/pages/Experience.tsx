@@ -1,7 +1,6 @@
 import '../style/Experience.css';
 import Chip from '../components/Chip';
 import Resume from '../assets/docs/Devan Kavalchek Resume.pdf';
-import IconButton from 'components/IconButton';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 
 interface Work {
