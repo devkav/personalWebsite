@@ -8,7 +8,7 @@ const AboutMe = () => {
         <h2 className="fit-content">About Me</h2>
         <p>
           Hi, my name is Devan Kavalchek, I'm a passionate and detail oriented
-          software engineer. I'm a fourth year student at the Rochester Institute
+          software engineer. I'm a fifth year student at the Rochester Institute
           of Technology pursuing a B.S. in Software Engineering. Recently, I've
           been enjoying working with ReactJS, SQL, Java, and learning TensorFlow
           using Python.

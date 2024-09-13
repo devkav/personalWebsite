@@ -118,3 +118,7 @@
 #resume-link>svg {
     font-size: 20px;
 }
+
+.job-dates {
+    opacity: 0.5;
+}
