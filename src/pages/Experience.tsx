@@ -19,17 +19,18 @@ const technologies: string[] = [
   'ReactJS',
   'JavaScript',
   'TypeScript',
-  'Java',
   'Python',
+  'Perl',
+  'Java',
   'SQL',
   'Dart',
   'Flutter',
   'Kotlin',
   'Flask',
   'Firebase',
+  'AWS',
   'HTML',
   'CSS',
-  'SASS'
 ];
 
 const work: Work[] = [
