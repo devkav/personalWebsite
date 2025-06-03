@@ -38,6 +38,13 @@ const work: Work[] = [
     company: 'AMD',
     terms: [
       {
+        title: 'Software Engineer 1',
+        dates: 'June 2025 - Present',
+        descriptions: [
+          'Building AI tools for hardware emulation'
+        ]
+      },
+      {
         title: 'Software Engineer Co-op',
         dates: 'May 2024 - August 2024',
         descriptions: [
@@ -138,12 +145,7 @@ const Experience = () => {
                     <p>B.S. in Software Engineering</p>
                   </li>
                   <li>
-                    <p>Expected Graduation: May 2025 (5 year program)</p>
-                  </li>
-                  <li>
-                    <p>
-                      <b>Deans List</b> Spring 2021 to Present
-                    </p>
+                    <p>Graduated Magna Cum Laude</p>
                   </li>
                   <li>
                     <p>Member of Society of Software Engineers</p>
