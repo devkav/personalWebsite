@@ -8,7 +8,7 @@ import Resume from '../assets/docs/Devan Kavalchek Resume.pdf';
 const Linkbar = () => {
   return (
     <div className='linkbar'>
-      <IconButton href="https://github.com/DevanTurtle7">
+      <IconButton href="https://github.com/devkav">
         <AiOutlineGithub className="linkbar-icon color-0" />
       </IconButton>
       <IconButton href="https://www.linkedin.com/in/devan-kavalchek">

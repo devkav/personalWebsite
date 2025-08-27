@@ -54,7 +54,7 @@ const highlightedProjects: Project[] = [
             images.`
     ],
     tags: ['ReactJS', 'Redux', 'Firebase', 'AWS S3', 'Web Development'],
-    githubLink: 'https://github.com/DevanTurtle7/xavier-portfolio',
+    githubLink: 'https://github.com/devkav/xavier-portfolio',
   },
   {
     title: 'MathFlow',
@@ -109,7 +109,7 @@ const highlightedProjects: Project[] = [
         to difficult problems.`
     ],
     tags: ['Python', 'Machine Learning', 'Test Driven Development'],
-    githubLink: 'https://github.com/DevanTurtle7/geneticAlgorithm'
+    githubLink: 'https://github.com/devkav/geneticAlgorithm'
   }
 ];
 
@@ -131,7 +131,7 @@ const otherProjects: Project[] = [
             backend and get us back on track.`
     ],
     tags: ['ReactJS', 'Web Development'],
-    githubLink: 'https://github.com/DevanTurtle7/twotor'
+    githubLink: 'https://github.com/devkav/twotor'
   },
   {
     title: 'Minesweeper',
@@ -139,8 +139,8 @@ const otherProjects: Project[] = [
       `I enjoy playing minesweeper, so I decided to build it myself. This gave me a good excuse to get more familiar with Redux and TypeScript, which I was using on my co-op at the time. `
     ],
     tags: ['ReactJS', 'Redux', 'TypeScript', 'Web Development'],
-    githubLink: 'https://github.com/DevanTurtle7/react-minesweeper',
-    link: 'https://devanturtle7.github.io/react-minesweeper/'
+    githubLink: 'https://github.com/devkav/react-minesweeper',
+    link: 'https://devkav.github.io/react-minesweeper/'
   },
   {
     title: 'Full Stack Chat',
@@ -163,7 +163,7 @@ const otherProjects: Project[] = [
       'REST APIs',
       'Test Driven Development'
     ],
-    githubLink: 'https://github.com/DevanTurtle7/full-stack-chat'
+    githubLink: 'https://github.com/devkav/full-stack-chat'
   },
   {
     title: 'Spotify Hue',
@@ -180,7 +180,7 @@ const otherProjects: Project[] = [
             this is a long term passion project and still under development.`
     ],
     tags: ['Java', 'REST APIs', 'Android Development'],
-    githubLink: 'https://github.com/DevanTurtle7/SpotifyHueAndroid'
+    githubLink: 'https://github.com/devkav/SpotifyHueAndroid'
   },
   {
     title: 'WUPHF Weather',
@@ -199,7 +199,7 @@ const otherProjects: Project[] = [
             Twitter and Instagram.`
     ],
     tags: ['React Native', 'Mobile Development'],
-    githubLink: 'https://github.com/DevanTurtle7/WUPHF-Weather'
+    githubLink: 'https://github.com/devkav/WUPHF-Weather'
   },
   {
     title: 'Rope Physics Simulator',
@@ -207,8 +207,8 @@ const otherProjects: Project[] = [
       `This project was inspired Day #9 from the 2022 Advent of Code. This problem required you to simulate the physics of a rope being dragged along a surface. This problem was very interesting and engaging for me. After writing my solution in Python, I wanted to visualize it so that I could interact with the rope. I translated my Python solution into TypeScript and built a website where you could interact with the Rope yourself.`
     ],
     tags: ['ReactJS', 'TypeScript', 'Web Development'],
-    githubLink: 'https://github.com/DevanTurtle7/rope-physics',
-    link: 'https://devanturtle7.github.io/rope-physics/'
+    githubLink: 'https://github.com/devkav/rope-physics',
+    link: 'https://devkav.github.io/rope-physics/'
   },
   {
     title: 'Corner Clerk',
@@ -225,7 +225,7 @@ const otherProjects: Project[] = [
             multiple version to Android users.`
     ],
     tags: ['Flutter', 'Dart', 'Firestore', 'Mobile Development'],
-    githubLink: 'https://github.com/DevanTurtle7/clayHack2020'
+    githubLink: 'https://github.com/devkav/clayHack2020'
   },
   {
     title: 'Tempo',
@@ -244,8 +244,8 @@ const otherProjects: Project[] = [
             skip songs they dislike.`
     ],
     tags: ['JavaScript', 'HTML', 'Firestore', 'REST APIs', 'Web Development'],
-    githubLink: 'https://github.com/DevanTurtle7/BrickHack7',
-    link: 'https://devanturtle7.github.io/BrickHack7/'
+    githubLink: 'https://github.com/devkav/BrickHack7',
+    link: 'https://devkav.github.io/BrickHack7/'
   }
 ];
 

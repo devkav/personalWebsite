@@ -8,4 +8,4 @@ Check it out at https://kavalchek.dev
 ![Light Mode Screenshot](./docs/lightModeScreenshot.png?raw=true)
 
 ## Previous Versions
-- [Version 1](https://github.com/DevanTurtle7/personalWebsite/tree/version1)
+- [Version 1](https://github.com/devkav/personalWebsite/tree/version1)
